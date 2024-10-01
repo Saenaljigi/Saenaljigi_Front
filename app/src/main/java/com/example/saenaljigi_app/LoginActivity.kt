@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
         tvNo.setOnClickListener {
             updateClBoxVisible()
         }
-
+        //ㅈㅂㅈㅂㅈㅂㅈㅂ
         // *****btnLogin 클릭 시 NoticeBoardActivity로 이동
         btnLogin.setOnClickListener {
             val intent = Intent(this, NoticeBoardActivity::class.java)
