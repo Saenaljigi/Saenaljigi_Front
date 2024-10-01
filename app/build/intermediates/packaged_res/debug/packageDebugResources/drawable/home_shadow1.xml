@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop Shadow Stack -->
+    <item>
+        <shape>
+            <padding android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp" />
+            <corners android:radius="15dp" />
+            <solid android:color="#01000000" /> <!-- 1% 투명도, 아주 연한 검정 -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="2dp" android:right="2dp" android:bottom="2dp" android:left="2dp" />
+            <corners android:radius="15dp" />
+            <solid android:color="#02000000" /> <!-- 2% 투명도, 거의 안 보이는 검정 -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="3dp" android:right="3dp" android:bottom="3dp" android:left="3dp" />
+            <corners android:radius="15dp" />
+            <solid android:color="#03000000" /> <!-- 3% 투명도, 아주 약간 보이는 검정 -->
+        </shape>
+    </item>
+
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="#ffffff" /> <!-- 배경 흰색 -->
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+</layer-list>
