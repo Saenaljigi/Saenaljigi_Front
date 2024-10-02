@@ -4,11 +4,11 @@ package com.example.saenaljigi_app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.saenaljigi_app.R;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final FrameLayout rootView;
 
   @NonNull
   public final TextView breakfastMenu;
@@ -113,7 +113,7 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final TextView totalCountTitle;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull TextView breakfastMenu,
+  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull TextView breakfastMenu,
       @NonNull TextView breakfastMenuTitle, @NonNull TextView detailBtn,
       @NonNull TextView dinnerMenu, @NonNull TextView dinnerMenuTitle, @NonNull TextView homeDate,
       @NonNull TextView homeTitle, @NonNull TextView lunchMenu, @NonNull TextView lunchMenuTitle,
@@ -163,7 +163,7 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -374,7 +374,7 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, breakfastMenu, breakfastMenuTitle,
+      return new FragmentHomeBinding((FrameLayout) rootView, breakfastMenu, breakfastMenuTitle,
           detailBtn, dinnerMenu, dinnerMenuTitle, homeDate, homeTitle, lunchMenu, lunchMenuTitle,
           mealCount, mealCountBox, mealCountCmt, mealCountTitle, menuLine1, menuLine2, noticeBox,
           noticeContent1, noticeContent2, noticeIcon1, noticeIcon2, noticeLine1, noticeLine2,
