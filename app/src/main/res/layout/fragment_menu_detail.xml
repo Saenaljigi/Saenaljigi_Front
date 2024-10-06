@@ -22,7 +22,7 @@
 
     <!-- 신청하기 버튼 -->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/applyButton"
+        android:id="@+id/apply_btn"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginStart="58dp"
