@@ -1,3 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+# IntelliJ IDEA / Android Studio 관련 무시 파일
+.idea/
+/*.iml
