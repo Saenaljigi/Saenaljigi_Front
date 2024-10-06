@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.saenaljigi_app.databinding.FragmentMealTicketBinding
+import com.example.saenaljigi_app.databinding.FragmentPointBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +24,12 @@ class PointFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentPointBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var myPageHistoryAdapter: MyPageHistoryAdapter
+    private lateinit var myPageHistoryData: ArrayList<MyPageHistoryData>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,8 +42,37 @@ class PointFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_point, container, false)
+        _binding = FragmentPointBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        // 데이터 생성
+        myPageHistoryData = arrayListOf(
+            MyPageHistoryData("2024년 9월 20일", "상점", "+1점", "총 -3점"),
+            MyPageHistoryData("2024년 9월 19일", "상점", "+1점", "총 -4점"),
+            MyPageHistoryData("2024년 9월 19일", "벌점", "-2점", "총 -5점")
+        )
+
+        // 어댑터 초기화
+        myPageHistoryAdapter = MyPageHistoryAdapter(myPageHistoryData)
+
+        // RecyclerView에 어댑터와 레이아웃 매니저 연결
+        binding.rcvPoint.apply {
+            adapter = myPageHistoryAdapter
+            layoutManager = LinearLayoutManager(context)
+        }
+
+        // back_btn 클릭 시 백스택으로 이동
+        binding.backBtn.setOnClickListener {
+            // 백스택에서 이전 프래그먼트로 이동
+            parentFragmentManager.popBackStack()
+        }
+
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

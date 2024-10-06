@@ -34,6 +34,11 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.fragment_menu -> {
+                    MenuBoardFragment().changeFragment()
+                    true
+                }
+
                 R.id.fragment_mypage -> {
                     MyPageFragment().changeFragment()
                     true

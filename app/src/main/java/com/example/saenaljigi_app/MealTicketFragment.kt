@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.saenaljigi_app.databinding.FragmentMealTicketBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +23,12 @@ class MealTicketFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentMealTicketBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var myPageHistoryAdapter: MyPageHistoryAdapter
+    private lateinit var myPageHistoryData: ArrayList<MyPageHistoryData>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,8 +41,37 @@ class MealTicketFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_meal_ticket, container, false)
+        _binding = FragmentMealTicketBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        // 데이터 생성
+        myPageHistoryData = arrayListOf(
+            MyPageHistoryData("2024년 9월 20일", "석식", "+1장", "잔여 식권  109장"),
+            MyPageHistoryData("2024년 9월 19일", "중식", "+1장", "잔여 식권  110장"),
+            MyPageHistoryData("2024년 9월 19일", "석식", "+1장", "잔여 식권  111장")
+        )
+
+        // 어댑터 초기화
+        myPageHistoryAdapter = MyPageHistoryAdapter(myPageHistoryData)
+
+        // RecyclerView에 어댑터와 레이아웃 매니저 연결
+        binding.rcvMealTicket.apply {
+            adapter = myPageHistoryAdapter
+            layoutManager = LinearLayoutManager(context)
+        }
+
+        // back_btn 클릭 시 백스택으로 이동
+        binding.backBtn.setOnClickListener {
+            // 백스택에서 이전 프래그먼트로 이동
+            parentFragmentManager.popBackStack()
+        }
+
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

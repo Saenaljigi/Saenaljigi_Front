@@ -8,6 +8,9 @@
     <dimen name="design_bottom_navigation_height" ns1:override="true">66dp</dimen>
     <dimen name="design_bottom_navigation_margin" ns1:override="true">5dp</dimen>
     <dimen name="design_bottom_navigation_text_size" ns1:override="true">8sp</dimen>
+    <dimen name="view_page_margin">20dp</dimen>
+    <dimen name="view_page_margin_next">43dp</dimen>
+    <dimen name="view_page_translation_y">23dp</dimen>
     <string name="app_name">Saenaljigi_App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom_nav">BottomNav</string>

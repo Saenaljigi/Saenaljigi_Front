@@ -1,42 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\fragment_my_page.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\fragment_my_page.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\activity_bottom_nav.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\activity_bottom_nav.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\fragment_menu_board.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_menu_board.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\fragment_meal_ticket.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\fragment_meal_ticket.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\fragment_menu_detail.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_menu_detail.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\fragment_meal_ticket.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_meal_ticket.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-47:/layout/activity_main.xml",
-        "source": "com.example.saenaljigi_app-main-50:/layout/activity_main.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\item_mypage_history.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\item_mypage_history.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\fragment_notifications.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\fragment_notifications.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\fragment_my_page.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_my_page.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\fragment_point.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_point.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\fragment_dashboard.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\fragment_dashboard.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\item_top_meal_ticket.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\item_top_meal_ticket.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-48:\\layout\\item_menu_detail.xml",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\item_menu_detail.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-mergeDebugResources-47:\\layout\\fragment_point.xml",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-50:\\layout\\fragment_point.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-48:/layout/item_menu_detail.xml",
+        "source": "com.example.saenaljigi_app-main-51:/layout/item_menu_detail.xml"
     }
 ]

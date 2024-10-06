@@ -12,11 +12,11 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:background="#FFFFFF"
-        app:itemPaddingTop="10dp"
+        app:itemPaddingTop="20dp"
         app:itemIconSize="27dp"
         app:itemTextAppearanceActive="@style/BtmNavSelectedTextStyle"
         app:itemTextAppearanceInactive="@style/BtmNavUnselectedTextStyle"

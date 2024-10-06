@@ -33,8 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="baseline_add_home_24" />
-                            <entry key="sourceFile" value="C:\Users\USER\Export\Vector 2.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="back_btn" />
+                            <entry key="sourceFile" value="C:\Users\USER\Export\Icon (Stroke)2.svg" />
                           </map>
                         </option>
                       </PersistentState>
