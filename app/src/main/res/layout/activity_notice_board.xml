@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoticeBoardActivity"
+    android:background="#F5F5F5"
+    >
+
+    <ImageView
+        android:id="@+id/notice_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notice_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공지사항"
+        android:fontFamily="@font/suit_semibold"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="29dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/img_board_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notice_board_back1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_notice"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        />
+
+    <!-- FrameLayout을 사용하여 처음 XML을 겹치게 배치 -->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/img_board_top"
+        app:layout_constraintEnd_toEndOf="@id/img_board_top"
+        app:layout_constraintBottom_toBottomOf="@id/img_board_top"
+        app:layout_constraintTop_toTopOf="@id/img_board_top">
+
+        <!-- 처음 XML 레이아웃의 내용 -->
+        <ImageView
+            android:id="@+id/img_volume_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volume_low_red"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:id="@+id/tv_tile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[생활지도실] 2024-2학기 1차 생활점검 실..."
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/suit_medium"
+            android:layout_marginStart="49dp"
+
+            />
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/notice_board_back2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_board_top">
+
+        <!-- 리사이클러뷰 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_notice_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-1dp"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_notice_board" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
