@@ -84,7 +84,7 @@ class MenuDetailFragment : Fragment() {
 
         // 메뉴 리스트 설정
         val menuList = listOf("아침", "점심", "저녁")
-        val adapter = MenuDetailAdapter(menuList, binding.viewPager, binding.applyButton)
+        val adapter = MenuDetailAdapter(menuList, binding.viewPager, binding.applyBtn)
         viewPager.adapter = adapter
 
         // ViewPager에 페이지 변화 리스너 추가
@@ -97,10 +97,10 @@ class MenuDetailFragment : Fragment() {
             super.onPageSelected(position)
             if (position == 0) {
                 // 조식 페이지에서 신청하기 버튼을 보이게 함
-                binding.applyButton.visibility = View.VISIBLE
+                binding.applyBtn.visibility = View.VISIBLE
             } else {
                 // 그 외 페이지에서는 신청하기 버튼 숨김
-                binding.applyButton.visibility = View.GONE
+                binding.applyBtn.visibility = View.GONE
             }
         }
     }

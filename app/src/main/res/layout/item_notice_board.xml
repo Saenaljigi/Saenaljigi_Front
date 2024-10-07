@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:id="@+id/img_volume_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/volume_low"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_tile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[생활지도실] 2024-2학기 1차 생활점검 실..."
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:fontFamily="@font/suit_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_volume_icon"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10.5dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024.09.11"
+        android:textColor="#777777"
+        android:textSize="10sp"
+        android:fontFamily="@font/suit_regular"
+        app:layout_constraintTop_toBottomOf="@id/tv_tile"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="2dp"
+        />
+
+    <ImageView
+        android:id="@+id/img_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notice_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_created_at"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@
 .idea/
 /*.iml
 
-#
+# Gradle 관련 무시 파일
 .gradle
 /local.properties
 /.idea/caches

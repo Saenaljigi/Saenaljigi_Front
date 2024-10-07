@@ -21,15 +21,15 @@ public final class FragmentMenuDetailBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final AppCompatButton applyButton;
+  public final AppCompatButton applyBtn;
 
   @NonNull
   public final ViewPager2 viewPager;
 
   private FragmentMenuDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull AppCompatButton applyButton, @NonNull ViewPager2 viewPager) {
+      @NonNull AppCompatButton applyBtn, @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
-    this.applyButton = applyButton;
+    this.applyBtn = applyBtn;
     this.viewPager = viewPager;
   }
 
@@ -60,9 +60,9 @@ public final class FragmentMenuDetailBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.applyButton;
-      AppCompatButton applyButton = ViewBindings.findChildViewById(rootView, id);
-      if (applyButton == null) {
+      id = R.id.apply_btn;
+      AppCompatButton applyBtn = ViewBindings.findChildViewById(rootView, id);
+      if (applyBtn == null) {
         break missingId;
       }
 
@@ -72,7 +72,7 @@ public final class FragmentMenuDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMenuDetailBinding((ConstraintLayout) rootView, applyButton, viewPager);
+      return new FragmentMenuDetailBinding((ConstraintLayout) rootView, applyBtn, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

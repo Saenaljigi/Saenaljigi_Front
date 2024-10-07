@@ -1,262 +1,258 @@
 [
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_baseline_add_home_24.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/baseline_add_home_24.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_back_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\back_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/menu_menu_bottom_nav.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/menu/menu_bottom_nav.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_filled_home_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/filled_home_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\ic_notifications_black_24dp.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_mypage_rectangle.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\mypage_rectangle.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_selector_menu_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/selector_menu_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_selector_mypage_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/selector_mypage_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_filled_menu_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\filled_menu_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_home_shadow1.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/home_shadow1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_fragment_menu_board.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_menu_board.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_notice_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/notice_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_home_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/home_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_filled_notice_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\filled_notice_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_filled_menu_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/filled_menu_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_right_rounded_rectangle1.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\right_rounded_rectangle1.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_back_btn.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/back_btn.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_menu_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\menu_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_help_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/help_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\ic_dashboard_black_24dp.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_rectangle1.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/rectangle1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_fragment_meal_ticket.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_meal_ticket.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_item_mypage_history.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\item_mypage_history.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_right_rounded_rectangle1.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/right_rounded_rectangle1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_check_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\check_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_filled_mypage_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\filled_mypage_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_check_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/check_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_mypage_line1.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\mypage_line1.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_item_menu_detail.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\item_menu_detail.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_next_btn.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/next_btn.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_mypage_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/mypage_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_selector_home_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/selector_home_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_filled_home_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\filled_home_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_home_line2.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\home_line2.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_back_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/back_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_speaker_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\speaker_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_notice_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\notice_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_fork_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/fork_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_fragment_menu_detail.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_menu_detail.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_mypage_line1.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/mypage_line1.xml"
+    },
+    {
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_home_line.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/home_line.xml"
     },
     {
         "merged": "com.example.saenaljigi_app-debug-49:/layout_item_menu_detail.xml.flat",
         "source": "com.example.saenaljigi_app-main-51:/layout/item_menu_detail.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_back_btn.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\back_btn.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_nav_item_background.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/nav_item_background.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_home_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\home_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_ic_home_black_24dp.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/ic_home_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_setting_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\setting_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_transparent_ripple.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/transparent_ripple.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_mypage_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\mypage_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_speaker_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/speaker_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_down_arrow.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\down_arrow.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_fragment_menu_board.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/fragment_menu_board.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_nav_item_background.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\nav_item_background.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_rectangle1.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\rectangle1.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_fragment_home.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_fragment_meal_ticket.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/fragment_meal_ticket.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_fragment_point.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_point.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_setting_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/setting_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_selector_notice_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\selector_notice_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_baseline_add_home_24.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\baseline_add_home_24.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_activity_main.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_selector_mypage_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\selector_mypage_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_fragment_point.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/fragment_point.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_menu_shadow1.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\menu_shadow1.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_menu_btn.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/menu_btn.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\menu_menu_bottom_nav.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\menu\\menu_bottom_nav.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_item_mypage_history.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/item_mypage_history.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_fork_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\fork_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_fragment_my_page.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/fragment_my_page.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_left_rounded_rectangle1.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/left_rounded_rectangle1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_fragment_my_page.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_my_page.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_filled_notice_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/filled_notice_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_transparent_ripple.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\transparent_ripple.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_home_line.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\home_line.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/layout_fragment_menu_detail.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/layout/fragment_menu_detail.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_selector_menu_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\selector_menu_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_selector_notice_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/selector_notice_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\fragment_home.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.saenaljigi_app-main-51:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_home_rounded_rectangle1.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\home_rounded_rectangle1.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_down_arrow.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/down_arrow.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\xml\\backup_rules.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_menu_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/menu_icon.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_mypage_rectangle.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/mypage_rectangle.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_home_shadow1.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\home_shadow1.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_menu_shadow1.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/menu_shadow1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\ic_home_black_24dp.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_home_line2.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/home_line2.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_help_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\help_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/xml_backup_rules.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_selector_home_icon.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\selector_home_icon.xml"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_home_rounded_rectangle1.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/home_rounded_rectangle1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_next_btn.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\next_btn.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_left_rounded_rectangle1.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\left_rounded_rectangle1.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\drawable_menu_btn.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\drawable\\menu_btn.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-49:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-51:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.saenaljigi_app-debug-49:/drawable_filled_mypage_icon.xml.flat",
+        "source": "com.example.saenaljigi_app-main-51:/drawable/filled_mypage_icon.xml"
     }
 ]

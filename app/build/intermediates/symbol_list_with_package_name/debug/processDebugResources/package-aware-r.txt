@@ -3266,7 +3266,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
-id applyButton
+id apply_btn
 id arc
 id asConfigured
 id async

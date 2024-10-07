@@ -51,7 +51,7 @@ drawable selector_notice_icon
 drawable setting_icon
 drawable speaker_icon
 drawable transparent_ripple
-id applyButton
+id apply_btn
 id back_btn
 id background
 id bottom_navigation_view
