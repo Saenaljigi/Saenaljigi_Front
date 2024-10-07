@@ -39,5 +39,4 @@
         app:layout_constraintTop_toTopOf="parent"
         android:fitsSystemWindows="false"/>
 
-    <!--#CEF6F5-->
 </androidx.constraintlayout.widget.ConstraintLayout>

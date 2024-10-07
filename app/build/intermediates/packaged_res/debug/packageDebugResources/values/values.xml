@@ -18,7 +18,9 @@
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
     <style name="Base.Theme.Saenaljigi_App" parent="Theme.Material3.DayNight.NoActionBar">
+        
         <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:fontFamily">@font/suit_regular</item>
     </style>
     <style name="BtmNavSelectedTextStyle" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">8sp</item> 
@@ -27,6 +29,15 @@
     <style name="BtmNavUnselectedTextStyle" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">8sp</item> 
         <item name="android:textColor">#D0D0D0</item>
+    </style>
+    <style name="Theme.LightStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        
+        <item name="android:statusBarColor">@android:color/white</item>
+
+        
+        <item name="android:windowLightStatusBar">true</item>
+
+
     </style>
     <style name="Theme.Saenaljigi_App" parent="Base.Theme.Saenaljigi_App"/>
 </resources>
