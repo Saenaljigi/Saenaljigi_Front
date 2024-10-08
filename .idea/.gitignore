@@ -5,3 +5,20 @@
 # IntelliJ IDEA / Android Studio 관련 무시 파일
 .idea/
 /*.iml
+
+# Gradle 관련 무시 파일
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+.idea/other.xml
