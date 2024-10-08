@@ -26,7 +26,6 @@
           <option name="screenY" value="2160" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
-<<<<<<< HEAD
           <option name="api" value="34" />
           <option name="brand" value="Lenovo" />
           <option name="codename" value="TB370FU" />
@@ -38,8 +37,6 @@
           <option name="screenY" value="2944" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
-=======
->>>>>>> upstream/main
           <option name="api" value="31" />
           <option name="brand" value="samsung" />
           <option name="codename" value="a51" />
