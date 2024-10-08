@@ -20,6 +20,7 @@
         app:itemIconSize="27dp"
         app:itemTextAppearanceActive="@style/BtmNavSelectedTextStyle"
         app:itemTextAppearanceInactive="@style/BtmNavUnselectedTextStyle"
+        app:itemTextColor="@color/nav_item_text_color"
         app:labelVisibilityMode="labeled"
         app:itemHorizontalTranslationEnabled="false"
         app:itemBackground="@android:color/transparent"

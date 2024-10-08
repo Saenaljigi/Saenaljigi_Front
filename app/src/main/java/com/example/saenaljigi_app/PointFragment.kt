@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.saenaljigi_app.databinding.FragmentMealTicketBinding
 import com.example.saenaljigi_app.databinding.FragmentPointBinding
@@ -60,6 +62,18 @@ class PointFragment : Fragment() {
             adapter = myPageHistoryAdapter
             layoutManager = LinearLayoutManager(context)
         }
+
+        val recyclerView = binding.rcvPoint
+        recyclerView.layoutManager = LinearLayoutManager(context)
+
+        // 구분선 적용
+        val dividerItemDecoration = DividerItemDecoration(recyclerView.context, LinearLayoutManager.VERTICAL)
+        val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.mypage_divider)
+        drawable?.let {
+            dividerItemDecoration.setDrawable(it)
+        }
+
+        recyclerView.addItemDecoration(dividerItemDecoration)
 
         // back_btn 클릭 시 백스택으로 이동
         binding.backBtn.setOnClickListener {

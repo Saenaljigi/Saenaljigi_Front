@@ -26,7 +26,7 @@
     <!-- Background -->
     <item>
         <shape>
-            <solid android:color="#FFBABA" /> <!-- 배경 흰색 -->
+            <solid android:color="#45565E" /> <!-- 배경 흰색 -->
             <corners android:radius="12dp" />
         </shape>
     </item>

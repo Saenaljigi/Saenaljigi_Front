@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color nav_item_text_color
 color white
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
@@ -44,6 +45,7 @@ drawable login_red_id
 drawable menu_btn
 drawable menu_icon
 drawable menu_shadow1
+drawable mypage_divider
 drawable mypage_icon
 drawable mypage_line1
 drawable mypage_rectangle
