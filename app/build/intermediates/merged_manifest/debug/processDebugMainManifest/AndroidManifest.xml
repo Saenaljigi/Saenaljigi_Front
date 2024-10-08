@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Saenaljigi_App" >
         <activity
-            android:name="com.example.saenaljigi_app.NoticeBoardActivity"
+            android:name="com.example.saenaljigi_app.NoticeBoardFragment"
             android:exported="false" />
         <activity
             android:name="com.example.saenaljigi_app.LoginActivity"

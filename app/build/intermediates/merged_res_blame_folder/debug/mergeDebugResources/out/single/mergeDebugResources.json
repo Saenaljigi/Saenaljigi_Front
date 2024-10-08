@@ -44,6 +44,10 @@
         "source": "com.example.saenaljigi_app-main-54:/drawable/rectangle1.xml"
     },
     {
+        "merged": "com.example.saenaljigi_app-debug-52:/layout_fragment_notice_board.xml.flat",
+        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_notice_board.xml"
+    },
+    {
         "merged": "com.example.saenaljigi_app-debug-52:/drawable_ic_launcher_foreground.xml.flat",
         "source": "com.example.saenaljigi_app-main-54:/drawable/ic_launcher_foreground.xml"
     },
@@ -152,6 +156,10 @@
         "source": "com.example.saenaljigi_app-main-54:/drawable/filled_mypage_icon.xml"
     },
     {
+        "merged": "com.example.saenaljigi_app-debug-52:/drawable_fi_rs_clip.xml.flat",
+        "source": "com.example.saenaljigi_app-main-54:/drawable/fi_rs_clip.xml"
+    },
+    {
         "merged": "com.example.saenaljigi_app-debug-52:/drawable_back_btn.xml.flat",
         "source": "com.example.saenaljigi_app-main-54:/drawable/back_btn.xml"
     },
@@ -200,8 +208,16 @@
         "source": "com.example.saenaljigi_app-main-54:/drawable/notice_line.xml"
     },
     {
+        "merged": "com.example.saenaljigi_app-debug-52:/layout_fragment_notice_detail.xml.flat",
+        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_notice_detail.xml"
+    },
+    {
         "merged": "com.example.saenaljigi_app-debug-52:/drawable_home_line2.xml.flat",
         "source": "com.example.saenaljigi_app-main-54:/drawable/home_line2.xml"
+    },
+    {
+        "merged": "com.example.saenaljigi_app-debug-52:/drawable_notice_board_background.xml.flat",
+        "source": "com.example.saenaljigi_app-main-54:/drawable/notice_board_background.xml"
     },
     {
         "merged": "com.example.saenaljigi_app-debug-52:/layout_item_mypage_history.xml.flat",
@@ -246,10 +262,6 @@
     {
         "merged": "com.example.saenaljigi_app-debug-52:/drawable_menu_icon.xml.flat",
         "source": "com.example.saenaljigi_app-main-54:/drawable/menu_icon.xml"
-    },
-    {
-        "merged": "com.example.saenaljigi_app-debug-52:/layout_activity_notice_board.xml.flat",
-        "source": "com.example.saenaljigi_app-main-54:/layout/activity_notice_board.xml"
     },
     {
         "merged": "com.example.saenaljigi_app-debug-52:/mipmap-hdpi_ic_launcher.webp.flat",

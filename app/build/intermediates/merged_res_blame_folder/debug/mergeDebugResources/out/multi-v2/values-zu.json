@@ -4,7 +4,24 @@
             "outputFile": "com.example.saenaljigi_app-mergeDebugResources-50:/values-zu/values-zu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\caches\\transforms-4\\ee07bca0b0f40d7edd69f0327cdb153c\\transformed\\material-1.12.0\\res\\values-zu\\values-zu.xml",
+                    "source": "C:\\Users\\Hyerim\\.gradle\\caches\\transforms-4\\b6a13957af6a07e338f89b118649bad1\\transformed\\core-1.13.1\\res\\values-zu\\values-zu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,257,356,459,565,672,785",
+                        "endColumns": "97,103,98,102,105,106,112,100",
+                        "endOffsets": "148,252,351,454,560,667,780,881"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41,42,43,44,118",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3421,3519,3623,3722,3825,3931,4038,10230",
+                        "endColumns": "97,103,98,102,105,106,112,100",
+                        "endOffsets": "3514,3618,3717,3820,3926,4033,4146,10326"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Hyerim\\.gradle\\caches\\transforms-4\\ee07bca0b0f40d7edd69f0327cdb153c\\transformed\\material-1.12.0\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\caches\\transforms-4\\3cd5ba3d93555012dd0cf3f96faf576d\\transformed\\appcompat-1.7.0\\res\\values-zu\\values-zu.xml",
+                    "source": "C:\\Users\\Hyerim\\.gradle\\caches\\transforms-4\\3cd5ba3d93555012dd0cf3f96faf576d\\transformed\\appcompat-1.7.0\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,24 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\caches\\transforms-4\\b6a13957af6a07e338f89b118649bad1\\transformed\\core-1.13.1\\res\\values-zu\\values-zu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,257,356,459,565,672,785",
-                        "endColumns": "97,103,98,102,105,106,112,100",
-                        "endOffsets": "148,252,351,454,560,667,780,881"
-                    },
-                    "to": {
-                        "startLines": "38,39,40,41,42,43,44,118",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3421,3519,3623,3722,3825,3931,4038,10230",
-                        "endColumns": "97,103,98,102,105,106,112,100",
-                        "endOffsets": "3514,3618,3717,3820,3926,4033,4146,10326"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\caches\\transforms-4\\fca8d5083c4ef42434298f99b55ad904\\transformed\\navigation-ui-2.6.0\\res\\values-zu\\values-zu.xml",
+                    "source": "C:\\Users\\Hyerim\\.gradle\\caches\\transforms-4\\fca8d5083c4ef42434298f99b55ad904\\transformed\\navigation-ui-2.6.0\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

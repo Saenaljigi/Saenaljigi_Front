@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="black">#FF000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -12,6 +17,8 @@
     <dimen name="view_page_margin_next">43dp</dimen>
     <dimen name="view_page_translation_y">23dp</dimen>
     <string name="app_name">Saenaljigi_App</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom_nav">BottomNav</string>
     <string name="title_dashboard">Dashboard</string>
@@ -40,4 +47,12 @@
 
     </style>
     <style name="Theme.Saenaljigi_App" parent="Base.Theme.Saenaljigi_App"/>
+    <style name="Widget.Theme.Saenaljigi_App.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <declare-styleable name="FullscreenAttrs">
+        <attr format="color" name="fullscreenBackgroundColor"/>
+        <attr format="color" name="fullscreenTextColor"/>
+    </declare-styleable>
 </resources>

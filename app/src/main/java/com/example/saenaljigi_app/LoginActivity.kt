@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         //ㅈㅂㅈㅂㅈㅂㅈㅂ
         // *****btnLogin 클릭 시 NoticeBoardActivity로 이동
         btnLogin.setOnClickListener {
-            val intent = Intent(this, NoticeBoardFragment::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
