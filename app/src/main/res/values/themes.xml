@@ -2,14 +2,21 @@
     <!-- Base application theme -->
     <style name="Base.Theme.Saenaljigi_App" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:fontFamily">@font/suit_regular</item>
     </style>
 
     <style name="Theme.Saenaljigi_App" parent="Base.Theme.Saenaljigi_App" />
 
-    <style name="ThemeOverlay.Saenaljigi_App.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
-        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    <!-- Bottom Navigation selected item text style -->
+    <style name="BtmNavSelectedTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">8sp</item> <!-- 텍스트 크기 증가 -->
+        <item name="android:textColor">#121212</item>
+    </style>
+
+    <!-- Bottom Navigation unselected item text style -->
+    <style name="BtmNavUnselectedTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">8sp</item> <!-- 텍스트 크기 증가 -->
+        <item name="android:textColor">#D0D0D0</item>
     </style>
 </resources>

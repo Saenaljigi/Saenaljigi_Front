@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.saenaljigi_app-mergeDebugResources-29:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
+            "outputFile": "com.example.saenaljigi_app-mergeDebugResources-50:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\caches\\transforms-4\\f940b623479780b9386fa91f263b8783\\transformed\\material-1.12.0\\res\\values-h360dp-land-v13\\values-h360dp-land-v13.xml",
+                    "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\caches\\transforms-4\\ee07bca0b0f40d7edd69f0327cdb153c\\transformed\\material-1.12.0\\res\\values-h360dp-land-v13\\values-h360dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" ns1:override="true">8sp</dimen>
+    <dimen name="design_bottom_navigation_height" ns1:override="true">66dp</dimen>
+    <dimen name="design_bottom_navigation_margin" ns1:override="true">5dp</dimen>
+    <dimen name="design_bottom_navigation_text_size" ns1:override="true">8sp</dimen>
+    <dimen name="view_page_margin">20dp</dimen>
+    <dimen name="view_page_margin_next">43dp</dimen>
+    <dimen name="view_page_translation_y">23dp</dimen>
     <string name="app_name">Saenaljigi_App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bottom_nav">BottomNav</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
     <style name="Base.Theme.Saenaljigi_App" parent="Theme.Material3.DayNight.NoActionBar">
         
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:fontFamily">@font/suit_regular</item>
+    </style>
+    <style name="BtmNavSelectedTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">8sp</item> 
+        <item name="android:textColor">#121212</item>
+    </style>
+    <style name="BtmNavUnselectedTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">8sp</item> 
+        <item name="android:textColor">#D0D0D0</item>
+    </style>
+    <style name="Theme.LightStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
         
+        <item name="android:statusBarColor">@android:color/white</item>
+
+        
+        <item name="android:windowLightStatusBar">true</item>
+
+
     </style>
     <style name="Theme.Saenaljigi_App" parent="Base.Theme.Saenaljigi_App"/>
 </resources>
