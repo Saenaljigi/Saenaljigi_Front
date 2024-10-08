@@ -21,4 +21,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# 추가한 항목들
+.gradle/8.7/fileHashes/fileHashes.bin
+.gradle/8.7/fileHashes/fileHashes.lock
+.idea/deploymentTargetSelector.xml
 .idea/other.xml
