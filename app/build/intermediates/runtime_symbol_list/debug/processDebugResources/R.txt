@@ -2122,6 +2122,7 @@ int color mtrl_textinput_disabled_color 0x7f0502ea
 int color mtrl_textinput_filled_box_default_background_color 0x7f0502eb
 int color mtrl_textinput_focused_box_stroke_color 0x7f0502ec
 int color mtrl_textinput_hovered_box_stroke_color 0x7f0502ed
+int color nav_item_text_color 0x7f050307
 int color notification_action_color_filter 0x7f0502ee
 int color notification_icon_bg_color 0x7f0502ef
 int color primary_dark_material_dark 0x7f0502f0
@@ -3160,6 +3161,7 @@ int drawable mtrl_switch_thumb_unchecked_pressed 0x7f0700e9
 int drawable mtrl_switch_track 0x7f0700ea
 int drawable mtrl_switch_track_decoration 0x7f0700eb
 int drawable mtrl_tabs_default_indicator 0x7f0700ec
+int drawable mypage_divider 0x7f07011b
 int drawable mypage_icon 0x7f0700ed
 int drawable mypage_line1 0x7f0700ee
 int drawable mypage_rectangle 0x7f0700ef

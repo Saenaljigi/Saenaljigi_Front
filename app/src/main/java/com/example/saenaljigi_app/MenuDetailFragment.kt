@@ -55,6 +55,11 @@ class MenuDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 배경 클릭 시 프래그먼트 종료
+        binding.root.setOnClickListener {
+            parentFragmentManager.beginTransaction().remove(this@MenuDetailFragment).commit()
+        }
+
         // ViewPager 설정
         val viewPager = binding.viewPager
         viewPager.clipToPadding = false
@@ -63,7 +68,9 @@ class MenuDetailFragment : Fragment() {
 
         // 페이지 간 마진 및 스케일 조정
         viewPager.setPageTransformer { page, position ->
+            // 페이지 간의 간격
             val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.view_page_margin)
+            // 양옆 페이지가 보이는 크기
             val pageOffsetPx = resources.getDimensionPixelOffset(R.dimen.view_page_margin_next)
 
             // 페이지 간 마진 및 오프셋 설정
@@ -83,8 +90,14 @@ class MenuDetailFragment : Fragment() {
         }
 
         // 메뉴 리스트 설정
-        val menuList = listOf("아침", "점심", "저녁")
-        val adapter = MenuDetailAdapter(menuList, binding.viewPager, binding.applyBtn)
+        val menuLists = listOf(
+            listOf("밥", "밥", "밥"), // 조식 메뉴
+            listOf("국", "국", "국"), // 중식 메뉴
+            listOf("고기", "김치", "나물") // 석식 메뉴
+        )
+
+        // 어댑터 연결
+        val adapter = MenuDetailAdapter(menuLists, binding.viewPager, binding.applyBtn)
         viewPager.adapter = adapter
 
         // ViewPager에 페이지 변화 리스너 추가
@@ -96,7 +109,7 @@ class MenuDetailFragment : Fragment() {
         override fun onPageSelected(position: Int) {
             super.onPageSelected(position)
             if (position == 0) {
-                // 조식 페이지에서 신청하기 버튼을 보이게 함
+                // 조식 페이지에서만 신청하기 버튼을 보이게 함
                 binding.applyBtn.visibility = View.VISIBLE
             } else {
                 // 그 외 페이지에서는 신청하기 버튼 숨김

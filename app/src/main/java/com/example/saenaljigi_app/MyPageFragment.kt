@@ -41,6 +41,16 @@ class MyPageFragment : Fragment() {
             replaceFragment(MealTicketFragment())
         }
 
+        // FAQFragment로 교체
+        binding.menu3Box.setOnClickListener {
+            // replaceFragment(FAQFragment())
+        }
+
+        // SettingFragment로 교체
+        binding.menu4Box.setOnClickListener {
+            // replaceFragment(SettingFragment())
+        }
+
         return binding.root
     }
 
