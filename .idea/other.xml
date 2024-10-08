@@ -26,6 +26,7 @@
           <option name="screenY" value="2160" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -33,6 +34,8 @@
 <<<<<<< HEAD
 >>>>>>> 2ccd49384755767bfe849ce6d09e68b0076d14e8
 >>>>>>> 5d19a3eb16bc4cc015389c642c460a4ec938b712
+=======
+>>>>>>> Stashed changes
           <option name="api" value="34" />
           <option name="brand" value="Lenovo" />
           <option name="codename" value="TB370FU" />
@@ -44,6 +47,7 @@
           <option name="screenY" value="2944" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -52,6 +56,8 @@
 >>>>>>> upstream/main
 >>>>>>> 2ccd49384755767bfe849ce6d09e68b0076d14e8
 >>>>>>> 5d19a3eb16bc4cc015389c642c460a4ec938b712
+=======
+>>>>>>> Stashed changes
           <option name="api" value="31" />
           <option name="brand" value="samsung" />
           <option name="codename" value="a51" />

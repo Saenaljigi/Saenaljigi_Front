@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="2dp"/>
+    <solid android:color="#EEE"/> <!-- 검정색 구분선 -->
+</shape>

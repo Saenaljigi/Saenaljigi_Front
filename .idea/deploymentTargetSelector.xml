@@ -4,30 +4,30 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
         <DropdownSelection timestamp="2024-10-05T16:06:08.733254400Z">
+=======
+        <DropdownSelection timestamp="2024-10-07T16:32:50.857998200Z">
+>>>>>>> Stashed changes
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\USER\.android\avd\Pixel_8_API_34_2.avd" />
-=======
-<<<<<<< HEAD
-        <DropdownSelection timestamp="2024-09-26T02:12:43.239319600Z">
-          <Target type="DEFAULT_BOOT">
-            <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Hyerim\.android\avd\Medium_Phone_API_33.avd" />
->>>>>>> 2ccd49384755767bfe849ce6d09e68b0076d14e8
             </handle>
           </Target>
         </DropdownSelection>
         <DialogSelection />
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> upstream/main
 >>>>>>> 2ccd49384755767bfe849ce6d09e68b0076d14e8
 >>>>>>> 5d19a3eb16bc4cc015389c642c460a4ec938b712
+=======
+>>>>>>> Stashed changes
       </SelectionState>
     </selectionStates>
   </component>

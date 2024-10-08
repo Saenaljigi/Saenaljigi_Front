@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 
 class MenuDetailAdapter(
-    private val menuList: List<String>,
+    private val menuLists: List<List<String>>, // 각 페이지별 메뉴 리스트
     private val viewPager: ViewPager2, // ViewPager2를 어댑터에 전달
     private val applyBtn: Button
 ) : RecyclerView.Adapter<MenuDetailAdapter.MenuDetailViewHolder>() {
@@ -24,32 +24,21 @@ class MenuDetailAdapter(
     }
 
     override fun onBindViewHolder(holder: MenuDetailViewHolder, position: Int) {
-        holder.menuList.text = menuList[position]
+        // 메뉴 리스트를 한 줄씩 표시하도록 포멧
+        val menuText = menuLists[position].joinToString(separator = "\n")
+        holder.menuList.text = menuText
 
-        // 조식
-        if (position == 0) {
-            holder.menuType.text = "조식"
-            holder.prevBtn.visibility = View.GONE // prev_btn 숨김
-            holder.nextBtn.visibility = View.VISIBLE // next_btn 표시
-
-            applyBtn.visibility = View.VISIBLE // 조식에서는 신청하기 버튼 표시
+        // 메뉴 타입 설정
+        val menuTypeText = when (position) {
+            0 -> "조식"
+            1 -> "중식"
+            else -> "석식"
         }
-        // 중식
-        else if (position == 1) {
-            holder.menuType.text = "중식"
-            holder.prevBtn.visibility = View.VISIBLE // prev_btn 표시
-            holder.nextBtn.visibility = View.VISIBLE // next_btn 표시
+        holder.menuType.text = menuTypeText
 
-            applyBtn.visibility = View.GONE // 중식과 석식은 신청하기 버튼 X
-        }
-        // 석식
-        else if (position == 2) {
-            holder.menuType.text = "석식"
-            holder.prevBtn.visibility = View.VISIBLE // prev_btn 표시
-            holder.nextBtn.visibility = View.GONE // next_btn 숨김
-
-            applyBtn.visibility = View.GONE
-        }
+        // 버튼 가시성 설정 (조식 페이지: 뒤로 가기 버튼X, 석식 페이지: 앞으로 가기 버튼X)
+        holder.prevBtn.visibility = if (position == 0) View.GONE else View.VISIBLE
+        holder.nextBtn.visibility = if (position == itemCount - 1) View.GONE else View.VISIBLE
 
         // next_btn 클릭 시 다음 페이지로 이동
         holder.nextBtn.setOnClickListener {
@@ -66,7 +55,7 @@ class MenuDetailAdapter(
         }
     }
 
-    override fun getItemCount(): Int = menuList.size
+    override fun getItemCount(): Int = menuLists.size
 
     inner class MenuDetailViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val menuType: TextView = itemView.findViewById(R.id.tv_menu_type)
@@ -75,4 +64,3 @@ class MenuDetailAdapter(
         val nextBtn: ImageView = itemView.findViewById(R.id.next_btn)
     }
 }
-
