@@ -55,6 +55,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    //viewPager
+    // viewPager
     implementation("androidx.viewpager2:viewpager2:1.1.0")
+
+    // calendar
+    implementation("com.github.prolificinteractive:material-calendarview:2.0.1")
+    implementation("com.jakewharton.threetenabp:threetenabp:1.1.1")
 }

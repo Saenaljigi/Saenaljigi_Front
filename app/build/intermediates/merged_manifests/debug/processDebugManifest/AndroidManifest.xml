@@ -28,9 +28,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.Saenaljigi_App" >
         <activity
-            android:name="com.example.saenaljigi_app.NoticeBoardActivity"
-            android:exported="false" />
-        <activity
             android:name="com.example.saenaljigi_app.LoginActivity"
             android:exported="true" />
         <activity
@@ -46,6 +43,11 @@
             android:name="com.example.saenaljigi_app.InitActivity"
             android:exported="true" />
 
+        <provider
+            android:name="com.prolificinteractive.materialcalendarview.MaterialCalendarViewInitProvider"
+            android:authorities="com.example.saenaljigi_app.materialcalendarviewinitprovider"
+            android:enabled="true"
+            android:exported="false" />
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.saenaljigi_app.androidx-startup"

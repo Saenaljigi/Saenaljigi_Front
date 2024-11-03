@@ -39,6 +39,11 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.fragment_notice -> {
+                    NoticeBoardFragment().changeFragment()
+                    true
+                }
+
                 R.id.fragment_mypage -> {
                     MyPageFragment().changeFragment()
                     true
