@@ -1,5 +1,7 @@
 package com.example.saenaljigi_app
 
+import android.graphics.Color
+import android.service.autofill.Validators.or
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,10 +26,6 @@ class MenuDetailAdapter(
     }
 
     override fun onBindViewHolder(holder: MenuDetailViewHolder, position: Int) {
-        // 메뉴 리스트를 한 줄씩 표시하도록 포멧
-        val menuText = menuLists[position].joinToString(separator = "\n")
-        holder.menuList.text = menuText
-
         // 메뉴 타입 설정
         val menuTypeText = when (position) {
             0 -> "조식"
@@ -35,6 +33,26 @@ class MenuDetailAdapter(
             else -> "석식"
         }
         holder.menuType.text = menuTypeText
+
+        // 메뉴 리스트에서 최대 6개 메뉴 가져오기
+        val menuItems = menuLists[position]
+        val textViews = listOf(
+            holder.menu1, holder.menu2, holder.menu3,
+            holder.menu4, holder.menu5, holder.menu6
+        )
+
+        // 각 TextView에 메뉴 아이템을 할당하고, 메뉴가 없는 경우 비워두고 클릭 불가 처리
+        for (i in textViews.indices) {
+            textViews[i].text = if (i < menuItems.size) menuItems[i] else ""
+            textViews[i].isClickable = textViews[i].text.isNotEmpty() // 빈 텍스트뷰는 클릭 불가
+
+            // 클릭 리스너 설정
+            textViews[i].setOnClickListener {
+                if (textViews[i].text.isNotEmpty()) {
+                    textViews[i].setBackgroundColor(Color.parseColor("#FFF86C")) // 배경을 빨간색으로 설정
+                }
+            }
+        }
 
         // 버튼 가시성 설정 (조식 페이지: 뒤로 가기 버튼X, 석식 페이지: 앞으로 가기 버튼X)
         holder.prevBtn.visibility = if (position == 0) View.GONE else View.VISIBLE
@@ -55,11 +73,17 @@ class MenuDetailAdapter(
         }
     }
 
+
     override fun getItemCount(): Int = menuLists.size
 
     inner class MenuDetailViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val menuType: TextView = itemView.findViewById(R.id.tv_menu_type)
-        val menuList: TextView = itemView.findViewById(R.id.tv_menu_list)
+        val menu1: TextView = itemView.findViewById(R.id.tv_menu1)
+        val menu2: TextView = itemView.findViewById(R.id.tv_menu2)
+        val menu3: TextView = itemView.findViewById(R.id.tv_menu3)
+        val menu4: TextView = itemView.findViewById(R.id.tv_menu4)
+        val menu5: TextView = itemView.findViewById(R.id.tv_menu5)
+        val menu6: TextView = itemView.findViewById(R.id.tv_menu6)
         val prevBtn: ImageView = itemView.findViewById(R.id.prev_btn)
         val nextBtn: ImageView = itemView.findViewById(R.id.next_btn)
     }

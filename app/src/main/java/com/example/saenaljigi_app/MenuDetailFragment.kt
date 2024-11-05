@@ -57,7 +57,7 @@ class MenuDetailFragment : Fragment() {
 
         // 배경 클릭 시 프래그먼트 종료
         binding.root.setOnClickListener {
-            parentFragmentManager.beginTransaction().remove(this@MenuDetailFragment).commit()
+            parentFragmentManager.popBackStack()  // BackStack에서 현재 Fragment를 제거
         }
 
         // ViewPager 설정
@@ -83,7 +83,7 @@ class MenuDetailFragment : Fragment() {
             page.translationY = if (position != 0f) translationY.toFloat() else 0f
 
             // 중앙으로 올수록 투명도가 증가하며, 양옆으로 갈수록 투명도가 감소
-            val minAlpha = 0.1f // 양옆 페이지의 최소 투명도
+            val minAlpha = 0.2f // 양옆 페이지의 최소 투명도
             val alpha = Math.max(minAlpha, 1 - Math.abs(position)) // 중앙으로 갈수록 밝아짐
             page.alpha = alpha
 

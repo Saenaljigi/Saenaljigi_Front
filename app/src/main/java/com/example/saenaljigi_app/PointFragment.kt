@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EdgeEffect
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.saenaljigi_app.databinding.FragmentMealTicketBinding
 import com.example.saenaljigi_app.databinding.FragmentPointBinding
 
@@ -60,24 +62,19 @@ class PointFragment : Fragment() {
         // RecyclerView에 어댑터와 레이아웃 매니저 연결
         binding.rcvPoint.apply {
             adapter = myPageHistoryAdapter
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = LinearLayoutManager(context) // 레이아웃 매니저 설정
         }
 
-        val recyclerView = binding.rcvPoint
-        recyclerView.layoutManager = LinearLayoutManager(context)
-
         // 구분선 적용
-        val dividerItemDecoration = DividerItemDecoration(recyclerView.context, LinearLayoutManager.VERTICAL)
+        val dividerItemDecoration = DividerItemDecoration(binding.rcvPoint.context, LinearLayoutManager.VERTICAL)
         val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.mypage_divider)
         drawable?.let {
             dividerItemDecoration.setDrawable(it)
         }
-
-        recyclerView.addItemDecoration(dividerItemDecoration)
+        binding.rcvPoint.addItemDecoration(dividerItemDecoration)
 
         // back_btn 클릭 시 백스택으로 이동
         binding.backBtn.setOnClickListener {
-            // 백스택에서 이전 프래그먼트로 이동
             parentFragmentManager.popBackStack()
         }
 
