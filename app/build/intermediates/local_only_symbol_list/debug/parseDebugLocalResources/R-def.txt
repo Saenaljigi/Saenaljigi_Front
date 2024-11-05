@@ -77,6 +77,9 @@ drawable notice_board_back2
 drawable notice_board_background
 drawable notice_icon
 drawable notice_line
+drawable post_btn
+drawable post_line1
+drawable post_rectangle1
 drawable rectangle1
 drawable right_rounded_rectangle1
 drawable selector_home_icon
@@ -103,6 +106,7 @@ id bottom_navigation_view
 id breakfast_menu
 id breakfast_menu_title
 id btn_login
+id button
 id calendar_view
 id cl_box
 id cv_box
@@ -121,6 +125,10 @@ id fragment_mypage
 id fragment_notice
 id home_date
 id home_title
+id imageView
+id imageView2
+id imageView3
+id imageView4
 id img_board_top
 id img_box
 id img_clip
@@ -174,6 +182,9 @@ id rcv_point
 id root_layout
 id rv_notice_board
 id sv_notice_detail
+id textView
+id textView2
+id textView3
 id today_apply_btn
 id today_menu_box
 id today_menu_title
@@ -208,6 +219,7 @@ id tv_title2
 id tv_total
 id under_line
 id viewPager
+layout activity_create_post
 layout activity_init
 layout activity_login
 layout activity_main

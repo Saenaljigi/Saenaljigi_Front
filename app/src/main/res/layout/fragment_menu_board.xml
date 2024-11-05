@@ -11,7 +11,7 @@
         android:id="@+id/menu_title"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
-        android:fontFamily="@font/suit_semibold"
+        android:fontFamily="@font/suite_semibold"
         android:text="식단"
         android:textColor="#121212"
         android:textSize="23sp"
@@ -62,15 +62,15 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/menu_btn"
-        android:fontFamily="@font/suit_semibold"
+        android:fontFamily="@font/suite_semibold"
+        android:overScrollMode="never"
         android:text="오늘의 조식 신청하기"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calendar_view"
-        android:overScrollMode="never"/>
+        app:layout_constraintTop_toBottomOf="@id/calendar_view" />
 
     <ImageView
         android:id="@+id/menu_line"

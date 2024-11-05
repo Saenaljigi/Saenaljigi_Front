@@ -3236,6 +3236,9 @@ int drawable notification_template_icon_bg 0x7f080115
 int drawable notification_template_icon_low_bg 0x7f080116
 int drawable notification_tile_bg 0x7f080117
 int drawable notify_panel_notification_icon_bg 0x7f080118
+int drawable post_btn 0x7f080128
+int drawable post_line1 0x7f080129
+int drawable post_rectangle1 0x7f08012a
 int drawable rectangle1 0x7f080119
 int drawable right_rounded_rectangle1 0x7f08011a
 int drawable selector_home_icon 0x7f08011b
@@ -3365,6 +3368,7 @@ int id bounceStart 0x7f0a0067
 int id breakfast_menu 0x7f0a0068
 int id breakfast_menu_title 0x7f0a0069
 int id btn_login 0x7f0a006a
+int id button 0x7f0a028e
 int id buttonPanel 0x7f0a006b
 int id cache_measures 0x7f0a006c
 int id calendar_view 0x7f0a006d
@@ -3514,6 +3518,10 @@ int id ifRoom 0x7f0a00fc
 int id ignore 0x7f0a00fd
 int id ignoreRequest 0x7f0a00fe
 int id image 0x7f0a00ff
+int id imageView 0x7f0a0290
+int id imageView2 0x7f0a0291
+int id imageView3 0x7f0a0292
+int id imageView4 0x7f0a0293
 int id img_board_top 0x7f0a0100
 int id img_box 0x7f0a0101
 int id img_clip 0x7f0a0102
@@ -3821,6 +3829,9 @@ int id textSpacerNoButtons 0x7f0a022f
 int id textSpacerNoTitle 0x7f0a0230
 int id textStart 0x7f0a0231
 int id textTop 0x7f0a0232
+int id textView 0x7f0a0294
+int id textView2 0x7f0a0295
+int id textView3 0x7f0a0296
 int id textWatcher 0x7f0a0233
 int id text_input_end_icon 0x7f0a0234
 int id text_input_error_icon 0x7f0a0235
@@ -4027,6 +4038,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
+int layout activity_create_post 0x7f0d0083
 int layout activity_init 0x7f0d001c
 int layout activity_login 0x7f0d001d
 int layout activity_main 0x7f0d001e

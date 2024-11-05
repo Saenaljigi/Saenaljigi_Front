@@ -26,12 +26,12 @@
             android:id="@+id/meal_ticket_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="식권 사용 내역"
-            android:textSize="22sp"
-            android:textColor="#121212"
-            android:fontFamily="@font/suit_semibold"
-            android:layout_marginTop="28dp"
             android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/suite_semibold"
+            android:text="식권 사용 내역"
+            android:textColor="#121212"
+            android:textSize="22sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/back_btn" />
 
@@ -41,10 +41,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="25dp"
+            android:fontFamily="@font/suite_semibold"
             android:text="2024년 9월"
-            android:textSize="13sp"
             android:textColor="#808080"
-            android:fontFamily="@font/suit_semibold"
+            android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/meal_ticket_title" />
 

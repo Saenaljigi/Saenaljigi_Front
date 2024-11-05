@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostActivity"
+    android:fitsSystemWindows="true"
+    android:background="#F5F5F5">
+
+    <ImageView
+        android:id="@+id/post_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+    <TextView
+        android:id="@+id/post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/suite_semibold"
+        android:text="글 작성하기"
+        android:textColor="#121212"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/post_line2"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_title"
+        app:srcCompat="@drawable/menu_line" />
+
+    <ImageView
+        android:id="@+id/post_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_line2"
+        app:srcCompat="@drawable/post_rectangle1" />
+
+    <ImageView
+        android:id="@+id/post_line3"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="57dp"
+        app:layout_constraintEnd_toEndOf="@+id/post_box"
+        app:layout_constraintStart_toStartOf="@+id/post_box"
+        app:layout_constraintTop_toTopOf="@+id/post_box"
+        app:srcCompat="@drawable/post_line1" />
+
+    <EditText
+        android:id="@+id/tv_post_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/suite_medium"
+        android:hint="제목"
+        android:textColorHint="#B6B6B6"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/post_line3"
+        app:layout_constraintEnd_toEndOf="@+id/post_box"
+        app:layout_constraintStart_toStartOf="@+id/post_box"
+        app:layout_constraintTop_toTopOf="@+id/post_box"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/tv_post_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="14dp"
+        android:hint="내용"
+        android:gravity="top"
+        android:fontFamily="@font/suite_regular"
+        android:textColorHint="#B6B6B6"
+        android:textSize="14sp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/post_box"
+        app:layout_constraintEnd_toEndOf="@+id/post_box"
+        app:layout_constraintStart_toStartOf="@+id/post_box"
+        app:layout_constraintTop_toBottomOf="@+id/post_line3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/post_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="게시"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/suite_regular"
+        android:background="@drawable/post_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/post_box"
+        app:layout_constraintEnd_toEndOf="@+id/post_box"
+        app:layout_constraintStart_toStartOf="@+id/post_box" />
+</androidx.constraintlayout.widget.ConstraintLayout>

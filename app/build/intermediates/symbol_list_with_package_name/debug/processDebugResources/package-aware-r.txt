@@ -3237,6 +3237,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable post_btn
+drawable post_line1
+drawable post_rectangle1
 drawable rectangle1
 drawable right_rounded_rectangle1
 drawable selector_home_icon
@@ -3366,6 +3369,7 @@ id bounceStart
 id breakfast_menu
 id breakfast_menu_title
 id btn_login
+id button
 id buttonPanel
 id cache_measures
 id calendar_view
@@ -3515,6 +3519,10 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
+id imageView2
+id imageView3
+id imageView4
 id img_board_top
 id img_box
 id img_clip
@@ -3822,6 +3830,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
+id textView3
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -4028,6 +4039,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_create_post
 layout activity_init
 layout activity_login
 layout activity_main

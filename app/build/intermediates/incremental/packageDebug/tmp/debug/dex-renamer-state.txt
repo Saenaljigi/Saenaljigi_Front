@@ -1,4 +1,4 @@
-#Sun Nov 03 04:00:37 KST 2024
+#Tue Nov 05 10:42:12 KST 2024
 base.0=C\:\\Users\\USER\\Saenaljigi_Front\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\USER\\Saenaljigi_Front\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\USER\\Saenaljigi_Front\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
