@@ -19,4 +19,9 @@
         <item name="android:textSize">9sp</item> <!-- 텍스트 크기 증가 -->
         <item name="android:textColor">#D0D0D0</item>
     </style>
+
+    <style name="ThemeOverlay.Saenaljigi_App.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
 </resources>

@@ -1,6 +1,5 @@
-package com.example.saenaljigi_app
+package com.example.saenaljigi_app.login
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -9,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.fragment.app.Fragment
+import com.example.saenaljigi_app.notice.NoticeBoardFragment
+import com.example.saenaljigi_app.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -37,12 +39,18 @@ class LoginActivity : AppCompatActivity() {
         tvNo.setOnClickListener {
             updateClBoxVisible()
         }
-        //ㅈㅂㅈㅂㅈㅂㅈㅂ
-        // *****btnLogin 클릭 시 NoticeBoardActivity로 이동
+
+        /*// *****btnLogin 클릭 시 MainActivity로 이동
         btnLogin.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }*/
+
+        // *****btnLogin 클릭 시 NoticeBoardFragment로 이동
+        btnLogin.setOnClickListener {
+            replaceFragment(NoticeBoardFragment())
         }
+
 
         // etId 또는 etPassword 입력 시 배경 변경
         etId.setOnFocusChangeListener { _, hasFocus ->
@@ -96,5 +104,13 @@ class LoginActivity : AppCompatActivity() {
     // dp를 px로 변환하는 함수
     private fun convertDpToPx(dp: Int): Int {
         return (dp * resources.displayMetrics.density).toInt()
+    }
+
+    // Fragment 교체 함수
+    private fun replaceFragment(fragment: Fragment) {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container, fragment) // fragment_container는 Fragment를 추가할 컨테이너 ID입니다.
+        transaction.addToBackStack(null) // 뒤로 가기 스택에 추가
+        transaction.commit()
     }
 }

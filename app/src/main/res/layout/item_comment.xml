@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginEnd="58dp"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="58dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_comment">
+
+    <LinearLayout
+        android:id="@+id/linear_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="7dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="40dp"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_comment_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="종이2"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:fontFamily="@font/suit_regular" />
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/suit_light"
+            android:text="네"
+            android:textColor="@color/black12"
+            android:textSize="13sp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_comment_created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14:13"
+        android:textColor="@color/gray"
+        android:textSize="9sp"
+        android:fontFamily="@font/suit_regular"
+        app:layout_constraintTop_toBottomOf="@id/linear_comment"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

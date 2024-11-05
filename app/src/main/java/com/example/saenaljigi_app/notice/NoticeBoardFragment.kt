@@ -1,4 +1,4 @@
-package com.example.saenaljigi_app
+package com.example.saenaljigi_app.notice
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -28,13 +28,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Saenaljigi_App" >
         <activity
-            android:name="com.example.saenaljigi_app.NoticeBoardActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.saenaljigi_app.LoginActivity"
+            android:name="com.example.saenaljigi_app.MainActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.saenaljigi_app.MainActivity"
+            android:name="com.example.saenaljigi_app.InitActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.saenaljigi_app.InitActivity"
+            android:name="com.example.saenaljigi_app.LoginActivity"
             android:exported="true" />
 
         <provider

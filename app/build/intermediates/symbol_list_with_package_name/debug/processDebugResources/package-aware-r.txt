@@ -622,6 +622,8 @@ attr forceApplySystemWindowInsetTop
 attr forceDefaultNavigationOnClickListener
 attr foregroundInsidePadding
 attr framePosition
+attr fullscreenBackgroundColor
+attr fullscreenTextColor
 attr gapBetweenBars
 attr gestureInsetBottomIgnored
 attr goIcon
@@ -1407,6 +1409,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color black_overlay
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1469,6 +1472,10 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_blue_600
+color light_blue_900
+color light_blue_A200
+color light_blue_A400
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -3039,8 +3046,10 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable back_board
 drawable back_btn
 drawable back_icon
+drawable bar_board
 drawable baseline_add_home_24
 drawable box_background
 drawable btn_checkbox_checked_mtrl
@@ -3052,12 +3061,14 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable check_icon
+drawable comment_icon
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable down_arrow
+drawable fi_rs_clip
 drawable filled_home_icon
 drawable filled_menu_icon
 drawable filled_mypage_icon
@@ -3094,6 +3105,7 @@ drawable ic_notifications_black_24dp
 drawable ic_search_black_24
 drawable indeterminate_static
 drawable left_rounded_rectangle1
+drawable like_icon
 drawable login_black_id
 drawable login_box
 drawable login_btn
@@ -3172,6 +3184,7 @@ drawable next_btn
 drawable notice_back
 drawable notice_board_back1
 drawable notice_board_back2
+drawable notice_board_background
 drawable notice_icon
 drawable notice_line
 drawable notification_action_background
@@ -3457,6 +3470,7 @@ id ignoreRequest
 id image
 id img_board_top
 id img_box
+id img_clip
 id img_icon
 id img_line
 id img_underbar_no
@@ -3470,6 +3484,10 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id iv_back_board
+id iv_bar
+id iv_comment_icon
+id iv_like_icon
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3658,6 +3676,7 @@ id root_layout
 id rounded
 id row_index_key
 id rtl
+id rv_board
 id rv_notice_board
 id save_non_transition_alpha
 id save_overlay_view
@@ -3722,6 +3741,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id sv_notice_detail
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3779,15 +3799,22 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_attached_file
+id tv_board
 id tv_box
+id tv_comment_icon
 id tv_created_at
 id tv_date
 id tv_fail_login
 id tv_hello
+id tv_like_icon
 id tv_menu_list
 id tv_menu_type
 id tv_no
 id tv_notice
+id tv_notice_content
+id tv_notice_title
+id tv_notice_writer
 id tv_point
 id tv_student_id
 id tv_tile
@@ -3795,6 +3822,7 @@ id tv_title
 id tv_title1
 id tv_title2
 id tv_total
+id tv_writer
 id unchecked
 id under_line
 id uniform
@@ -3938,7 +3966,6 @@ layout abc_tooltip
 layout activity_init
 layout activity_login
 layout activity_main
-layout activity_notice_board
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3955,14 +3982,18 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment__board
 layout fragment_home
 layout fragment_meal_ticket
 layout fragment_menu_board
 layout fragment_menu_detail
 layout fragment_my_page
+layout fragment_notice_board
+layout fragment_notice_detail
 layout fragment_point
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_board
 layout item_menu_detail
 layout item_mypage_history
 layout item_notice_board
@@ -4079,6 +4110,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
 string dest_title
+string dummy_button
+string dummy_content
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -4953,6 +4986,7 @@ style ThemeOverlay_MaterialComponents_TimePicker_Display_TextInputEditText
 style ThemeOverlay_MaterialComponents_Toolbar_Popup_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
+style ThemeOverlay_Saenaljigi_App_FullscreenContainer
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
@@ -5337,6 +5371,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style Widget_Theme_Saenaljigi_App_ButtonBar_Fullscreen
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -5401,6 +5436,7 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
+styleable FullscreenAttrs fullscreenBackgroundColor fullscreenTextColor
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc blendSrc brightness contrast crossfade imagePanX imagePanY imageRotate imageZoom overlay round roundPercent saturation warmth
