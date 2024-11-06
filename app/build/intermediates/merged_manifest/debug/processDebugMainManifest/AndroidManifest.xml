@@ -13,7 +13,7 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.example.saenaljigi_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-<!-- android:theme="@style/Theme.Saenaljigi_App" -->
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,10 +28,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.Saenaljigi_App" >
         <activity
+            android:name="com.example.saenaljigi_app.CreatePostActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.saenaljigi_app.MainActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.saenaljigi_app.InitActivity"
+            android:name="com.example.saenaljigi_app.login.InitActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,9 +43,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.saenaljigi_app.LoginActivity"
+            android:name="com.example.saenaljigi_app.login.LoginActivity"
             android:exported="true" />
 
+        <provider
+            android:name="com.prolificinteractive.materialcalendarview.MaterialCalendarViewInitProvider"
+            android:authorities="com.example.saenaljigi_app.materialcalendarviewinitprovider"
+            android:enabled="true"
+            android:exported="false" />
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.saenaljigi_app.androidx-startup"
@@ -57,6 +65,10 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" />
 
         <uses-library
             android:name="androidx.window.extensions"

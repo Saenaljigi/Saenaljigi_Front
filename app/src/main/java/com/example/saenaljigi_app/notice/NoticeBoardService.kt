@@ -21,10 +21,4 @@ interface NoticeBoardService {
     ): Call<NoticeBoardData>
 
 
-    // 상세 페이지 조회 예시
-    @GET("notice/{seq}/{id}")
-    fun getNoticeDetail(
-        @Header("Authorization") token: String
-    ): Call<NoticeBoardData>
-
 }

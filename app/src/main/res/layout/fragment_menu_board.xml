@@ -1,16 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MenuBoardFragment"
     android:background="#F5F5F5">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/textview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:fontFamily="@font/suite_semibold"
+        android:text="식단"
+        android:textColor="#121212"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="-25dp"
+        android:background="@drawable/calendar_background"
+        app:layout_constraintBottom_toBottomOf="@id/calendar_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/calendar_view" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="30dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:theme="@style/CalenderViewCustom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_title"
+        app:mcv_dateTextAppearance="@style/CalenderViewDateCustomText"
+        app:mcv_firstDayOfWeek="sunday"
+        app:mcv_leftArrow="@drawable/icon__stroke_left"
+        app:mcv_rightArrow="@drawable/icon__stroke_right"
+        app:mcv_selectionMode="range"
+        app:mcv_showOtherDates="all"
+        app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+        app:mcv_tileHeight="65dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/today_apply_btn"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/menu_btn"
+        android:fontFamily="@font/suite_semibold"
+        android:overScrollMode="never"
+        android:text="오늘의 조식 신청하기"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar_view" />
+
+    <ImageView
+        android:id="@+id/menu_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/menu_line"
+        app:layout_constraintBottom_toBottomOf="@id/menu_title"
+        app:layout_constraintBottom_toTopOf="@id/calendar_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

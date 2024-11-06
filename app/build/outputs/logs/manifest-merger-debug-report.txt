@@ -1,13 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [androidx.databinding:databinding-adapters:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\7781f750bcbbc697a7f54a2d98082df6\transformed\databinding-adapters-8.5.1\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.databinding:databinding-ktx:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\d35ff2c27195e442299f7ff1c5eaa6de\transformed\databinding-ktx-8.5.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:databinding-ktx:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\5715d0a7a4b4a7797537c2de8da73366\transformed\jetified-databinding-ktx-8.5.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\222474af59afea8f2ef7d0d0913e07a2\transformed\databinding-runtime-8.5.1\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\69ddc0f9074c00f536e02de1d567d68f\transformed\viewbinding-8.5.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\2fbb1c2e2c03f2f2a676daedbc2986f2\transformed\jetified-viewbinding-8.5.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\5668c3e8de1f1a51c57dbb852f57f12c\transformed\navigation-common-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\21d470006c81d24d4b7821f675604065\transformed\navigation-common-ktx-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\84786c76e80169b1a9f120ce782331a0\transformed\navigation-runtime-2.6.0\AndroidManifest.xml:17:1-22:12
@@ -18,18 +18,23 @@ MERGED from [androidx.navigation:navigation-ui-ktx:2.6.0] C:\Users\Hyerim\.gradl
 MERGED from [androidx.navigation:navigation-ui:2.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\fca8d5083c4ef42434298f99b55ad904\transformed\navigation-ui-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ee07bca0b0f40d7edd69f0327cdb153c\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Hyerim\.gradle\caches\transforms-4\5df588879c8192fd655d9ade91484448\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\c005a445fb4e7c9b7b371a4997f161af\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:2:1-19:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\77a413fc91247a69bf5d63b52cb749cf\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\3cd5ba3d93555012dd0cf3f96faf576d\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\4bee129be10e087f92c0a9f31aba2913\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\c509281d4df22873d09675ae578002e5\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\191ac94e2199697f7dccfe5c5e03d1e9\transformed\recyclerview-1.3.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d5ba690b92017d39971d231d84df19aa\transformed\viewpager2-1.1.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.fragment:fragment-ktx:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0956b2d3b76b4a3707914ca633f50ca2\transformed\fragment-ktx-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\990d9bad26bcab0369ac3e4e52ec7785\transformed\jetified-viewpager2-1.1.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:2:1-15:12
+MERGED from [com.github.bumptech.glide:glide:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\945761cf0b17d78d70625d2eb9aefff2\transformed\jetified-glide-4.14.2\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\bd2131929f403382b08568dd2b321d0a\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment-ktx:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ac33696c59fc5a45ab2a0bbe47615fde\transformed\jetified-fragment-ktx-1.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\23700b43a11a411b98881a22f2506c10\transformed\fragment-1.6.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\38efd87fd30cf6e40c75fe820b5a6e6e\transformed\activity-ktx-1.9.2\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.activity:activity:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\8ea72d70f93386884317d27c53e8eeef\transformed\activity-1.9.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\e173997589381938e4794a7d9c917aa0\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\39bfd53e037ad796a39f2bc89ad5a093\transformed\core-ktx-1.13.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\99a1b7523cec5e29bf97404e5b6fca4f\transformed\jetified-activity-ktx-1.9.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\98a93e744ec7ef826ea988bd7d331fd9\transformed\jetified-activity-1.9.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\16c8323be3e7775f4d7ebcef8ec57cda\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\04df5b60a75bc7a85ee59a9b1102d6d1\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\9637f3d783bc763e1b8eb06f8c258c3e\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\1276752eab1614a0733219f5dd25f0b1\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\1067db4771c7e14f17780efcfa2fe0c3\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7fc6182c72d6b75e4872acbe6ac67e67\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -41,34 +46,40 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Hyerim\.g
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\f297c4cd4b45b1166da3dc22373ba977\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\5c4b5aa320de108bfc93c3612ee4dac4\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\10135f692eb6180c4706f9177a6789bf\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\1ed7e2c5de9386c552831aa17c386f07\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d2aa98f96ee00bb53d5e9658bbe4c24c\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d413d064b83425b13d84037437cde883\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\edc2c0df904db2d8125bb96fd719b357\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f3f0969c3a849bb9d85947f35dea4515\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\cd258ee2cf8acc89d4e3be40ba1b0d1a\transformed\jetified-savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\833b1a6dc28d6003b8f9c978f047a1a3\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\48373984951fef33c4507fd0e6b8c8b6\transformed\lifecycle-viewmodel-2.8.5\AndroidManifest.xml:2:1-5:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\f4f1ecf592cb3d4907afce835768e49b\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\c9b6d5cfe053fff6a898a346187a00b3\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\ab0859448931ae08cfd867087bcb8127\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\257b39ec0e7ae7848906ee677f0e9ae5\transformed\jetified-lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\5ef1bc39900b346d5214714c257928d0\transformed\jetified-lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\9f618e4b8365ca763745574c00e0a1b8\transformed\jetified-lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\337eded524f9c427c6298c9e2f81f8fb\transformed\lifecycle-livedata-core-2.8.5\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\79cc2525afbeb824b8d56fe3e2c320fa\transformed\lifecycle-livedata-core-ktx-2.8.5\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\7671668369f2275b2a8a775c641be3e3\transformed\lifecycle-viewmodel-savedstate-2.8.5\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-service:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\a04f289ce54dfbb8c385847aba979a99\transformed\lifecycle-service-2.8.5\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\5b4cf091f25161c0230b2aaa7092c928\transformed\jetified-lifecycle-livedata-core-ktx-2.8.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\076ec5438ebfb066e6b39fd49fbca3e2\transformed\jetified-lifecycle-viewmodel-savedstate-2.8.5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\29e688be3153fb993ec3fc97cba17be7\transformed\jetified-lifecycle-service-2.8.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\3bcbe5c71147a46a85af18fc11846750\transformed\lifecycle-livedata-2.8.5\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\b3c0575b877e2fc0cb04153f4474a8fa\transformed\lifecycle-livedata-ktx-2.8.5\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\564eae12b2cb16f3a74251792490f2c5\transformed\lifecycle-viewmodel-ktx-2.8.5\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Hyerim\.gradle\caches\transforms-4\37eb30c257a0a4c63015dba8b92d8607\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\08ef7f2debcf5d4e5b0d11de6348dbaf\transformed\jetified-lifecycle-livedata-ktx-2.8.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\0a90b1fbd7e429cab2465f1cce16dd64\transformed\jetified-lifecycle-viewmodel-ktx-2.8.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Hyerim\.gradle\caches\transforms-4\351caa2b8f066cfc7e2c046a9c63fbbe\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\9b74e1f4f82e81149bcd026cd7ec2429\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\2da5499572f41618ab22e9d781025e3e\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f83361180159a17d9a83c624c84db293\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\af8a37884fbf76d7f853ac6ccb4adb50\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\49fb6e1b47de54c55fc1384965bdc904\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\f58850daa07cfdc896b782a0934edeea\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\efe91cfd81da86308639412e4571eb69\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ec0cc99680c7b887b3d68763c1ee18b4\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Hyerim\.gradle\caches\transforms-4\70b9843787a30d3b1a0548f038055e94\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\92f4b10e1141171169ce34af0c12981a\transformed\jetified-gifdecoder-4.14.2\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Hyerim\.gradle\caches\transforms-4\4c5cad3c88c5bd2ba650568d4c6a6d25\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\4ffec4ea077009e0cd1e8b55cf12362c\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\04b642074ee9b69a3a100853d997d4dd\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\644ffd50e74efe50970e11a69fcd76d9\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\9c9805986644f63f719e9ead6fed7853\transformed\jetified-threetenabp-1.1.1\AndroidManifest.xml:2:1-9:12
 	package
 		INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -80,88 +91,104 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Hyerim\.gradle\caches\transfor
 	xmlns:android
 		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:8:5-34:19
-INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:8:5-34:19
+ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:5:5-33:19
+INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ee07bca0b0f40d7edd69f0327cdb153c\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ee07bca0b0f40d7edd69f0327cdb153c\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Hyerim\.gradle\caches\transforms-4\5df588879c8192fd655d9ade91484448\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Hyerim\.gradle\caches\transforms-4\5df588879c8192fd655d9ade91484448\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:24:5-31:19
+MERGED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:11:5-17:19
+MERGED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:11:5-17:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:9:5-13:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:9:5-13:19
+MERGED from [com.github.bumptech.glide:glide:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\945761cf0b17d78d70625d2eb9aefff2\transformed\jetified-glide-4.14.2\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\945761cf0b17d78d70625d2eb9aefff2\transformed\jetified-glide-4.14.2\AndroidManifest.xml:9:5-20
+MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f83361180159a17d9a83c624c84db293\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f83361180159a17d9a83c624c84db293\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\49fb6e1b47de54c55fc1384965bdc904\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\49fb6e1b47de54c55fc1384965bdc904\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\efe91cfd81da86308639412e4571eb69\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\efe91cfd81da86308639412e4571eb69\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\92f4b10e1141171169ce34af0c12981a\transformed\jetified-gifdecoder-4.14.2\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\92f4b10e1141171169ce34af0c12981a\transformed\jetified-gifdecoder-4.14.2\AndroidManifest.xml:9:5-20
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\9c9805986644f63f719e9ead6fed7853\transformed\jetified-threetenabp-1.1.1\AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\9c9805986644f63f719e9ead6fed7853\transformed\jetified-threetenabp-1.1.1\AndroidManifest.xml:7:5-20
 	android:extractNativeLibs
 		INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:10:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:8:9-54
 	android:roundIcon
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:15:9-54
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:11:9-54
 	tools:targetApi
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:17:9-29
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:14:9-29
 	android:icon
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:9:9-52
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:13:9-52
 	android:dataExtractionRules
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:11:9-65
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:7:9-65
+activity#com.example.saenaljigi_app.CreatePostActivity
+ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:17:13-47
 activity#com.example.saenaljigi_app.MainActivity
 ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:19:9-21:39
 	android:exported
 		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:21:13-36
 	android:name
 		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:20:13-41
-activity#com.example.saenaljigi_app.InitActivity
-ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:22:9-30:20
+activity#com.example.saenaljigi_app.login.InitActivity
+ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:22:9-29:20
 	android:exported
 		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:23:13-41
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:23:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:25:13-28:29
 action#android.intent.action.MAIN
 ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
 		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:28:27-74
-activity#com.example.saenaljigi_app.LoginActivity
-ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:31:9-33:38
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:27:27-74
+activity#com.example.saenaljigi_app.login.LoginActivity
+ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:30:9-32:39
 	android:exported
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:33:13-36
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:32:13-42
+		ADDED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml:31:13-48
 uses-sdk
 INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\7781f750bcbbc697a7f54a2d98082df6\transformed\databinding-adapters-8.5.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:databinding-adapters:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\7781f750bcbbc697a7f54a2d98082df6\transformed\databinding-adapters-8.5.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.databinding:databinding-ktx:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\d35ff2c27195e442299f7ff1c5eaa6de\transformed\databinding-ktx-8.5.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.databinding:databinding-ktx:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\d35ff2c27195e442299f7ff1c5eaa6de\transformed\databinding-ktx-8.5.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-ktx:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\5715d0a7a4b4a7797537c2de8da73366\transformed\jetified-databinding-ktx-8.5.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-ktx:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\5715d0a7a4b4a7797537c2de8da73366\transformed\jetified-databinding-ktx-8.5.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:databinding-runtime:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\222474af59afea8f2ef7d0d0913e07a2\transformed\databinding-runtime-8.5.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:databinding-runtime:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\222474af59afea8f2ef7d0d0913e07a2\transformed\databinding-runtime-8.5.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\69ddc0f9074c00f536e02de1d567d68f\transformed\viewbinding-8.5.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\69ddc0f9074c00f536e02de1d567d68f\transformed\viewbinding-8.5.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\2fbb1c2e2c03f2f2a676daedbc2986f2\transformed\jetified-viewbinding-8.5.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.5.1] C:\Users\Hyerim\.gradle\caches\transforms-4\2fbb1c2e2c03f2f2a676daedbc2986f2\transformed\jetified-viewbinding-8.5.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-common:2.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\5668c3e8de1f1a51c57dbb852f57f12c\transformed\navigation-common-2.6.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\5668c3e8de1f1a51c57dbb852f57f12c\transformed\navigation-common-2.6.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common-ktx:2.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\21d470006c81d24d4b7821f675604065\transformed\navigation-common-ktx-2.6.0\AndroidManifest.xml:20:5-44
@@ -182,30 +209,40 @@ MERGED from [com.google.android.material:material:1.12.0] C:\Users\Hyerim\.gradl
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ee07bca0b0f40d7edd69f0327cdb153c\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Hyerim\.gradle\caches\transforms-4\5df588879c8192fd655d9ade91484448\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Hyerim\.gradle\caches\transforms-4\5df588879c8192fd655d9ade91484448\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\c005a445fb4e7c9b7b371a4997f161af\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\c005a445fb4e7c9b7b371a4997f161af\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\77a413fc91247a69bf5d63b52cb749cf\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\77a413fc91247a69bf5d63b52cb749cf\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\3cd5ba3d93555012dd0cf3f96faf576d\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Hyerim\.gradle\caches\transforms-4\3cd5ba3d93555012dd0cf3f96faf576d\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\4bee129be10e087f92c0a9f31aba2913\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\4bee129be10e087f92c0a9f31aba2913\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\c509281d4df22873d09675ae578002e5\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\c509281d4df22873d09675ae578002e5\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\191ac94e2199697f7dccfe5c5e03d1e9\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\191ac94e2199697f7dccfe5c5e03d1e9\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d5ba690b92017d39971d231d84df19aa\transformed\viewpager2-1.1.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d5ba690b92017d39971d231d84df19aa\transformed\viewpager2-1.1.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.fragment:fragment-ktx:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0956b2d3b76b4a3707914ca633f50ca2\transformed\fragment-ktx-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment-ktx:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0956b2d3b76b4a3707914ca633f50ca2\transformed\fragment-ktx-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\990d9bad26bcab0369ac3e4e52ec7785\transformed\jetified-viewpager2-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\990d9bad26bcab0369ac3e4e52ec7785\transformed\jetified-viewpager2-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\945761cf0b17d78d70625d2eb9aefff2\transformed\jetified-glide-4.14.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\945761cf0b17d78d70625d2eb9aefff2\transformed\jetified-glide-4.14.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\bd2131929f403382b08568dd2b321d0a\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\bd2131929f403382b08568dd2b321d0a\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ac33696c59fc5a45ab2a0bbe47615fde\transformed\jetified-fragment-ktx-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ac33696c59fc5a45ab2a0bbe47615fde\transformed\jetified-fragment-ktx-1.6.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\23700b43a11a411b98881a22f2506c10\transformed\fragment-1.6.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.6.0] C:\Users\Hyerim\.gradle\caches\transforms-4\23700b43a11a411b98881a22f2506c10\transformed\fragment-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\38efd87fd30cf6e40c75fe820b5a6e6e\transformed\activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\38efd87fd30cf6e40c75fe820b5a6e6e\transformed\activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\8ea72d70f93386884317d27c53e8eeef\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\8ea72d70f93386884317d27c53e8eeef\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\e173997589381938e4794a7d9c917aa0\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\e173997589381938e4794a7d9c917aa0\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\39bfd53e037ad796a39f2bc89ad5a093\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\39bfd53e037ad796a39f2bc89ad5a093\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\99a1b7523cec5e29bf97404e5b6fca4f\transformed\jetified-activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\99a1b7523cec5e29bf97404e5b6fca4f\transformed\jetified-activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\98a93e744ec7ef826ea988bd7d331fd9\transformed\jetified-activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\Hyerim\.gradle\caches\transforms-4\98a93e744ec7ef826ea988bd7d331fd9\transformed\jetified-activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\16c8323be3e7775f4d7ebcef8ec57cda\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\16c8323be3e7775f4d7ebcef8ec57cda\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\04df5b60a75bc7a85ee59a9b1102d6d1\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\04df5b60a75bc7a85ee59a9b1102d6d1\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\9637f3d783bc763e1b8eb06f8c258c3e\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\9637f3d783bc763e1b8eb06f8c258c3e\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\1276752eab1614a0733219f5dd25f0b1\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\1276752eab1614a0733219f5dd25f0b1\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\1067db4771c7e14f17780efcfa2fe0c3\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -228,100 +265,128 @@ MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Hyerim\.gradle\caches\
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\5c4b5aa320de108bfc93c3612ee4dac4\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\10135f692eb6180c4706f9177a6789bf\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Hyerim\.gradle\caches\transforms-4\10135f692eb6180c4706f9177a6789bf\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\1ed7e2c5de9386c552831aa17c386f07\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\1ed7e2c5de9386c552831aa17c386f07\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d2aa98f96ee00bb53d5e9658bbe4c24c\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d2aa98f96ee00bb53d5e9658bbe4c24c\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d413d064b83425b13d84037437cde883\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\d413d064b83425b13d84037437cde883\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\edc2c0df904db2d8125bb96fd719b357\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\edc2c0df904db2d8125bb96fd719b357\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f3f0969c3a849bb9d85947f35dea4515\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f3f0969c3a849bb9d85947f35dea4515\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\cd258ee2cf8acc89d4e3be40ba1b0d1a\transformed\jetified-savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\cd258ee2cf8acc89d4e3be40ba1b0d1a\transformed\jetified-savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\833b1a6dc28d6003b8f9c978f047a1a3\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Hyerim\.gradle\caches\transforms-4\833b1a6dc28d6003b8f9c978f047a1a3\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\48373984951fef33c4507fd0e6b8c8b6\transformed\lifecycle-viewmodel-2.8.5\AndroidManifest.xml:4:5-43
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\48373984951fef33c4507fd0e6b8c8b6\transformed\lifecycle-viewmodel-2.8.5\AndroidManifest.xml:4:5-43
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\f4f1ecf592cb3d4907afce835768e49b\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\f4f1ecf592cb3d4907afce835768e49b\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\c9b6d5cfe053fff6a898a346187a00b3\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\c9b6d5cfe053fff6a898a346187a00b3\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\ab0859448931ae08cfd867087bcb8127\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\ab0859448931ae08cfd867087bcb8127\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\257b39ec0e7ae7848906ee677f0e9ae5\transformed\jetified-lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\257b39ec0e7ae7848906ee677f0e9ae5\transformed\jetified-lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\5ef1bc39900b346d5214714c257928d0\transformed\jetified-lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\5ef1bc39900b346d5214714c257928d0\transformed\jetified-lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\9f618e4b8365ca763745574c00e0a1b8\transformed\jetified-lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\9f618e4b8365ca763745574c00e0a1b8\transformed\jetified-lifecycle-runtime-release\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\337eded524f9c427c6298c9e2f81f8fb\transformed\lifecycle-livedata-core-2.8.5\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\337eded524f9c427c6298c9e2f81f8fb\transformed\lifecycle-livedata-core-2.8.5\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\79cc2525afbeb824b8d56fe3e2c320fa\transformed\lifecycle-livedata-core-ktx-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\79cc2525afbeb824b8d56fe3e2c320fa\transformed\lifecycle-livedata-core-ktx-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\7671668369f2275b2a8a775c641be3e3\transformed\lifecycle-viewmodel-savedstate-2.8.5\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\7671668369f2275b2a8a775c641be3e3\transformed\lifecycle-viewmodel-savedstate-2.8.5\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-service:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\a04f289ce54dfbb8c385847aba979a99\transformed\lifecycle-service-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-service:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\a04f289ce54dfbb8c385847aba979a99\transformed\lifecycle-service-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\5b4cf091f25161c0230b2aaa7092c928\transformed\jetified-lifecycle-livedata-core-ktx-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\5b4cf091f25161c0230b2aaa7092c928\transformed\jetified-lifecycle-livedata-core-ktx-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\076ec5438ebfb066e6b39fd49fbca3e2\transformed\jetified-lifecycle-viewmodel-savedstate-2.8.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\076ec5438ebfb066e6b39fd49fbca3e2\transformed\jetified-lifecycle-viewmodel-savedstate-2.8.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\29e688be3153fb993ec3fc97cba17be7\transformed\jetified-lifecycle-service-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\29e688be3153fb993ec3fc97cba17be7\transformed\jetified-lifecycle-service-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\3bcbe5c71147a46a85af18fc11846750\transformed\lifecycle-livedata-2.8.5\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\3bcbe5c71147a46a85af18fc11846750\transformed\lifecycle-livedata-2.8.5\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\b3c0575b877e2fc0cb04153f4474a8fa\transformed\lifecycle-livedata-ktx-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\b3c0575b877e2fc0cb04153f4474a8fa\transformed\lifecycle-livedata-ktx-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\564eae12b2cb16f3a74251792490f2c5\transformed\lifecycle-viewmodel-ktx-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\564eae12b2cb16f3a74251792490f2c5\transformed\lifecycle-viewmodel-ktx-2.8.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Hyerim\.gradle\caches\transforms-4\37eb30c257a0a4c63015dba8b92d8607\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Hyerim\.gradle\caches\transforms-4\37eb30c257a0a4c63015dba8b92d8607\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\08ef7f2debcf5d4e5b0d11de6348dbaf\transformed\jetified-lifecycle-livedata-ktx-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\08ef7f2debcf5d4e5b0d11de6348dbaf\transformed\jetified-lifecycle-livedata-ktx-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\0a90b1fbd7e429cab2465f1cce16dd64\transformed\jetified-lifecycle-viewmodel-ktx-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\0a90b1fbd7e429cab2465f1cce16dd64\transformed\jetified-lifecycle-viewmodel-ktx-2.8.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Hyerim\.gradle\caches\transforms-4\351caa2b8f066cfc7e2c046a9c63fbbe\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Hyerim\.gradle\caches\transforms-4\351caa2b8f066cfc7e2c046a9c63fbbe\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\9b74e1f4f82e81149bcd026cd7ec2429\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\9b74e1f4f82e81149bcd026cd7ec2429\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\2da5499572f41618ab22e9d781025e3e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\2da5499572f41618ab22e9d781025e3e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f83361180159a17d9a83c624c84db293\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f83361180159a17d9a83c624c84db293\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\af8a37884fbf76d7f853ac6ccb4adb50\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\af8a37884fbf76d7f853ac6ccb4adb50\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\49fb6e1b47de54c55fc1384965bdc904\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\49fb6e1b47de54c55fc1384965bdc904\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\f58850daa07cfdc896b782a0934edeea\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\f58850daa07cfdc896b782a0934edeea\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\efe91cfd81da86308639412e4571eb69\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\efe91cfd81da86308639412e4571eb69\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ec0cc99680c7b887b3d68763c1ee18b4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\ec0cc99680c7b887b3d68763c1ee18b4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Hyerim\.gradle\caches\transforms-4\70b9843787a30d3b1a0548f038055e94\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Hyerim\.gradle\caches\transforms-4\70b9843787a30d3b1a0548f038055e94\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\92f4b10e1141171169ce34af0c12981a\transformed\jetified-gifdecoder-4.14.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\92f4b10e1141171169ce34af0c12981a\transformed\jetified-gifdecoder-4.14.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Hyerim\.gradle\caches\transforms-4\4c5cad3c88c5bd2ba650568d4c6a6d25\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\Hyerim\.gradle\caches\transforms-4\4c5cad3c88c5bd2ba650568d4c6a6d25\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\4ffec4ea077009e0cd1e8b55cf12362c\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\4ffec4ea077009e0cd1e8b55cf12362c\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\04b642074ee9b69a3a100853d997d4dd\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\04b642074ee9b69a3a100853d997d4dd\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\644ffd50e74efe50970e11a69fcd76d9\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\644ffd50e74efe50970e11a69fcd76d9\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\9c9805986644f63f719e9ead6fed7853\transformed\jetified-threetenabp-1.1.1\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\9c9805986644f63f719e9ead6fed7853\transformed\jetified-threetenabp-1.1.1\AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
 		INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\Hyerim\AndroidStudioProjects\Saenaljigi_App\app\src\main\AndroidManifest.xml
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f83361180159a17d9a83c624c84db293\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\f83361180159a17d9a83c624c84db293\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+provider#com.prolificinteractive.materialcalendarview.MaterialCalendarViewInitProvider
+ADDED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:12:9-16:40
+	android:enabled
+		ADDED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:15:13-35
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+		ADDED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:14:13-84
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+		ADDED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:16:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+		ADDED from [com.github.prolificinteractive:material-calendarview:2.0.1] C:\Users\Hyerim\.gradle\caches\transforms-4\a51272d3f747caa560eb27502f041812\transformed\jetified-material-calendarview-2.0.1\AndroidManifest.xml:13:13-105
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\49fb6e1b47de54c55fc1384965bdc904\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Hyerim\.gradle\caches\transforms-4\49fb6e1b47de54c55fc1384965bdc904\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\0e87c44a741e44a4f3bf90022dff4d7a\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Hyerim\.gradle\caches\transforms-4\7af1a7a926150fb7209c6181bfbd4a59\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
+ADDED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:10:9-12:43
+	android:value
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:12:13-40
+	android:name
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.14.2] C:\Users\Hyerim\.gradle\caches\transforms-4\a6193631d4be186cbff87147cf06e716\transformed\jetified-okhttp3-integration-4.14.2\AndroidManifest.xml:11:13-84
 uses-library#androidx.window.extensions
-ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
 uses-library#androidx.window.sidecar
-ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\39feb43c6b239a9c504b529c92921e0d\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Hyerim\.gradle\caches\transforms-4\df13ffdbb704af31667d79a800399414\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
@@ -343,50 +408,50 @@ ADDED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\Hyerim\.gradle\caches\transforms-4\b6a13957af6a07e338f89b118649bad1\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\8c6f6c24d0ec7e934d1413ab5d5bee12\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:30:17-78
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\Hyerim\.gradle\caches\transforms-4\4881f1d0f9a1345cd52aeafd169b4ad4\transformed\jetified-lifecycle-process-2.8.5\AndroidManifest.xml:30:17-78
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
 receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
 	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
 	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
 	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\22f748df43fec8ddcfd9dfcee2debf61\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Hyerim\.gradle\caches\transforms-4\36af5b63f7650946178f88c2a1dceb05\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92

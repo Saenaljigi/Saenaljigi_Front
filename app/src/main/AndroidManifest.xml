@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 인터넷 권한 (파일 다운로드 시 필요) -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    <!--android:theme="@style/Theme.Saenaljigi_App"
-    -->
+    <!-- 외부 저장소 읽기 및 쓰기 권한 (파일 접근 시 필요) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
-        android:theme="@style/Theme.Saenaljigi_App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,23 +17,36 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Saenaljigi_App"
+        tools:targetApi="31"
+        android:requestLegacyExternalStorage="true"> <!-- Android 10 이하에서 외부 저장소 접근 허용 -->
 
+        <!-- 활동(Activity) 목록 정의 -->
+
+        <!-- 게시물 작성 화면 Activity -->
+        <activity
+            android:name=".CreatePostActivity"
+            android:exported="false" />
+
+        <!-- 메인 화면 Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <!-- 초기화 화면 Activity, 앱의 런처(시작) 화면 -->
         <activity
             android:name=".login.InitActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 로그인 화면 Activity -->
         <activity
             android:name=".login.LoginActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>

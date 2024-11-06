@@ -1,66 +1,78 @@
 [
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_meal_ticket.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_meal_ticket.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/activity_init.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/activity_init.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/item_mypage_history.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/item_mypage_history.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_board_detail.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_board_detail.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_home.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_home.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/activity_create_post.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/activity_create_post.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_notice_detail.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_notice_detail.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/item_mypage_history.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/item_mypage_history.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/activity_main.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/activity_main.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/item_board.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/item_board.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_point.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_point.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment__board.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment__board.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment__board.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment__board.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_point.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_point.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/activity_init.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/activity_init.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/item_comment.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/item_comment.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/activity_login.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/activity_login.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/item_notice_board.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/item_notice_board.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_menu_board.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_menu_board.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_menu_detail.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_menu_detail.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/item_menu_detail.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/item_menu_detail.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/activity_login.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/item_board.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/item_board.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_notice_detail.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_notice_detail.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_my_page.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_my_page.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/activity_main.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_menu_detail.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_menu_detail.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_notice_board.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_notice_board.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/fragment_notice_board.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/fragment_notice_board.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_home.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.example.saenaljigi_app-mergeDebugResources-51:/layout/item_notice_board.xml",
-        "source": "com.example.saenaljigi_app-main-54:/layout/item_notice_board.xml"
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_menu_board.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_menu_board.xml"
+    },
+    {
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_meal_ticket.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_meal_ticket.xml"
+    },
+    {
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/fragment_my_page.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/fragment_my_page.xml"
+    },
+    {
+        "merged": "com.example.saenaljigi_app-mergeDebugResources-54:/layout/item_menu_detail.xml",
+        "source": "com.example.saenaljigi_app-main-57:/layout/item_menu_detail.xml"
     }
 ]

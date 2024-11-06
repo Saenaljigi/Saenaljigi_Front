@@ -30,14 +30,14 @@
             android:text="종이2"
             android:textStyle="bold"
             android:textSize="13sp"
-            android:fontFamily="@font/suit_regular" />
+            />
 
         <TextView
             android:id="@+id/tv_comment_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:fontFamily="@font/suit_light"
+            android:fontFamily="@font/suite_light"
             android:text="네"
             android:textColor="@color/black12"
             android:textSize="13sp"
@@ -49,9 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="14:13"
-        android:textColor="@color/gray"
+        android:textColor="@color/gray7"
         android:textSize="9sp"
-        android:fontFamily="@font/suit_regular"
         app:layout_constraintTop_toBottomOf="@id/linear_comment"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="48dp"

@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="custom_months">
+        <item>1월</item>
+        <item>2월</item>
+        <item>3월</item>
+        <item>4월</item>
+        <item>5월</item>
+        <item>6월</item>
+        <item>7월</item>
+        <item>8월</item>
+        <item>9월</item>
+        <item>10월</item>
+        <item>11월</item>
+        <item>12월</item>
+    </string-array>
+    <string-array name="custom_weekdays">
+        <item>월</item>
+        <item>화</item>
+        <item>수</item>
+        <item>목</item>
+        <item>금</item>
+        <item>토</item>
+        <item>일</item>
+    </string-array>
     <color name="black">#FF000000</color>
+    <color name="black12">#121212</color>
     <color name="black_overlay">#66000000</color>
+    <color name="gray">#62626266</color>
+    <color name="gray7">#777777</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="red_sun">#FF7474</color>
+    <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -27,7 +55,7 @@
     <style name="Base.Theme.Saenaljigi_App" parent="Theme.Material3.DayNight.NoActionBar">
         
         <item name="android:windowTranslucentNavigation">false</item>
-        <item name="android:fontFamily">@font/suit_regular</item>
+        <item name="android:fontFamily">@font/suite_regular</item>
     </style>
     <style name="BtmNavSelectedTextStyle" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">9sp</item> 
@@ -36,6 +64,29 @@
     <style name="BtmNavUnselectedTextStyle" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">9sp</item> 
         <item name="android:textColor">#D0D0D0</item>
+    </style>
+    <style name="CalendarWidgetHeader">
+        <item name="android:fontFamily">@font/suit_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#575757</item>
+    </style>
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@android:color/holo_red_light</item>
+        <item name="colorPrimary">@android:color/holo_blue_light</item>
+        <item name="android:fontFamily">@font/suit_semibold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">#121212</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/suit_semibold</item>
+        <item name="android:weekNumberColor">@android:color/holo_red_light</item>
+    </style>
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/suit_semibold</item>
+        <item name="android:textColor">#6F6F6F</item>
+        <item name="android:weekNumberColor">@android:color/holo_red_light</item>
     </style>
     <style name="Theme.LightStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
         
@@ -47,10 +98,6 @@
 
     </style>
     <style name="Theme.Saenaljigi_App" parent="Base.Theme.Saenaljigi_App"/>
-    <style name="ThemeOverlay.Saenaljigi_App.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
-        <item name="fullscreenTextColor">@color/light_blue_A200</item>
-    </style>
     <style name="Widget.Theme.Saenaljigi_App.ButtonBar.Fullscreen" parent="">
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>

@@ -17,9 +17,9 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildFeatures{
-        viewBinding=true
-        dataBinding=true
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
 
     buildTypes {
@@ -41,21 +41,20 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
-        implementation(libs.androidx.core.ktx)
-        implementation(libs.androidx.appcompat)
-        implementation(libs.material)
-        implementation(libs.androidx.activity)
-        implementation(libs.androidx.constraintlayout)
-        implementation(libs.androidx.lifecycle.livedata.ktx)
-        implementation(libs.androidx.lifecycle.viewmodel.ktx)
-        implementation(libs.androidx.navigation.fragment.ktx)
-        implementation(libs.androidx.navigation.ui.ktx)
-        testImplementation(libs.junit)
-        androidTestImplementation(libs.androidx.junit)
-        androidTestImplementation(libs.androidx.espresso.core)
-
-    //viewPager
+    // ViewPager2
     implementation("androidx.viewpager2:viewpager2:1.1.0")
 
     // Retrofit
@@ -68,4 +67,8 @@ dependencies {
 
     // Glide와 OkHttp 통합
     implementation("com.github.bumptech.glide:okhttp3-integration:4.14.2")
+
+    // Calendar
+    implementation("com.github.prolificinteractive:material-calendarview:2.0.1")
+    implementation("com.jakewharton.threetenabp:threetenabp:1.1.1")
 }

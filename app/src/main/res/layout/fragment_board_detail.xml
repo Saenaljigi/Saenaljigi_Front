@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="22sp"
         android:textColor="#000000"
-        android:fontFamily="@font/suit_semibold"
+        android:fontFamily="@font/suite_semibold"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="29dp" />
 
@@ -73,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="배달 같이 시키실 분"
                 android:textSize="15sp"
+                android:fontFamily="@font/suite_semibold"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/board_container"
                 app:layout_constraintTop_toTopOf="@id/board_container"
@@ -108,7 +109,6 @@
                 android:layout_marginTop="16dp"
                 android:textSize="13sp"
                 android:textColor="@color/black12"
-                android:fontFamily="@font/suit_regular"
                 />
 
 
