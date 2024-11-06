@@ -28,13 +28,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.Saenaljigi_App" >
         <activity
-            android:name="com.example.saenaljigi_app.MainActivity"
+            android:name="com.example.saenaljigi_app.CreatePostActivity"
             android:exported="false" />
         <activity
             android:name="com.example.saenaljigi_app.LoginActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.saenaljigi_app.CreatePostActivity"
+            android:name="com.example.saenaljigi_app.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

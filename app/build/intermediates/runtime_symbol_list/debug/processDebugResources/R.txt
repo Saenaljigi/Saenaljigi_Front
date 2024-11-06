@@ -3111,6 +3111,7 @@ int drawable home_icon 0x7f080098
 int drawable home_line 0x7f080099
 int drawable home_line2 0x7f08009a
 int drawable home_rounded_rectangle1 0x7f08009b
+int drawable home_rounded_rectangle2 0x7f08012b
 int drawable home_shadow1 0x7f08009c
 int drawable ic_arrow_back_black_24 0x7f08009d
 int drawable ic_call_answer 0x7f08009e
@@ -3214,6 +3215,7 @@ int drawable mypage_divider 0x7f0800ff
 int drawable mypage_icon 0x7f080100
 int drawable mypage_line1 0x7f080101
 int drawable mypage_rectangle 0x7f080102
+int drawable mypage_rectangle2 0x7f08012c
 int drawable nav_item_background 0x7f080103
 int drawable navigation_empty_icon 0x7f080104
 int drawable next_btn 0x7f080105
@@ -3261,6 +3263,11 @@ int font suit_light 0x7f090003
 int font suit_medium 0x7f090004
 int font suit_regular 0x7f090005
 int font suit_semibold 0x7f090006
+int font suite_extrabold 0x7f090007
+int font suite_light 0x7f090008
+int font suite_medium 0x7f090009
+int font suite_regular 0x7f09000a
+int font suite_semibold 0x7f09000b
 int id ALT 0x7f0a0000
 int id BOTTOM_END 0x7f0a0001
 int id BOTTOM_START 0x7f0a0002
@@ -3368,7 +3375,6 @@ int id bounceStart 0x7f0a0067
 int id breakfast_menu 0x7f0a0068
 int id breakfast_menu_title 0x7f0a0069
 int id btn_login 0x7f0a006a
-int id button 0x7f0a028e
 int id buttonPanel 0x7f0a006b
 int id cache_measures 0x7f0a006c
 int id calendar_view 0x7f0a006d
@@ -3518,10 +3524,6 @@ int id ifRoom 0x7f0a00fc
 int id ignore 0x7f0a00fd
 int id ignoreRequest 0x7f0a00fe
 int id image 0x7f0a00ff
-int id imageView 0x7f0a0290
-int id imageView2 0x7f0a0291
-int id imageView3 0x7f0a0292
-int id imageView4 0x7f0a0293
 int id img_board_top 0x7f0a0100
 int id img_box 0x7f0a0101
 int id img_clip 0x7f0a0102
@@ -3718,6 +3720,12 @@ int id point_title 0x7f0a01c0
 int id pooling_container_listener_holder_tag 0x7f0a01c1
 int id position 0x7f0a01c2
 int id postLayout 0x7f0a01c3
+int id post_back_btn 0x7f0a0297
+int id post_box 0x7f0a0298
+int id post_btn 0x7f0a0299
+int id post_line2 0x7f0a029a
+int id post_line3 0x7f0a029b
+int id post_title 0x7f0a029c
 int id pressed 0x7f0a01c4
 int id prev_btn 0x7f0a01c5
 int id previous 0x7f0a01c6
@@ -3829,9 +3837,6 @@ int id textSpacerNoButtons 0x7f0a022f
 int id textSpacerNoTitle 0x7f0a0230
 int id textStart 0x7f0a0231
 int id textTop 0x7f0a0232
-int id textView 0x7f0a0294
-int id textView2 0x7f0a0295
-int id textView3 0x7f0a0296
 int id textWatcher 0x7f0a0233
 int id text_input_end_icon 0x7f0a0234
 int id text_input_error_icon 0x7f0a0235
@@ -3889,6 +3894,8 @@ int id tv_notice_content 0x7f0a0268
 int id tv_notice_title 0x7f0a0269
 int id tv_notice_writer 0x7f0a026a
 int id tv_point 0x7f0a026b
+int id tv_post_content 0x7f0a029d
+int id tv_post_title 0x7f0a029e
 int id tv_student_id 0x7f0a026c
 int id tv_tile 0x7f0a026d
 int id tv_title 0x7f0a026e

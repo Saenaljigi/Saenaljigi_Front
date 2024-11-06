@@ -133,24 +133,24 @@ MERGED from [com.jakewharton.threetenabp:threetenabp:1.1.1] C:\Users\USER\Downlo
 		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:13:9-52
 	android:dataExtractionRules
 		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.saenaljigi_app.MainActivity
+activity#com.example.saenaljigi_app.CreatePostActivity
 ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
 		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:16:13-41
+		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:16:13-47
 activity#com.example.saenaljigi_app.LoginActivity
 ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:18:9-20:39
 	android:exported
 		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:20:13-36
 	android:name
 		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:19:13-42
-activity#com.example.saenaljigi_app.CreatePostActivity
+activity#com.example.saenaljigi_app.MainActivity
 ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:21:9-29:20
 	android:exported
 		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:23:13-36
 	android:name
-		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:22:13-47
+		ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:22:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\USER\Saenaljigi_Front\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN

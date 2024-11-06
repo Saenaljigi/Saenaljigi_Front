@@ -3112,6 +3112,7 @@ drawable home_icon
 drawable home_line
 drawable home_line2
 drawable home_rounded_rectangle1
+drawable home_rounded_rectangle2
 drawable home_shadow1
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
@@ -3215,6 +3216,7 @@ drawable mypage_divider
 drawable mypage_icon
 drawable mypage_line1
 drawable mypage_rectangle
+drawable mypage_rectangle2
 drawable nav_item_background
 drawable navigation_empty_icon
 drawable next_btn
@@ -3262,6 +3264,11 @@ font suit_light
 font suit_medium
 font suit_regular
 font suit_semibold
+font suite_extrabold
+font suite_light
+font suite_medium
+font suite_regular
+font suite_semibold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3369,7 +3376,6 @@ id bounceStart
 id breakfast_menu
 id breakfast_menu_title
 id btn_login
-id button
 id buttonPanel
 id cache_measures
 id calendar_view
@@ -3519,10 +3525,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
-id imageView2
-id imageView3
-id imageView4
 id img_board_top
 id img_box
 id img_clip
@@ -3719,6 +3721,12 @@ id point_title
 id pooling_container_listener_holder_tag
 id position
 id postLayout
+id post_back_btn
+id post_box
+id post_btn
+id post_line2
+id post_line3
+id post_title
 id pressed
 id prev_btn
 id previous
@@ -3830,9 +3838,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
-id textView2
-id textView3
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -3890,6 +3895,8 @@ id tv_notice_content
 id tv_notice_title
 id tv_notice_writer
 id tv_point
+id tv_post_content
+id tv_post_title
 id tv_student_id
 id tv_tile
 id tv_title

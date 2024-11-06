@@ -49,6 +49,20 @@ class MenuBoardFragment : Fragment() {
             val endDay = dates.last().date.toString()
         }
 
+        // 오늘 날짜 가져오기
+        val today = CalendarDay.today()
+
+        // 오늘 날짜를 하얀색으로 표시하는 데코레이터 추가
+        binding.calendarView.addDecorator(object : DayViewDecorator {
+            override fun shouldDecorate(day: CalendarDay): Boolean {
+                return day == today // 오늘 날짜만 데코레이터 적용
+            }
+
+            override fun decorate(view: DayViewFacade) {
+                view.addSpan(object : ForegroundColorSpan(Color.WHITE) {}) // 글씨 색을 하얀색으로 변경
+            }
+        })
+
         // Decorators 설정
         val dayDecorator = DayDecorator(requireContext())
         val todayDecorator = TodayDecorator(requireContext())

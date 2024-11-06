@@ -45,6 +45,7 @@ drawable home_icon
 drawable home_line
 drawable home_line2
 drawable home_rounded_rectangle1
+drawable home_rounded_rectangle2
 drawable home_shadow1
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
@@ -69,6 +70,7 @@ drawable mypage_divider
 drawable mypage_icon
 drawable mypage_line1
 drawable mypage_rectangle
+drawable mypage_rectangle2
 drawable nav_item_background
 drawable next_btn
 drawable notice_back
@@ -99,6 +101,11 @@ font suit_light
 font suit_medium
 font suit_regular
 font suit_semibold
+font suite_extrabold
+font suite_light
+font suite_medium
+font suite_regular
+font suite_semibold
 id apply_btn
 id back_btn
 id background
@@ -106,7 +113,6 @@ id bottom_navigation_view
 id breakfast_menu
 id breakfast_menu_title
 id btn_login
-id button
 id calendar_view
 id cl_box
 id cv_box
@@ -125,10 +131,6 @@ id fragment_mypage
 id fragment_notice
 id home_date
 id home_title
-id imageView
-id imageView2
-id imageView3
-id imageView4
 id img_board_top
 id img_box
 id img_clip
@@ -176,15 +178,18 @@ id notice_posted_time1
 id notice_posted_time2
 id notice_title
 id point_title
+id post_back_btn
+id post_box
+id post_btn
+id post_line2
+id post_line3
+id post_title
 id prev_btn
 id rcv_meal_ticket
 id rcv_point
 id root_layout
 id rv_notice_board
 id sv_notice_detail
-id textView
-id textView2
-id textView3
 id today_apply_btn
 id today_menu_box
 id today_menu_title
@@ -211,6 +216,8 @@ id tv_notice_content
 id tv_notice_title
 id tv_notice_writer
 id tv_point
+id tv_post_content
+id tv_post_title
 id tv_student_id
 id tv_tile
 id tv_title
