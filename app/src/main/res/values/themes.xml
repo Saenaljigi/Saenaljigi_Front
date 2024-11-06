@@ -3,7 +3,7 @@
     <style name="Base.Theme.Saenaljigi_App" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here -->
         <item name="android:windowTranslucentNavigation">false</item>
-        <item name="android:fontFamily">@font/suit_regular</item>
+        <item name="android:fontFamily">@font/suite_regular</item>
     </style>
 
     <style name="Theme.Saenaljigi_App" parent="Base.Theme.Saenaljigi_App" />
@@ -20,7 +20,7 @@
         <item name="android:textColor">#D0D0D0</item>
     </style>
 
-    <!-- 캘린더 텍스트 스타일 -->
+    <!-- Calendar Text Styles -->
     <style name="CalenderViewCustom" parent="Theme.AppCompat">
         <item name="colorAccent">@android:color/holo_red_light</item>
         <item name="colorPrimary">@android:color/holo_blue_light</item>
@@ -28,7 +28,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <!-- 달력 안의 숫자들에 적용되는 스타일 -->
+    <!-- Calendar Date Text Style -->
     <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textColor">#121212</item>
         <item name="android:textSize">12sp</item>
@@ -36,7 +36,7 @@
         <item name="android:weekNumberColor">@android:color/holo_red_light</item>
     </style>
 
-    <!-- 달력 안의 요일들에 적용되는 스타일 -->
+    <!-- Calendar Weekday Text Style -->
     <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textSize">13sp</item>
         <item name="android:fontFamily">@font/suit_semibold</item>
@@ -44,7 +44,7 @@
         <item name="android:weekNumberColor">@android:color/holo_red_light</item>
     </style>
 
-    <!-- 연, 월을 표시하는 헤더에 적용되는 스타일 -->
+    <!-- Calendar Header Style -->
     <style name="CalendarWidgetHeader">
         <item name="android:fontFamily">@font/suit_semibold</item>
         <item name="android:textSize">16sp</item>

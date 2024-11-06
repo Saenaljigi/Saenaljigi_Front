@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoticeDetailFragment"
+    tools:context=".notice.NoticeDetailFragment"
     android:background="#F5F5F5">
 
     <!-- 뒤로가기 버튼 -->
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="공지사항"
-        android:fontFamily="@font/suit_semibold"
+        android:fontFamily="@font/suite_semibold"
         android:textColor="#000000"
         android:textSize="22dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,10 +36,12 @@
     <!-- 공지 내용 박스 배경 -->
     <ImageView
         android:id="@+id/img_box"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/notice_board_background"
+
         app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
@@ -50,11 +52,11 @@
     <ScrollView
         android:id="@+id/sv_notice_detail"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/img_box"
         app:layout_constraintEnd_toEndOf="@id/img_box"
         app:layout_constraintTop_toTopOf="@id/img_box"
-        app:layout_constraintBottom_toBottomOf="@id/img_box">
+        >
 
         <!-- 스크롤 가능한 공지 내용 -->
         <LinearLayout
@@ -68,6 +70,7 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="24dp"
                 android:layout_marginStart="21dp"
+                android:layout_marginEnd="21dp"
                 android:gravity="center_vertical">
 
                 <!-- 볼륨 아이콘 -->
@@ -84,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="[생활지도실] 2024-2학기 1차 생활점검 실시 안내"
-                    android:fontFamily="@font/suit_semibold"
+                    android:fontFamily="@font/suite_medium"
                     android:textSize="13sp"
                     android:textColor="#000000"
                     android:layout_marginStart="8dp"/>
@@ -93,7 +96,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="29dp">
+                android:layout_marginTop="16dp">
 
                 <!-- 작성자 -->
                 <TextView
@@ -134,29 +137,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp">
 
-                <ImageView
-                    android:id="@+id/img_clip"
-                    android:layout_width="wrap_content"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_attached_files"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/fi_rs_clip"
-                    app:layout_constraintEnd_toStartOf="@id/tv_attached_file"
-                    android:layout_marginEnd="7dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="1dp"
-                    />
+                    tools:listitem="@layout/item_file"
+                    android:layout_marginBottom="20dp"
+                    tools:itemCount="2"/>
 
-                <!-- 파일 첨부 텍스트 -->
-                <TextView
-                    android:id="@+id/tv_attached_file"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="첨부파일: 생활점검 안내.pdf"
-                    android:textSize="12sp"
-                    android:textColor="#707070"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="19dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -164,15 +152,16 @@
             <!-- 공지사항 내용 -->
             <TextView
                 android:id="@+id/tv_notice_content"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="새관 행복기숙사 전체 생활점검을 아래와 같이 실시하오니, 기숙사생들께서는 반드시 이 점 숙지하시고 생활점검에 반드시 참여해주시기 바랍니다.\n\n- 아 래 -\n\n1. 일 시: 2024년 09월 26일(목) 저녁 18시 00분 부터 실시\n2. 점검 시간:\n점검시간\n09월 26일 (목)\n남학생\n여학생\n18:00PM\n4, 5, 6, 7, 8층\n3, 9, 10, 11, 12, 13층\n※ 점검시간에 따라 상기 층별 점검시간이 다소 지체될 수 있음.\n\n3. 생활점검 내용\n(1) 호실 내 외부인 투숙, 흡연, 음주, 주류 반입 및 허가되지 않은 물품(취사도구, 전열기구)의 사용 금지.\n(2) 호실 내 정리정돈 및 청소상태 점검 (호실 출입구 주변, 화장실 포함)\n\n※ 호실 내 사생이 없더라도 사감 및 조교가 입실하여 호실 점검 후, 호실 내 상태에 따라 벌점 부과."
                 android:textSize="13sp"
-                android:fontFamily="@font/suit_medium"
                 android:textColor="#121212"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginStart="22dp"
-                android:layout_marginEnd="22dp"/>
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="22dp"
+                />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

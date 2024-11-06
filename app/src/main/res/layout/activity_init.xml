@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InitActivity"
+    tools:context=".login.InitActivity"
     android:background="#FFFFFF"
     >
 
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="275dp"
         android:layout_marginStart="58dp"
-        android:background="#000000"
+        android:background="@drawable/app_icon"
         />
     
     <!--세통 text-->
@@ -55,7 +55,6 @@
         android:text="시작하기"
         android:textColor="#FFFFFF"
         android:gravity="center"
-        android:fontFamily="@font/suit_regular"
         android:textSize="22sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
