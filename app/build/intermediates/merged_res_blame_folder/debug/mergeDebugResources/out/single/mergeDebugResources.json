@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_mypage_rectangle2.xml.flat",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\drawable\\mypage_rectangle2.xml"
     },
     {
         "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_home_shadow1.xml.flat",
         "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\drawable\\home_shadow1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_mypage_rectangle2.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\drawable\\mypage_rectangle2.xml"
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_calendar_circle_gray.xml.flat",
-        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\drawable\\calendar_circle_gray.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_calendar_circle_gray.xml.flat",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\drawable\\calendar_circle_gray.xml"
     },
     {
         "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\font_suit_medium.ttf.flat",
@@ -178,6 +178,10 @@
     {
         "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_today_background.xml.flat",
+        "source": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-main-56:\\drawable\\today_background.xml"
     },
     {
         "merged": "C:\\Users\\USER\\Downloads\\TripWith-main\\daemon\\8.7\\com.example.saenaljigi_app-debug-54:\\drawable_speaker_icon.xml.flat",

@@ -90,6 +90,7 @@ drawable selector_mypage_icon
 drawable selector_notice_icon
 drawable setting_icon
 drawable speaker_icon
+drawable today_background
 drawable transparent_calendar_element
 drawable transparent_ripple
 drawable volume_low

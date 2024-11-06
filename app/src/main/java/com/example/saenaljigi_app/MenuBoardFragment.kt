@@ -1,11 +1,15 @@
 package com.example.saenaljigi_app
 
 import android.content.Context
+import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Paint
 import android.graphics.drawable.Drawable
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.text.style.ForegroundColorSpan
+import android.text.style.LineBackgroundSpan
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -144,11 +148,14 @@ class MenuBoardFragment : Fragment() {
 
     /* 오늘 날짜의 background를 설정하는 클래스 */
     private class TodayDecorator(context: Context) : DayViewDecorator {
-        private val drawable = ContextCompat.getDrawable(context, R.drawable.calendar_circle_gray)
-        private var date = CalendarDay.today()
+        private val date = CalendarDay.today()
+        private val customBackgroundSpan = CustomBackgroundSpan(context, Color.parseColor("#45565E"))
+
         override fun shouldDecorate(day: CalendarDay?): Boolean = day == date
+
         override fun decorate(view: DayViewFacade?) {
-            view?.setBackgroundDrawable(drawable!!)
+            // CustomBackgroundSpan을 사용하여 오늘 날짜의 배경을 설정
+            view?.addSpan(customBackgroundSpan)
         }
     }
 
@@ -180,5 +187,34 @@ class MenuBoardFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+}
+
+// 오늘 날짜의 배경 설정
+class CustomBackgroundSpan(context: Context, private val color: Int) : LineBackgroundSpan {
+    private val radius: Float
+
+    init {
+        // 24dp를 픽셀로 변환하여 반지름으로 사용
+        radius = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25f, context.resources.displayMetrics) / 2
+    }
+
+    override fun drawBackground(
+        canvas: Canvas, paint: Paint,
+        left: Int, right: Int,
+        top: Int, baseline: Int,
+        bottom: Int, text: CharSequence,
+        start: Int, end: Int, lineNum: Int
+    ) {
+        val oldColor = paint.color
+        paint.color = color
+
+        // 원의 중심 좌표 계산
+        val cx = (left + right) / 2f
+        val cy = (top + bottom) / 2f
+
+        // 원 그리기
+        canvas.drawCircle(cx, cy, radius, paint)
+        paint.color = oldColor
     }
 }

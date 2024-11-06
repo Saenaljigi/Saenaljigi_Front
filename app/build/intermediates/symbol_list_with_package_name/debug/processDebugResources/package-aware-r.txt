@@ -3251,6 +3251,7 @@ drawable selector_notice_icon
 drawable setting_icon
 drawable speaker_icon
 drawable test_level_drawable
+drawable today_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable transparent_calendar_element
