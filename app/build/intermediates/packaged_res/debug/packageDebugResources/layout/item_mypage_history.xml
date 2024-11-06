@@ -21,10 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="19dp"
+        android:fontFamily="@font/suite_semibold"
         android:text="2024년 9월 20일"
-        android:textSize="12sp"
         android:textColor="#808080"
-        android:fontFamily="@font/suit_semibold"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/mypage_history_box"
         app:layout_constraintTop_toTopOf="@+id/mypage_history_box" />
 
@@ -32,12 +32,12 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/suite_semibold"
         android:text="석식"
-        android:textSize="15sp"
         android:textColor="#363636"
-        android:fontFamily="@font/suit_semibold"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/mypage_history_box"
         app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
@@ -47,10 +47,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="6dp"
+        android:fontFamily="@font/suite_semibold"
         android:text="+1장"
-        android:textSize="15sp"
         android:textColor="#363636"
-        android:fontFamily="@font/suit_semibold"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_total"
         app:layout_constraintEnd_toEndOf="@+id/mypage_history_box" />
 
@@ -60,10 +60,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="14dp"
+        android:fontFamily="@font/suite_semibold"
         android:text="잔여 식권  109장"
-        android:textSize="12sp"
         android:textColor="#808080"
-        android:fontFamily="@font/suit_semibold"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/mypage_history_box"
         app:layout_constraintEnd_toEndOf="@+id/mypage_history_box" />
 </androidx.constraintlayout.widget.ConstraintLayout>

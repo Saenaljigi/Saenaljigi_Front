@@ -28,13 +28,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.Saenaljigi_App" >
         <activity
-            android:name="com.example.saenaljigi_app.MainActivity"
+            android:name="com.example.saenaljigi_app.CreatePostActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.saenaljigi_app.LoginActivity"
+            android:name="com.example.saenaljigi_app.MainActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.saenaljigi_app.CreatePostActivity"
+            android:name="com.example.saenaljigi_app.login.InitActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.saenaljigi_app.InitActivity"
+            android:name="com.example.saenaljigi_app.login.LoginActivity"
             android:exported="true" />
 
         <provider
@@ -65,6 +65,10 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" />
 
         <uses-library
             android:name="androidx.window.extensions"

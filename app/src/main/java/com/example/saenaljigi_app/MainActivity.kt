@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.saenaljigi_app.databinding.ActivityMainBinding
+import com.example.saenaljigi_app.notice.NoticeBoardFragment
 
 
 class MainActivity : AppCompatActivity() {

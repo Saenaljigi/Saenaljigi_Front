@@ -1,0 +1,216 @@
+[33mcommit 05a36f587a93c47c4e2c513156dc80a944b5726f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/hyerim[m[33m, [m[1;31mupstream/main[m[33m, [m[1;31mupstream/HEAD[m[33m)[m
+Merge: c120fe5 8cb068a
+Author: HyerimH <134906042+HyerimH@users.noreply.github.com>
+Date:   Tue Nov 5 17:23:53 2024 +0900
+
+    Merge pull request #10 from nayoung04/feature/nayoung
+    
+    Feature/nayoung
+
+[33mcommit 8cb068a916fa4ca2dc1aed593ba5feab0eeed874[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Tue Nov 5 11:20:51 2024 +0900
+
+    글씨체 추가
+
+[33mcommit 04a87cbf2a1cc16c84790408c22c4dc084e751d1[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Tue Nov 5 11:19:21 2024 +0900
+
+    글씨체 추가
+
+[33mcommit 76395b57450489ee633e6236e3e4e74938eaa98b[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Sun Nov 3 21:13:51 2024 +0900
+
+    식단 캘린더/메뉴 ui
+
+[33mcommit c120fe53291a0ecb31e7af7549cf8d6489fe933c[m
+Merge: 830515a 7605934
+Author: HyerimH <134906042+HyerimH@users.noreply.github.com>
+Date:   Tue Oct 8 23:38:00 2024 +0900
+
+    Merge pull request #9 from HyerimH/feature/hyerim
+    
+    공지사항 상세화면 xml
+
+[33mcommit 76059340f393e1e8c6f6d50cba8e53779c29780c[m[33m ([m[1;31morigin/feature/hyerim[m[33m)[m
+Merge: 70a8ad5 830515a
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Tue Oct 8 23:37:26 2024 +0900
+
+    resolve merge
+
+[33mcommit 70a8ad5d38cab9bd2815ea48eae6e333fcd893d9[m
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Tue Oct 8 23:27:15 2024 +0900
+
+    Remove tracked build and cache files
+
+[33mcommit 3bafc9036e2348292b698b62a4d6705ddb59cf98[m
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Tue Oct 8 23:21:20 2024 +0900
+
+    공지사항 상세화면 xml
+
+[33mcommit 830515aa76d42ff108eca64243c26c06b2aa946b[m
+Merge: 7eac26b 1764130
+Author: Kim na young <127202466+nayoung04@users.noreply.github.com>
+Date:   Tue Oct 8 18:19:07 2024 +0900
+
+    Merge pull request #8 from nayoung04/feature/nayoung
+    
+    menu view pager
+
+[33mcommit 1764130ff5152fd11c073dc7117914382dbf2a38[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Tue Oct 8 18:12:12 2024 +0900
+
+    menu view pager
+
+[33mcommit 7eac26bbd1ae73de431d1e4f4932429542c5cf3b[m
+Merge: 5d19a3e 259cb86
+Author: Kim na young <127202466+nayoung04@users.noreply.github.com>
+Date:   Tue Oct 8 17:47:01 2024 +0900
+
+    Merge pull request #7 from HyerimH/feature/hyerim
+    
+    git ignore 수정
+
+[33mcommit 259cb860bf84753a535c7ac1cdc00333371abc94[m
+Merge: 1c639f1 5d19a3e
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Tue Oct 8 17:42:05 2024 +0900
+
+    gitignore 수정
+
+[33mcommit 1c639f1b8e65ff1929e1cef491c986230aa638c6[m
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Tue Oct 8 16:49:34 2024 +0900
+
+    notice_board_detail xml 추가
+
+[33mcommit 5d19a3eb16bc4cc015389c642c460a4ec938b712[m
+Merge: 2ccd493 7b363a1
+Author: HyerimH <134906042+HyerimH@users.noreply.github.com>
+Date:   Tue Oct 8 16:47:32 2024 +0900
+
+    Merge pull request #5 from nayoung04/feature/nayoung
+    
+    mypage/menu ui
+
+[33mcommit 7b363a117e22ca531eaaa0c044824f85e840b80b[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Mon Oct 7 18:27:32 2024 +0900
+
+    main xml
+
+[33mcommit a4bc6368719ef6144a254cba98d8393fcfc3c685[m
+Merge: 7a63c9a 2ccd493
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Mon Oct 7 18:17:26 2024 +0900
+
+    menu ui
+
+[33mcommit 7a63c9a9ac972d6ad23281dbdff8c44b8a381983[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Mon Oct 7 02:33:01 2024 +0900
+
+    feat: menu ui
+
+[33mcommit 65abf728cf05fe62432093db44f27032c5b7d86b[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Sun Oct 6 18:50:35 2024 +0900
+
+    feat: menu ui
+
+[33mcommit d3526f55dcb2a8dcf4c2dbab907720686cac2c4c[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Sun Oct 6 18:46:19 2024 +0900
+
+    feat: menu ui
+
+[33mcommit 75855e367be4d95a84e21ea54930a77d67c1f0ce[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Sun Oct 6 18:32:02 2024 +0900
+
+    feat: menu xml
+
+[33mcommit 2ccd49384755767bfe849ce6d09e68b0076d14e8[m
+Merge: e2ca893 b7851eb
+Author: Kim na young <127202466+nayoung04@users.noreply.github.com>
+Date:   Sun Oct 6 18:30:25 2024 +0900
+
+    Merge pull request #2 from HyerimH/feature/hyerim
+    
+    merge
+
+[33mcommit 3614e52abf84e195a26d09bd1363f2c2ef609281[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Wed Oct 2 16:43:29 2024 +0900
+
+    feat: mypage ui
+
+[33mcommit b7851eb34750c9be2504409583e9d5d080254df5[m
+Merge: bd3548f e2ca893
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Wed Oct 2 14:45:42 2024 +0900
+
+    공지사항 recyclerview
+
+[33mcommit bd3548f1ab5f3068e2e812c6432eeb4176264faa[m
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Tue Oct 1 16:49:27 2024 +0900
+
+    공지사항
+
+[33mcommit a5e7d73119a8d0f0d4af3691c17b568a1d52cdf1[m
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Tue Oct 1 11:43:11 2024 +0900
+
+    공지사항 xml,리사이클러뷰 구현
+
+[33mcommit e2ca893173d242f4ae9e09e814b52c2918faa69f[m[33m ([m[1;32mmain[m[33m)[m
+Merge: 6ab1a6e 7cc4f66
+Author: HyerimH <134906042+HyerimH@users.noreply.github.com>
+Date:   Tue Oct 1 11:39:11 2024 +0900
+
+    Merge pull request #1 from nayoung04/feature/nayoung
+    
+    feat: home UI
+
+[33mcommit 7cc4f668abf38dcca6a1e2165cd47dfe3d75ed94[m
+Author: Kim na young <kimna041208@gmail.com>
+Date:   Wed Sep 25 17:30:09 2024 +0900
+
+    feat: home UI
+
+[33mcommit f9364dbc8a1e1d4962c13dc9600855871d0a5a7a[m
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Wed Sep 25 14:45:30 2024 +0900
+
+    feat login xml
+
+[33mcommit c5fa9389f20989ea26bf2fa2930abba103bd56a7[m
+Author: hwangsea <134906042+hwangsea@users.noreply.github.com>
+Date:   Wed Sep 25 14:34:52 2024 +0900
+
+    feat login xml
+
+[33mcommit 6ab1a6e70cb26c1848db415e21a964b83970db20[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: HyerimH <134906042+HyerimH@users.noreply.github.com>
+Date:   Tue Sep 24 18:33:55 2024 +0900
+
+    Add files via upload
+
+[33mcommit b2bd2e9d01d553a931ded724dd643ab1671140ee[m
+Author: Kim na young <127202466+nayoung04@users.noreply.github.com>
+Date:   Tue Sep 24 18:32:29 2024 +0900
+
+    Delete Saenaljigi_App directory
+
+[33mcommit f3387a37684fc117714e3978d524c332a4ae405c[m
+Author: HyerimH <134906042+HyerimH@users.noreply.github.com>
+Date:   Tue Sep 24 18:08:21 2024 +0900
+
+    Add files via upload

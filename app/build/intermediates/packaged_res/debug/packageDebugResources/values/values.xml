@@ -24,14 +24,16 @@
         <item>일</item>
     </string-array>
     <color name="black">#FF000000</color>
+    <color name="black12">#121212</color>
     <color name="black_overlay">#66000000</color>
     <color name="gray">#62626266</color>
+    <color name="gray7">#777777</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="red_sun">#FF7474</color>
-    <color name="transparent"/>
+    <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -53,7 +55,7 @@
     <style name="Base.Theme.Saenaljigi_App" parent="Theme.Material3.DayNight.NoActionBar">
         
         <item name="android:windowTranslucentNavigation">false</item>
-        <item name="android:fontFamily">@font/suit_regular</item>
+        <item name="android:fontFamily">@font/suite_regular</item>
     </style>
     <style name="BtmNavSelectedTextStyle" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">9sp</item> 
