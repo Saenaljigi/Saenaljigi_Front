@@ -46,10 +46,10 @@ class MenuDetailAdapter(
             textViews[i].text = if (i < menuItems.size) menuItems[i] else ""
             textViews[i].isClickable = textViews[i].text.isNotEmpty() // 빈 텍스트뷰는 클릭 불가
 
-            // 클릭 리스너 설정
+            // 클릭 리스너 설정 (클릭 시 노란색으로 하이라이트)
             textViews[i].setOnClickListener {
                 if (textViews[i].text.isNotEmpty()) {
-                    textViews[i].setBackgroundColor(Color.parseColor("#FFF86C")) // 배경을 빨간색으로 설정
+                    textViews[i].setBackgroundColor(Color.parseColor("#FFF86C"))
                 }
             }
         }
