@@ -3150,6 +3150,7 @@ int drawable icon__stroke_right 0x7f0800bd
 int drawable img_box1000 0x7f0800be
 int drawable indeterminate_static 0x7f0800bf
 int drawable left_rounded_rectangle1 0x7f0800c0
+int drawable like_gray_icon 0x7f080135
 int drawable like_icon 0x7f0800c1
 int drawable login_black_id 0x7f0800c2
 int drawable login_box 0x7f0800c3
@@ -3764,7 +3765,10 @@ int id root_layout 0x7f0a01e3
 int id rounded 0x7f0a01e4
 int id row_index_key 0x7f0a01e5
 int id rtl 0x7f0a01e6
+int id rv_answer_container 0x7f0a02a9
+int id rv_attached_files 0x7f0a02a8
 int id rv_board 0x7f0a01e7
+int id rv_comment_container 0x7f0a02aa
 int id rv_notice_board 0x7f0a01e8
 int id saturday 0x7f0a01e9
 int id save_non_transition_alpha 0x7f0a01ea
@@ -3894,6 +3898,8 @@ int id transition_scene_layoutid_cache 0x7f0a0265
 int id transition_transform 0x7f0a0266
 int id triangle 0x7f0a0267
 int id tuesday 0x7f0a0268
+int id tv_answer_content 0x7f0a02ab
+int id tv_answer_writer 0x7f0a02ac
 int id tv_attached_file 0x7f0a0269
 int id tv_board 0x7f0a026a
 int id tv_box 0x7f0a026b
@@ -4093,7 +4099,7 @@ int layout design_navigation_menu 0x7f0d002d
 int layout design_navigation_menu_item 0x7f0d002e
 int layout design_text_input_end_icon 0x7f0d002f
 int layout design_text_input_start_icon 0x7f0d0030
-int layout fragment__board 0x7f0d0031
+int layout fragment_board 0x7f0d008a
 int layout fragment_board_detail 0x7f0d0032
 int layout fragment_home 0x7f0d0033
 int layout fragment_meal_ticket 0x7f0d0034
@@ -4105,8 +4111,10 @@ int layout fragment_notice_detail 0x7f0d0039
 int layout fragment_point 0x7f0d003a
 int layout ime_base_split_test_activity 0x7f0d003b
 int layout ime_secondary_split_test_activity 0x7f0d003c
+int layout item_answer 0x7f0d0089
 int layout item_board 0x7f0d003d
 int layout item_comment 0x7f0d003e
+int layout item_file 0x7f0d0088
 int layout item_menu_detail 0x7f0d003f
 int layout item_mypage_history 0x7f0d0040
 int layout item_notice_board 0x7f0d0041

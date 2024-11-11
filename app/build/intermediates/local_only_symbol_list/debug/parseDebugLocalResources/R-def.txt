@@ -65,6 +65,7 @@ drawable icon__stroke_left
 drawable icon__stroke_right
 drawable img_box1000
 drawable left_rounded_rectangle1
+drawable like_gray_icon
 drawable like_icon
 drawable login_black_id
 drawable login_box
@@ -204,7 +205,10 @@ id prev_btn
 id rcv_meal_ticket
 id rcv_point
 id root_layout
+id rv_answer_container
+id rv_attached_files
 id rv_board
+id rv_comment_container
 id rv_notice_board
 id scroll_view
 id sv_notice_detail
@@ -215,6 +219,8 @@ id total_count
 id total_count_box
 id total_count_cmt
 id total_count_title
+id tv_answer_content
+id tv_answer_writer
 id tv_attached_file
 id tv_board
 id tv_box
@@ -256,7 +262,7 @@ layout activity_create_post
 layout activity_init
 layout activity_login
 layout activity_main
-layout fragment__board
+layout fragment_board
 layout fragment_board_detail
 layout fragment_home
 layout fragment_meal_ticket
@@ -266,8 +272,10 @@ layout fragment_my_page
 layout fragment_notice_board
 layout fragment_notice_detail
 layout fragment_point
+layout item_answer
 layout item_board
 layout item_comment
+layout item_file
 layout item_menu_detail
 layout item_mypage_history
 layout item_notice_board

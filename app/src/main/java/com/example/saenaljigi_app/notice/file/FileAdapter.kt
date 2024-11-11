@@ -5,8 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.saenaljigi_app.databinding.ItemFileBinding
 
-data class FileData(val fileName: String, val fileUrl: String)
-
 class FileAdapter(
     private val fileList: List<FileData>,
     private val onFileClick: (FileData) -> Unit
