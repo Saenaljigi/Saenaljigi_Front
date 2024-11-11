@@ -1,10 +1,11 @@
-package com.example.saenaljigi_app
+package com.example.saenaljigi_app.mypage
 
 import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.databinding.ItemMypageHistoryBinding
 
 class MyPageHistoryAdapter(val myPageHistoryData: ArrayList<MyPageHistoryData>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {

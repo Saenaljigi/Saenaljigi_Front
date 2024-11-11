@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MenuBoardFragment"
+    tools:context=".menu.MenuBoardFragment"
     android:background="#F5F5F5">
 
     <TextView
         android:id="@+id/menu_title"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
+        android:layout_marginTop="62dp"
         android:fontFamily="@font/suite_semibold"
         android:text="식단"
         android:textColor="#121212"
@@ -67,10 +68,12 @@
         android:text="오늘의 조식 신청하기"
         android:textColor="@color/white"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calendar_view" />
+        app:layout_constraintTop_toBottomOf="@id/calendar_view"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/menu_line"

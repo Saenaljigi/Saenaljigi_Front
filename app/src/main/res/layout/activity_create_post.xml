@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreatePostActivity"
+    tools:context=".board.CreatePostActivity"
     android:fitsSystemWindows="true"
     android:background="#F5F5F5">
 
@@ -22,7 +22,7 @@
         android:id="@+id/post_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="62dp"
         android:fontFamily="@font/suite_semibold"
         android:text="글 작성하기"
         android:textColor="#121212"

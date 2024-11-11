@@ -1,10 +1,9 @@
-package com.example.saenaljigi_app
+package com.example.saenaljigi_app.menu
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.drawable.Drawable
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.text.style.ForegroundColorSpan
@@ -15,6 +14,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.databinding.FragmentMenuBoardBinding
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.DayViewDecorator
