@@ -25,7 +25,7 @@
 
         <!-- 게시물 작성 화면 Activity -->
         <activity
-            android:name=".CreatePostActivity"
+            android:name=".board.CreatePostActivity"
             android:exported="false" />
 
         <!-- 메인 화면 Activity -->

@@ -1,4 +1,4 @@
-package com.example.saenaljigi_app
+package com.example.saenaljigi_app.mypage
 
 data class MyPageHistoryData(
     val date: String,
