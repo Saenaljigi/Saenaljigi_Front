@@ -23,3 +23,6 @@ local.properties
 .gradle/8.7/fileHashes/fileHashes.lock
 .idea/deploymentTargetSelector.xml
 .idea/other.xml
+/app/build/
+.gradle/
+.idea/
