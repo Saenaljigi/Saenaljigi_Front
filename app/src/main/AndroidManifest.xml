@@ -30,12 +30,12 @@
 
         <!-- 메인 화면 Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".login.InitActivity"
             android:exported="true" />
 
         <!-- 초기화 화면 Activity, 앱의 런처(시작) 화면 -->
         <activity
-            android:name=".login.InitActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

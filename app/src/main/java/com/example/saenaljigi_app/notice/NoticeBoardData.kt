@@ -6,9 +6,10 @@ data class NoticeBoardData(
     val created_at: String,
     var content: String? = null,
     var writer: String? = null,
-    var file: List<fileData>? = null
+    var files: List<FileData>? = null // 파일 목록 필드 수정
 )
 
-data class fileData(
+data class FileData(
+    val fileName: String,  // 파일 이름 필드 추가
     val fileUrl: String
 )

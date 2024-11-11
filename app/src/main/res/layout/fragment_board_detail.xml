@@ -48,7 +48,10 @@
         android:layout_marginEnd="25dp"
         app:layout_constraintTop_toBottomOf="@id/tv_board"
         android:layout_marginTop="46dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="17dp"
+        />
+
 
     <!-- 스크롤 뷰 -->
     <androidx.core.widget.NestedScrollView
@@ -58,7 +61,9 @@
         app:layout_constraintStart_toStartOf="@id/img_box"
         app:layout_constraintEnd_toEndOf="@id/img_box"
         app:layout_constraintTop_toTopOf="@id/img_box"
-        app:layout_constraintBottom_toBottomOf="@id/img_box">
+        app:layout_constraintBottom_toBottomOf="@id/img_box"
+        android:layout_marginBottom="68dp"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/board_container"
@@ -69,17 +74,19 @@
             <!-- 제목 -->
             <TextView
                 android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="92dp"
+                android:fontFamily="@font/suite_semibold"
                 android:text="배달 같이 시키실 분"
                 android:textSize="15sp"
-                android:fontFamily="@font/suite_semibold"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.021"
                 app:layout_constraintStart_toStartOf="@id/board_container"
-                app:layout_constraintTop_toTopOf="@id/board_container"
-                android:layout_marginTop="21dp"
-                android:layout_marginStart="20dp"
-                 />
+                app:layout_constraintTop_toTopOf="@id/board_container" />
 
             <!-- 작성 날짜 -->
             <TextView
@@ -110,8 +117,65 @@
                 android:textSize="13sp"
                 android:textColor="@color/black12"
                 />
+            <ImageView
+                android:id="@+id/iv_like_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/like_gray_icon"
+                app:layout_constraintTop_toBottomOf="@id/tv_content"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/board_container"
+                android:layout_marginStart="23dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_like_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1개"
+                android:textSize="10sp"
+                android:textColor="@color/gray7"
+                app:layout_constraintTop_toBottomOf="@id/tv_content"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/iv_like_icon"
+                android:layout_marginStart="3dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_comment_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/comment_icon"
+                app:layout_constraintTop_toBottomOf="@id/tv_content"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/tv_like_icon"
+                android:layout_marginStart="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_comment_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5개"
+                android:textSize="10sp"
+                android:textColor="#777777"
+                app:layout_constraintStart_toEndOf="@id/iv_comment_icon"
+                android:layout_marginStart="3dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_content"
+                android:layout_marginTop="35dp"
+                />
 
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_answer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/iv_like_icon"
+                android:layout_marginTop="16dp"
+                tools:listitem="@layout/item_answer"
+                tools:itemCount="20"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
