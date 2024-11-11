@@ -181,14 +181,13 @@
             android:id="@+id/meal_count_box"
             android:layout_width="0dp"
             android:layout_height="90dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginEnd="3dp"
-            android:background="@drawable/home_shadow1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/meal_count_title"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/home_rounded_rectangle2"
             app:layout_constraintEnd_toStartOf="@id/total_count_box"
-            app:srcCompat="@drawable/home_rounded_rectangle1" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meal_count_title" />
 
 
         <TextView
@@ -199,7 +198,7 @@
             android:layout_marginTop="18dp"
             android:fontFamily="@font/suite_semibold"
             android:text="24회"
-            android:textColor="#121212"
+            android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="@+id/meal_count_box"
             app:layout_constraintTop_toTopOf="@+id/meal_count_box" />
@@ -213,7 +212,7 @@
             android:layout_marginBottom="14dp"
             android:fontFamily="@font/suite_regular"
             android:text="식권을 사용했어요!"
-            android:textColor="#121212"
+            android:textColor="@color/white"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="@+id/meal_count_box"
             app:layout_constraintStart_toStartOf="@+id/meal_count_box"
@@ -237,13 +236,13 @@
             android:id="@+id/total_count_box"
             android:layout_width="0dp"
             android:layout_height="90dp"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="26dp"
-            android:background="@drawable/home_shadow1"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="31dp"
+            android:background="@drawable/home_rounded_rectangle2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/meal_count_box"
-            app:layout_constraintTop_toBottomOf="@id/total_count_title"/>
+            app:layout_constraintTop_toBottomOf="@id/total_count_title" />
 
         <TextView
             android:id="@+id/total_count"
@@ -253,7 +252,7 @@
             android:layout_marginTop="18dp"
             android:fontFamily="@font/suite_semibold"
             android:text="+2점"
-            android:textColor="#121212"
+            android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="@+id/total_count_box"
             app:layout_constraintTop_toTopOf="@+id/total_count_box" />
@@ -267,7 +266,7 @@
             android:layout_marginBottom="14dp"
             android:fontFamily="@font/suite_regular"
             android:text="상점이 더 높아요 😁"
-            android:textColor="#121212"
+            android:textColor="@color/white"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="@+id/total_count_box"
             app:layout_constraintStart_toStartOf="@+id/total_count_box"
