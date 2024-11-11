@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
-import com.example.saenaljigi_app.board.FragmentBoard
+import com.example.saenaljigi_app.board.BoardFragment
 import com.example.saenaljigi_app.databinding.ActivityMainBinding
 import com.example.saenaljigi_app.home.HomeFragment
 import com.example.saenaljigi_app.menu.MenuBoardFragment
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.fragment_board -> {
-                    FragmentBoard().changeFragment()
+                    BoardFragment().changeFragment()
                     true
                 }
 
