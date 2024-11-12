@@ -2,15 +2,18 @@ package com.example.saenaljigi_app.login
 
 import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.WindowManager
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.view.WindowCompat
 import com.example.saenaljigi_app.MainActivity
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.RetrofitClient
@@ -34,6 +37,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        setStatusBarTransparent()  // 상태 바 투명하게 설정
 
         tvNo = findViewById(R.id.tv_no)
         clBox = findViewById(R.id.cl_box)
@@ -185,5 +190,17 @@ class LoginActivity : AppCompatActivity() {
     // dp를 px로 변환하는 함수
     private fun convertDpToPx(dp: Int): Int {
         return (dp * resources.displayMetrics.density).toInt()
+    }
+
+    private fun setStatusBarTransparent() {
+        window.apply {
+            setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            )
+        }
+        if(Build.VERSION.SDK_INT >= 30) {   // API 30 에 적용
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+        }
     }
 }

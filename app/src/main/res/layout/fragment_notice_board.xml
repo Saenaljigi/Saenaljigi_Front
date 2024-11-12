@@ -66,18 +66,21 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="15dp" />
 
-        <TextView
-            android:id="@+id/tv_tile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="[생활지도실] 2024-2학기 1차 생활점검 실..."
-            android:textColor="#000000"
-            android:textSize="13sp"
-            android:layout_gravity="center_vertical"
-            android:fontFamily="@font/suit_medium"
-            android:layout_marginStart="49dp"
+            <TextView
+                android:id="@+id/tv_tile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[생활지도실] 2024-2학기 1차 생활점검 실..."
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/suit_medium"
+                android:layout_marginStart="49dp"
+                android:layout_marginEnd="15dp"
 
-            />
+                />
     </FrameLayout>
 
 
