@@ -1,14 +1,19 @@
 package com.example.saenaljigi_app
 
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.View
+import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
+import com.example.saenaljigi_app.board.BoardFragment
 import com.example.saenaljigi_app.databinding.ActivityMainBinding
+import com.example.saenaljigi_app.home.HomeFragment
+import com.example.saenaljigi_app.menu.MenuBoardFragment
+import com.example.saenaljigi_app.mypage.MyPageFragment
 import com.example.saenaljigi_app.notice.NoticeBoardFragment
 
 
@@ -23,6 +28,20 @@ class MainActivity : AppCompatActivity() {
 
         showInit()
         initBottomNav()
+
+        setStatusBarTransparent()
+    }
+
+    fun setStatusBarTransparent() {
+        window.apply {
+            setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            )
+        }
+        if(Build.VERSION.SDK_INT >= 30) {	// API 30 에 적용
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+        }
     }
 
     private fun initBottomNav() {
@@ -37,6 +56,11 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.fragment_menu -> {
                     MenuBoardFragment().changeFragment()
+                    true
+                }
+
+                R.id.fragment_board -> {
+                    BoardFragment().changeFragment()
                     true
                 }
 

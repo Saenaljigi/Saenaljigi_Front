@@ -1,22 +1,15 @@
-package com.example.saenaljigi_app
+package com.example.saenaljigi_app.mypage
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EdgeEffect
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.saenaljigi_app.databinding.FragmentMealTicketBinding
+import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.databinding.FragmentPointBinding
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -33,14 +26,6 @@ class PointFragment : Fragment() {
 
     private lateinit var myPageHistoryAdapter: MyPageHistoryAdapter
     private lateinit var myPageHistoryData: ArrayList<MyPageHistoryData>
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,7 +51,8 @@ class PointFragment : Fragment() {
         }
 
         // 구분선 적용
-        val dividerItemDecoration = DividerItemDecoration(binding.rcvPoint.context, LinearLayoutManager.VERTICAL)
+        val dividerItemDecoration =
+            DividerItemDecoration(binding.rcvPoint.context, LinearLayoutManager.VERTICAL)
         val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.mypage_divider)
         drawable?.let {
             dividerItemDecoration.setDrawable(it)
@@ -84,25 +70,5 @@ class PointFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PointFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PointFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }

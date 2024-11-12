@@ -1,7 +1,6 @@
-package com.example.saenaljigi_app
+package com.example.saenaljigi_app.menu
 
 import android.graphics.Color
-import android.service.autofill.Validators.or
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.saenaljigi_app.R
 
 class MenuDetailAdapter(
     private val menuLists: List<List<String>>, // 각 페이지별 메뉴 리스트
