@@ -17,6 +17,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:fitsSystemWindows="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:background="#FFFFFF"
         app:itemPaddingTop="20dp"
         app:itemIconSize="27dp"

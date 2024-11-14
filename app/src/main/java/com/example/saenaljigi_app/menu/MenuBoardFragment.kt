@@ -8,6 +8,7 @@ import android.icu.util.Calendar
 import android.os.Bundle
 import android.text.style.ForegroundColorSpan
 import android.text.style.LineBackgroundSpan
+import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -94,6 +95,7 @@ class MenuBoardFragment : Fragment() {
             if (selected) {
                 binding.todayApplyBtn.visibility = View.GONE
                 val selectedDate = date.date.toString()
+                Log.d("Calendar", "Date:$selectedDate")
 
                 // MenuDetailFragment로 전환
                 val fragment = MenuDetailFragment().apply {

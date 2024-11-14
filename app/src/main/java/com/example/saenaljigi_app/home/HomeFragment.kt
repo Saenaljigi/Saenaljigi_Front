@@ -1,12 +1,20 @@
 package com.example.saenaljigi_app.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentHomeBinding
+import com.example.saenaljigi_app.menu.MenuApiService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.util.Calendar
 import java.util.Locale
 import java.util.TimeZone
@@ -34,6 +42,9 @@ class HomeFragment : Fragment() {
 
         // TextView에 날짜 설정
         binding.homeDate.text = todayDate
+
+        // 오늘의 메뉴 불러오기
+        val today: LocalDate = LocalDate.now()
 
         return binding.root
     }
