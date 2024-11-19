@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".board.SearchPostActivity">
+
+    <ImageView
+        android:id="@+id/search_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search_back" />
+
+    <ImageView
+        android:id="@+id/search_box"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_back_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search_box1" />
+
+    <ImageView
+        android:id="@+id/search_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/search_box"
+        app:layout_constraintStart_toStartOf="@+id/search_box"
+        app:layout_constraintTop_toTopOf="@+id/search_box"
+        app:srcCompat="@drawable/search_icon" />
+
+    <EditText
+        android:id="@+id/et_search_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/transparent"
+        android:hint="검색어를 입력하세요"
+        android:textColor="#121212"
+        android:textColorHint="#899097"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/search_box"
+        app:layout_constraintEnd_toEndOf="@+id/search_box"
+        app:layout_constraintStart_toEndOf="@+id/search_img"
+        app:layout_constraintTop_toTopOf="@+id/search_box" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/search_chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="20dp"
+        app:chipSpacingHorizontal="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recent_keyword"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:text="조식"
+            android:textColor="#46515B"
+            android:textSize="13sp"
+            app:chipBackgroundColor="#E9E9E9"
+            app:chipCornerRadius="26dp"
+            app:chipStrokeColor="@color/transparent" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/tv_recent_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="최근 검색어"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_box" />
+
+    <LinearLayout
+        android:id="@+id/delete_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_box">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="검색 기록 삭제"
+            android:textColor="#979797"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/delete_btn" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

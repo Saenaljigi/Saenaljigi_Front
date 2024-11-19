@@ -4,23 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.util.Log
+import android.view.Menu
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.saenaljigi_app.R
+import com.example.saenaljigi_app.RetrofitClient
+import com.example.saenaljigi_app.UserDTO
 import com.example.saenaljigi_app.databinding.FragmentMenuDetailBinding
+import java.time.LocalDate
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MenuDetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MenuDetailFragment : Fragment() {
     private var _binding: FragmentMenuDetailBinding? = null
     private val binding get() = _binding!!
 
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    // selectedDate를 저장할 변수
+    private var selectedDateString: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +34,17 @@ class MenuDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // selectedDate 값 받아 LocalDate 타입으로 변경
+        selectedDateString = arguments?.getString("selectedDate")
+        Log.d("MenuDetailFragment", "Received Date: $selectedDateString")
+
+        val selectedDate: LocalDate = selectedDateString.let {
+            LocalDate.parse(it)
+        }
+
+        // 선택된 날짜의 메뉴 불러오기
+        fetchMenu(selectedDate)
 
         // 배경 클릭 시 프래그먼트 종료
         binding.root.setOnClickListener {
@@ -64,22 +77,7 @@ class MenuDetailFragment : Fragment() {
             val minAlpha = 0.2f // 양옆 페이지의 최소 투명도
             val alpha = Math.max(minAlpha, 1 - Math.abs(position)) // 중앙으로 갈수록 밝아짐
             page.alpha = alpha
-
         }
-
-        // 메뉴 리스트 설정
-        val menuLists = listOf(
-            listOf("밥", "밥", "밥"), // 조식 메뉴
-            listOf("국", "국", "국"), // 중식 메뉴
-            listOf("고기", "김치", "나물") // 석식 메뉴
-        )
-
-        // 어댑터 연결
-        val adapter = MenuDetailAdapter(menuLists, binding.viewPager, binding.applyBtn)
-        viewPager.adapter = adapter
-
-        // ViewPager에 페이지 변화 리스너 추가
-        viewPager.registerOnPageChangeCallback(onPageChange)
     }
 
     // 페이지 변화 콜백
@@ -99,5 +97,54 @@ class MenuDetailFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    // 메뉴 불러오기
+    private fun fetchMenu(selectedDate: LocalDate) {
+        val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
+        val formattedDate = selectedDate.toString()
+        Log.d("MenuDetail_R", "$formattedDate")
+        val call = menuService.getMenu(formattedDate)
+
+        call.enqueue(object : Callback<CalendarDto> {
+            override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto?>) {
+                if (response.isSuccessful) {
+                    response.body()?.let { menus ->
+                        Log.d("MenuDetail_R", "$menus")
+
+                        // 중식과 석식의 foodName만 분리하여 리스트 생성
+                        val lunchMenuNames = mutableListOf<String>()
+                        val dinnerMenuNames = mutableListOf<String>()
+
+                        menus.menus.forEach { menu ->
+                            when (menu.foodTime) {
+                                "중식" -> lunchMenuNames.addAll(menu.foods.map { it.foodName })
+                                "석식" -> dinnerMenuNames.addAll(menu.foods.map { it.foodName })
+                            }
+                        }
+
+                        Log.d("MenuDetail_R", "Lunch: $lunchMenuNames, Dinner: $dinnerMenuNames")
+
+                        // 두 리스트를 하나의 데이터 구조로 전달
+                        val menuLists = listOf(lunchMenuNames, dinnerMenuNames)
+
+                        // 어댑터 연결
+                        val adapter = MenuDetailAdapter(menuLists, binding.viewPager, binding.applyBtn)
+                        binding.viewPager.adapter = adapter
+                    } ?: Log.e("MenuDetail_R", "Response body is null")
+                } else {
+                    Log.e("MenuDetail_R", "Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<CalendarDto>, t: Throwable) {
+                Log.e("MenuDetail_R", "Error: ${t.message}")
+            }
+        })
+    }
+
+    // 하이라이트된 메뉴 서버로 보내기
+    private fun updatedHighlightedMenu(userDTO: UserDTO, selectedDate: LocalDate, menu: Menu) {
+
     }
 }
