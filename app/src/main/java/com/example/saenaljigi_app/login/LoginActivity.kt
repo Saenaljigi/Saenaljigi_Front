@@ -16,11 +16,6 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.WindowCompat
 import com.example.saenaljigi_app.MainActivity
 import com.example.saenaljigi_app.R
-import com.example.saenaljigi_app.RetrofitClient
-import com.example.saenaljigi_app.UserDTO
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
@@ -73,12 +68,8 @@ class LoginActivity : AppCompatActivity() {
         val id = etId.text.toString()
         val pw = etPassword.text.toString()
 
-        val body = mapOf(
-            "id" to id,
-            "pw" to pw
-        )
-
-        // 세종대학교 로그인 요청
+        /* JWT 토큰 요청 (주석 처리하여 화면 넘어가게 하기)
+        val body = mapOf("id" to id, "pw" to pw)
         RetrofitClient.sejongApi.login(body).enqueue(object : Callback<SejongAuthResponse> {
             override fun onResponse(call: Call<SejongAuthResponse>, response: Response<SejongAuthResponse>) {
                 if (response.isSuccessful && response.body() != null) {
@@ -98,50 +89,11 @@ class LoginActivity : AppCompatActivity() {
                 showLoginError("네트워크 문제로 로그인하지 못했습니다.")
             }
         })
-    }
+        */
 
-    // JWT 토큰 요청 함수
-    private fun requestJwtToken(userData: SejongAuthResponseResultBodyJson, id: String) {
-        val userDTO = UserDTO(
-            id = id.toLong(),
-            studentId = userData.studentId,
-            name = userData.name,
-            mealCnt = 0,
-            reward = 0,
-            penalty = 0,
-            totalCnt = 0
-        )
 
-        // JWT 요청
-        RetrofitClient.userApi.requestJwtToken(userDTO).enqueue(object : Callback<JwtResponse> {
-            override fun onResponse(call: Call<JwtResponse>, response: Response<JwtResponse>) {
-                if (response.isSuccessful) {
-                    val token = response.body()?.token
-                    if (!token.isNullOrEmpty()) {
-                        saveUserData(token)
-                        navigateToMainActivity()
-                    } else {
-                        showLoginError("네트워크 문제로 로그인하지 못했습니다.")
-                    }
-                } else {
-                    showLoginError("네트워크 문제로 로그인하지 못했습니다.")
-                }
-            }
-
-            override fun onFailure(call: Call<JwtResponse>, t: Throwable) {
-                Log.e("JWT_REQUEST", "JWT 발급 오류", t)
-                showLoginError("네트워크 문제로 로그인하지 못했습니다.")
-            }
-        })
-    }
-
-    // SharedPreferences에 JWT 토큰 저장
-    private fun saveUserData(token: String) {
-        val sharedPref = getSharedPreferences("auth", MODE_PRIVATE)
-        with(sharedPref.edit()) {
-            putString("jwt_token", token)
-            apply()
-        }
+        // 직접 MainActivity로 이동 (API 실패 무시)
+        navigateToMainActivity()
     }
 
     // MainActivity로 이동
@@ -160,7 +112,8 @@ class LoginActivity : AppCompatActivity() {
         tvFailLogin.apply {
             text = message
             visibility = View.VISIBLE
-        }    }
+        }
+    }
 
     // tv_no 눌렀을 때 마진 수정 함수
     private fun updateClBoxVisible() {

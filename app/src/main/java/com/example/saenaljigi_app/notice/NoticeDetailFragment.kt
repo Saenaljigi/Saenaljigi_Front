@@ -37,6 +37,11 @@ class NoticeDetailFragment : Fragment() {
             openFileUrl(fileData.fileUrl)
         }
 
+        // 뒤로가기 버튼 동작
+        binding.noticeBack.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+        }
+
         binding.rvAttachedFiles.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = fileAdapter

@@ -9,6 +9,7 @@
     android:background="#F5F5F5"
     >
 
+<!--
     <ImageView
         android:id="@+id/notice_back"
         android:layout_width="wrap_content"
@@ -16,9 +17,10 @@
         android:background="@drawable/notice_back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="66dp"
         android:layout_marginStart="30dp"
         />
+-->
 
     <TextView
         android:id="@+id/tv_notice"
@@ -31,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="62dp"
 
         />
 
@@ -78,7 +80,7 @@
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/suit_medium"
                 android:layout_marginStart="49dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="23dp"
 
                 />
     </FrameLayout>
@@ -104,8 +106,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            tools:itemCount="10"
+            android:layout_marginBottom="15dp"
+            tools:itemCount="8"
             tools:listitem="@layout/item_notice_board" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

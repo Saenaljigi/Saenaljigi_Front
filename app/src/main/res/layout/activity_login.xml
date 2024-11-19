@@ -51,6 +51,7 @@
         android:textSize="18sp"
         android:textColorHint="#ADADAD"
         android:paddingStart="29dp"
+        android:paddingEnd="29dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/login_id"
         android:singleLine="true"

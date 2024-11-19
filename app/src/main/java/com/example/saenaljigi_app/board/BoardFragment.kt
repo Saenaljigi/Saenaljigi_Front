@@ -1,60 +1,50 @@
 package com.example.saenaljigi_app.board
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.saenaljigi_app.R
+import com.example.saenaljigi_app.databinding.FragmentBoardBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [BoardFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BoardFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentBoardBinding? = null
+    private val binding get() = _binding!!
+
+    private val boardList = listOf(
+        BoardClass(1, "배달 같이 시키실 분", "버거킹 먹고 싶은데 최소주문 금액이 안되는데 같이 시킬 사람 있나요? 버거킹 아니어도 돼요", "익명1", 3, 5, emptyList(), "10월 28일 14:20"),
+        BoardClass(2, "게시글 제목2", "내용2", "익명2", 5, 2, emptyList(), "10월 28일 15:00"),
+        BoardClass(3, "게시글 제목3", "내용3", "익명3", 1, 8, emptyList(), "10월 28일 16:10")
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_board, container, false)
+    ): View {
+        _binding = FragmentBoardBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment BoardFragment1.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            BoardFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val adapter = BoardAdapter(boardList) { board ->
+            val fragment = BoardDetailFragment.newInstance(board.postId)
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .addToBackStack(null)
+                .commit()
+        }
+
+        binding.rvBoard.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvBoard.adapter = adapter
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
