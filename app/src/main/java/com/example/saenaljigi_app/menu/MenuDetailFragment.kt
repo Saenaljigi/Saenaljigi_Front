@@ -78,34 +78,6 @@ class MenuDetailFragment : Fragment() {
             val alpha = Math.max(minAlpha, 1 - Math.abs(position)) // 중앙으로 갈수록 밝아짐
             page.alpha = alpha
         }
-
-        // foodName 리스트로 생성하여 lunch_menu와 dinner_menu에 저장
-        val breakfast_menu: List<String> = listOf(
-            "식당 스낵바에",
-            "샐러드&샌드위치",
-            "준비되어 있습니다",
-            "이틀 전에 예약하신 후",
-            "이용 가능합니다."
-        )
-        val lunch_menu = listOf(
-            "밥",
-            "국",
-            "고기",
-            "김치"
-        )
-
-        val dinner_menu = listOf(
-            "밥",
-            "국",
-            "빵"
-        )
-
-        // 어댑터 연결
-        val adapter = MenuDetailAdapter(listOf(breakfast_menu, lunch_menu, dinner_menu), binding.viewPager, binding.applyBtn)
-        binding.viewPager.adapter = adapter
-
-        // ViewPager에 페이지 변화 리스너 추가
-        viewPager.registerOnPageChangeCallback(onPageChange)
     }
 
     // 페이지 변화 콜백
@@ -131,6 +103,7 @@ class MenuDetailFragment : Fragment() {
     private fun fetchMenu(selectedDate: LocalDate) {
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
         val formattedDate = selectedDate.toString()
+        Log.d("MenuDetail_R", "$formattedDate")
         val call = menuService.getMenu(formattedDate)
 
         call.enqueue(object : Callback<CalendarDto> {
@@ -139,13 +112,24 @@ class MenuDetailFragment : Fragment() {
                     response.body()?.let { menus ->
                         Log.d("MenuDetail_R", "$menus")
 
-                        // 각 메뉴의 foodName만 추출하여 리스트 생성
-                        val menuNames = menus.menus.take(2).map { menu ->
-                            menu.foods.map { it.foodName }
+                        // 중식과 석식의 foodName만 분리하여 리스트 생성
+                        val lunchMenuNames = mutableListOf<String>()
+                        val dinnerMenuNames = mutableListOf<String>()
+
+                        menus.menus.forEach { menu ->
+                            when (menu.foodTime) {
+                                "중식" -> lunchMenuNames.addAll(menu.foods.map { it.foodName })
+                                "석식" -> dinnerMenuNames.addAll(menu.foods.map { it.foodName })
+                            }
                         }
 
+                        Log.d("MenuDetail_R", "Lunch: $lunchMenuNames, Dinner: $dinnerMenuNames")
+
+                        // 두 리스트를 하나의 데이터 구조로 전달
+                        val menuLists = listOf(lunchMenuNames, dinnerMenuNames)
+
                         // 어댑터 연결
-                        val adapter = MenuDetailAdapter(menuNames, binding.viewPager, binding.applyBtn)
+                        val adapter = MenuDetailAdapter(menuLists, binding.viewPager, binding.applyBtn)
                         binding.viewPager.adapter = adapter
                     } ?: Log.e("MenuDetail_R", "Response body is null")
                 } else {

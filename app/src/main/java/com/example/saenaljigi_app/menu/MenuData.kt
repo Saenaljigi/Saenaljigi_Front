@@ -19,7 +19,7 @@ data class FoodDto(
 data class CalendarDto(
     val id: Long,
     val day: LocalDate,
-    val isHighlight: Boolean,
+    val isHilight: Boolean,
     val isBreakfast: Boolean,
     val menus: List<MenuDto>
 )
