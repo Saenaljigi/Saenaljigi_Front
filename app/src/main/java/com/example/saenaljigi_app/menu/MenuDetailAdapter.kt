@@ -50,6 +50,7 @@ class MenuDetailAdapter(
             textViews[i].setOnClickListener {
                 if (textViews[i].text.isNotEmpty()) {
                     textViews[i].setBackgroundColor(Color.parseColor("#FFF86C"))
+
                 }
             }
         }

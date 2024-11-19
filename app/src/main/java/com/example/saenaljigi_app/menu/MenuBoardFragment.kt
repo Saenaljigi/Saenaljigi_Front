@@ -8,6 +8,7 @@ import android.icu.util.Calendar
 import android.os.Bundle
 import android.text.style.ForegroundColorSpan
 import android.text.style.LineBackgroundSpan
+import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.saenaljigi_app.R
+import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentMenuBoardBinding
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.DayViewDecorator
@@ -23,6 +25,10 @@ import com.prolificinteractive.materialcalendarview.MaterialCalendarView
 import com.prolificinteractive.materialcalendarview.format.ArrayWeekDayFormatter
 import com.prolificinteractive.materialcalendarview.format.MonthArrayTitleFormatter
 import com.prolificinteractive.materialcalendarview.format.TitleFormatter
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.time.LocalDate
 
 class MenuBoardFragment : Fragment() {
 
@@ -81,12 +87,22 @@ class MenuBoardFragment : Fragment() {
             }
         })
 
+        // 현재 달로 초기값 지정
+        var selectedMonth: Int = CalendarDay.today().month
+
+        // 이 달의 하이라이트된 날 표시하기
+        fetchHighlightedDate(selectedMonth)
+
         // 월 변경 이벤트 리스너
         binding.calendarView.setOnMonthChangedListener { _, date ->
+            selectedMonth = date.month
+            Log.d("Calendar", "Month: $selectedMonth")
             binding.calendarView.removeDecorators()
             binding.calendarView.invalidateDecorators()
             selectedMonthDecorator = SelectedMonthDecorator(requireContext(), date.month)
             binding.calendarView.addDecorators(dayDecorator, todayDecorator, sundayDecorator, selectedMonthDecorator)
+            // 달이 변경될 때마다 그 달의 하이라이트된 날 받아오기
+            fetchHighlightedDate(selectedMonth)
         }
 
         // 날짜 선택 이벤트 리스너
@@ -94,6 +110,7 @@ class MenuBoardFragment : Fragment() {
             if (selected) {
                 binding.todayApplyBtn.visibility = View.GONE
                 val selectedDate = date.date.toString()
+                Log.d("Calendar", "Date:$selectedDate")
 
                 // MenuDetailFragment로 전환
                 val fragment = MenuDetailFragment().apply {
@@ -188,33 +205,90 @@ class MenuBoardFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-}
 
-// 오늘 날짜의 배경 설정
-class CustomBackgroundSpan(context: Context, private val color: Int) : LineBackgroundSpan {
-    private val radius: Float
 
-    init {
-        // 24dp를 픽셀로 변환하여 반지름으로 사용
-        radius = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25f, context.resources.displayMetrics) / 2
+    // 오늘 날짜의 배경 설정
+    class CustomBackgroundSpan(context: Context, private val color: Int) : LineBackgroundSpan {
+        private val radius: Float
+
+        init {
+            // 24dp를 픽셀로 변환하여 반지름으로 사용
+            radius = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25f, context.resources.displayMetrics) / 2
+        }
+
+        override fun drawBackground(
+            canvas: Canvas, paint: Paint,
+            left: Int, right: Int,
+            top: Int, baseline: Int,
+            bottom: Int, text: CharSequence,
+            start: Int, end: Int, lineNum: Int
+        ) {
+            val oldColor = paint.color
+            paint.color = color
+
+            // 원의 중심 좌표 계산
+            val cx = (left + right) / 2f
+            val cy = (top + bottom) / 2f
+
+            // 원 그리기
+            canvas.drawCircle(cx, cy, radius, paint)
+            paint.color = oldColor
+        }
     }
 
-    override fun drawBackground(
-        canvas: Canvas, paint: Paint,
-        left: Int, right: Int,
-        top: Int, baseline: Int,
-        bottom: Int, text: CharSequence,
-        start: Int, end: Int, lineNum: Int
-    ) {
-        val oldColor = paint.color
-        paint.color = color
+    // 하이라이트된 날짜 받아와 표시하기
+    private fun fetchHighlightedDate(selectedMonth: Int) {
+        val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
+        val call = menuService.getAllDay()
 
-        // 원의 중심 좌표 계산
-        val cx = (left + right) / 2f
-        val cy = (top + bottom) / 2f
+        call.enqueue(object : Callback<List<CalendarDto>> {
+            override fun onResponse(call: Call<List<CalendarDto>>, response: Response<List<CalendarDto>>) {
+                if (response.isSuccessful) {
+                    response.body()?.let { days ->
+                        // 하이라이트 여부가 true인 날들의 날짜만 저장
+                        val highlightedDayList = days.filter { it.isHilight == true }.map { it.day }
+                        binding.calendarView.addDecorators(HighlightedDayDecorator(highlightedDayList))
 
-        // 원 그리기
-        canvas.drawCircle(cx, cy, radius, paint)
-        paint.color = oldColor
+                    } ?: Log.e("MenuBoard", "Response body is null")
+                } else {
+                    Log.e("MenuBoard", "Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<List<CalendarDto>>, t: Throwable) {
+                Log.e("MenuBoard", "Error: ${t.message}")
+            }
+        })
+    }
+
+    // 하이라이트된 날짜에 동그라미를 표시하는 데코레이터 클래스 정의
+    private inner class HighlightedDayDecorator(private val dates: List<LocalDate>) : DayViewDecorator {
+        private val paint = Paint().apply {
+            color = Color.parseColor("#FF0707")
+            style = Paint.Style.FILL
+        }
+
+        override fun shouldDecorate(day: CalendarDay): Boolean {
+            // CalendarDay를 LocalDate로 변환하여 비교
+            val localDate = LocalDate.of(day.year, day.month, day.day)
+            return dates.contains(localDate)
+        }
+
+        override fun decorate(view: DayViewFacade) {
+            view.addSpan(object : LineBackgroundSpan {
+                override fun drawBackground(
+                    canvas: Canvas, paint: Paint,
+                    left: Int, right: Int,
+                    top: Int, baseline: Int,
+                    bottom: Int, text: CharSequence,
+                    start: Int, end: Int, lineNum: Int
+                ) {
+                    val radius = 11f // 원의 반지름 설정
+                    val cx = (left + right) / 2f
+                    val cy = (top + bottom) / 2f + 50f
+                    canvas.drawCircle(cx, cy, radius, this@HighlightedDayDecorator.paint)
+                }
+            })
+        }
     }
 }
