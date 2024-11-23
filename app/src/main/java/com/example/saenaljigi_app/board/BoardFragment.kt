@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.board
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +42,12 @@ class BoardFragment : Fragment() {
 
         binding.rvBoard.layoutManager = LinearLayoutManager(requireContext())
         binding.rvBoard.adapter = adapter
+
+        binding.ivSearchIcon.setOnClickListener {
+            val intent = Intent(requireContext(), SearchPostActivity::class.java)
+            startActivity(intent) // SearchPostActivity로 이동
+        }
+
     }
 
     override fun onDestroyView() {

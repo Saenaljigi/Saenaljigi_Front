@@ -18,8 +18,33 @@ data class FoodDto(
 
 data class CalendarDto(
     val id: Long,
-    val day: LocalDate,
+    val day: String,
     val isHilight: Boolean,
     val isBreakfast: Boolean,
     val menus: List<MenuDto>
 )
+
+data class Food(
+    val id: Long,
+    val foodName: String,
+    val isSelected: Boolean,
+    val menu: Menu
+)
+
+data class Menu(
+    val id: Long,
+    val foodTime: FoodTime,
+    var isCheck: Boolean,
+    val calendar: Calendar
+)
+
+data class Calendar(
+    val id: Long,
+    val day: LocalDate,
+    var isHilight: Boolean,
+    var isBreakfast: Boolean
+)
+
+enum class FoodTime {
+    BREAKFAST, LUNCH, DINNER
+}

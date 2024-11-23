@@ -31,6 +31,9 @@
         <activity
             android:name=".board.CreatePostActivity"
             android:exported="false" />
+        <activity
+            android:name=".board.SearchPostActivity"
+            android:exported="false" />
 
         <!-- 메인 화면 Activity -->
         <activity

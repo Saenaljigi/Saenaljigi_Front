@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.util.Log
 import android.view.Menu
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.saenaljigi_app.R
@@ -23,6 +24,8 @@ class MenuDetailFragment : Fragment() {
 
     // selectedDate를 저장할 변수
     private var selectedDateString: String? = null
+
+    private var apiCall: Call<CalendarDto>? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -69,7 +72,8 @@ class MenuDetailFragment : Fragment() {
             page.translationX = offset
 
             // 20dp를 픽셀로 변환하여 y축 이동
-            val translationYFactor = resources.getDimensionPixelOffset(R.dimen.view_page_translation_y)
+            val translationYFactor =
+                resources.getDimensionPixelOffset(R.dimen.view_page_translation_y)
             val translationY = translationYFactor * Math.abs(position)
             page.translationY = if (position != 0f) translationY.toFloat() else 0f
 
@@ -78,6 +82,9 @@ class MenuDetailFragment : Fragment() {
             val alpha = Math.max(minAlpha, 1 - Math.abs(position)) // 중앙으로 갈수록 밝아짐
             page.alpha = alpha
         }
+
+        // onPageChange를 ViewPager2에 연결
+        viewPager.registerOnPageChangeCallback(onPageChange)
     }
 
     // 페이지 변화 콜백
@@ -97,54 +104,83 @@ class MenuDetailFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        apiCall?.cancel()
     }
 
     // 메뉴 불러오기
     private fun fetchMenu(selectedDate: LocalDate) {
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
-        val formattedDate = selectedDate.toString()
+        val formattedDate = selectedDate.toString() // String 형태로 포멧
         Log.d("MenuDetail_R", "$formattedDate")
-        val call = menuService.getMenu(formattedDate)
+        apiCall = menuService.getMenu(formattedDate)
 
-        call.enqueue(object : Callback<CalendarDto> {
-            override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto?>) {
-                if (response.isSuccessful) {
-                    response.body()?.let { menus ->
-                        Log.d("MenuDetail_R", "$menus")
+        apiCall?.enqueue(object : Callback<CalendarDto> {
+            override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto>) {
+                if (isAdded) {
+                    if (response.isSuccessful) {
+                        response.body()?.let { menus ->
+                            Log.d("MenuDetail_R", "$menus")
 
-                        // 중식과 석식의 foodName만 분리하여 리스트 생성
-                        val lunchMenuNames = mutableListOf<String>()
-                        val dinnerMenuNames = mutableListOf<String>()
+                            // 중식과 석식의 foodName만 분리하여 리스트 생성
+                            val lunchMenuNames = mutableListOf<String>()
+                            val dinnerMenuNames = mutableListOf<String>()
 
-                        menus.menus.forEach { menu ->
-                            when (menu.foodTime) {
-                                "중식" -> lunchMenuNames.addAll(menu.foods.map { it.foodName })
-                                "석식" -> dinnerMenuNames.addAll(menu.foods.map { it.foodName })
+                            menus.menus.forEach { menu ->
+                                when (menu.foodTime) {
+                                    "중식" -> lunchMenuNames.addAll(menu.foods.map { it.foodName })
+                                    "석식" -> dinnerMenuNames.addAll(menu.foods.map { it.foodName })
+                                }
                             }
+
+                            // 아침은 안내 멘트 설정
+                            val breakfast = listOf(
+                                "식당 스낵바에",
+                                "샐러드&샌드위치",
+                                "준비되어있습니다.",
+                                "이틀 전에 예약하신 후",
+                                "이용 가능합니다."
+                            )
+
+                            Log.d(
+                                "MenuDetail_R",
+                                "Lunch: $lunchMenuNames, Dinner: $dinnerMenuNames"
+                            )
+
+                            // 세 리스트를 하나의 데이터 구조로 전달
+                            val menuLists = listOf(breakfast, lunchMenuNames, dinnerMenuNames)
+
+                            // 어댑터 연결
+                            val adapter =
+                                MenuDetailAdapter(menuLists, binding.viewPager, binding.applyBtn)
+                            binding.viewPager.adapter = adapter
+
+                        } ?: run {
+                            val errorMessage = "메뉴 데이터를 불러오는 데 실패했습니다. 다시 시도해주세요."
+                            Log.e("MenuDetail_R", "Response body is null")
+                            showErrorAndExit(errorMessage)
                         }
 
-                        Log.d("MenuDetail_R", "Lunch: $lunchMenuNames, Dinner: $dinnerMenuNames")
-
-                        // 두 리스트를 하나의 데이터 구조로 전달
-                        val menuLists = listOf(lunchMenuNames, dinnerMenuNames)
-
-                        // 어댑터 연결
-                        val adapter = MenuDetailAdapter(menuLists, binding.viewPager, binding.applyBtn)
-                        binding.viewPager.adapter = adapter
-                    } ?: Log.e("MenuDetail_R", "Response body is null")
-                } else {
-                    Log.e("MenuDetail_R", "Error: ${response.errorBody()?.string()}")
+                    } else {
+                        val errorMessage = "서버에서 오류가 발생했습니다. 잠시 후 다시 시도해주세요."
+                        Log.e("MenuDetail_R", "Error: ${response.errorBody()?.string()}")
+                        showErrorAndExit(errorMessage)
+                    }
                 }
             }
 
             override fun onFailure(call: Call<CalendarDto>, t: Throwable) {
-                Log.e("MenuDetail_R", "Error: ${t.message}")
+                if (isAdded) {
+                    val errorMessage = "네트워크 연결에 문제가 발생했습니다. 인터넷 상태를 확인해주세요."
+                    Log.e("MenuDetail_R", "Error: ${t.message}")
+                    showErrorAndExit(errorMessage)
+                }
             }
         })
     }
 
-    // 하이라이트된 메뉴 서버로 보내기
-    private fun updatedHighlightedMenu(userDTO: UserDTO, selectedDate: LocalDate, menu: Menu) {
-
+    private fun showErrorAndExit(message: String) {
+        if (!isAdded) return // 프래그먼트가 Activity에 연결되지 않은 경우 아무 작업도 수행하지 않음
+        Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
+        parentFragmentManager.popBackStack() // 프래그먼트 종료
     }
 }

@@ -8,9 +8,9 @@ import retrofit2.http.Query
 
 interface MenuApiService {
 
-    @GET("/calendar/{day}")
+    @GET("/calendar/day")
     fun getMenu ( // 메뉴 조회
-        @Path("day") day: String
+        @Query("day") day: String
     ): Call<CalendarDto>
 
     @GET("/calendar")
@@ -18,7 +18,7 @@ interface MenuApiService {
     ): Call<List<CalendarDto>>
 
     @PUT("/food/{foodId}/select")
-    fun updateHighlightedMenu(
+    fun updateHighlightedMenu( // 메뉴 하이라이트 업데이트
         @Path("foodId") foodId: String,
         @Query("isSelected") isSelected: Boolean
     ): Call<Void>

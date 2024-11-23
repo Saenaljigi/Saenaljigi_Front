@@ -91,7 +91,7 @@ class MenuBoardFragment : Fragment() {
         var selectedMonth: Int = CalendarDay.today().month
 
         // 이 달의 하이라이트된 날 표시하기
-        fetchHighlightedDate(selectedMonth)
+        //fetchHighlightedDate(selectedMonth)
 
         // 월 변경 이벤트 리스너
         binding.calendarView.setOnMonthChangedListener { _, date ->
@@ -102,7 +102,7 @@ class MenuBoardFragment : Fragment() {
             selectedMonthDecorator = SelectedMonthDecorator(requireContext(), date.month)
             binding.calendarView.addDecorators(dayDecorator, todayDecorator, sundayDecorator, selectedMonthDecorator)
             // 달이 변경될 때마다 그 달의 하이라이트된 날 받아오기
-            fetchHighlightedDate(selectedMonth)
+            //fetchHighlightedDate(selectedMonth)
         }
 
         // 날짜 선택 이벤트 리스너
@@ -236,30 +236,30 @@ class MenuBoardFragment : Fragment() {
         }
     }
 
-    // 하이라이트된 날짜 받아와 표시하기
-    private fun fetchHighlightedDate(selectedMonth: Int) {
-        val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
-        val call = menuService.getAllDay()
-
-        call.enqueue(object : Callback<List<CalendarDto>> {
-            override fun onResponse(call: Call<List<CalendarDto>>, response: Response<List<CalendarDto>>) {
-                if (response.isSuccessful) {
-                    response.body()?.let { days ->
-                        // 하이라이트 여부가 true인 날들의 날짜만 저장
-                        val highlightedDayList = days.filter { it.isHilight == true }.map { it.day }
-                        binding.calendarView.addDecorators(HighlightedDayDecorator(highlightedDayList))
-
-                    } ?: Log.e("MenuBoard", "Response body is null")
-                } else {
-                    Log.e("MenuBoard", "Error: ${response.errorBody()?.string()}")
-                }
-            }
-
-            override fun onFailure(call: Call<List<CalendarDto>>, t: Throwable) {
-                Log.e("MenuBoard", "Error: ${t.message}")
-            }
-        })
-    }
+//    // 하이라이트된 날짜 받아와 표시하기
+//    private fun fetchHighlightedDate(selectedMonth: Int) {
+//        val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
+//        val call = menuService.getAllDay()
+//
+//        call.enqueue(object : Callback<List<CalendarDto>> {
+//            override fun onResponse(call: Call<List<CalendarDto>>, response: Response<List<CalendarDto>>) {
+//                if (response.isSuccessful) {
+//                    response.body()?.let { days ->
+//                        // 하이라이트 여부가 true인 날들의 날짜만 저장
+//                        val highlightedDayList = days.filter { it.isHilight == true }.map { it.day }
+//                        binding.calendarView.addDecorators(HighlightedDayDecorator(highlightedDayList))
+//
+//                    } ?: Log.e("MenuBoard", "Response body is null")
+//                } else {
+//                    Log.e("MenuBoard", "Error: ${response.errorBody()?.string()}")
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<List<CalendarDto>>, t: Throwable) {
+//                Log.e("MenuBoard", "Error: ${t.message}")
+//            }
+//        })
+//    }
 
     // 하이라이트된 날짜에 동그라미를 표시하는 데코레이터 클래스 정의
     private inner class HighlightedDayDecorator(private val dates: List<LocalDate>) : DayViewDecorator {
