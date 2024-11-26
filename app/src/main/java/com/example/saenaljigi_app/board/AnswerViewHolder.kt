@@ -13,7 +13,7 @@ class AnswerViewHolder(
         binding.tvAnswerContent.text = answer.content
         binding.tvAnswerCreatedAt.text = answer.createdAt
 
-        val commentAdapter = CommentAdapter(answer.replies)
+        val commentAdapter = CommentAdapter(answer.comments)
         binding.rvAnswerContainer.layoutManager = LinearLayoutManager(binding.root.context)
         binding.rvAnswerContainer.adapter = commentAdapter
     }

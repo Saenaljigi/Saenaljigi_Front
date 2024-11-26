@@ -1,4 +1,4 @@
-package com.example.saenaljigi_app.menu
+package com.example.saenaljigi_app.UserDto
 
 import retrofit2.Call
 import retrofit2.http.GET

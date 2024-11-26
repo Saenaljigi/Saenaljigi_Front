@@ -4,24 +4,25 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class BoardClass(
-    val postId: Long,
+data class PostClass(
+    val id: Long,
+    val username:String,
     val title: String,
     val content: String,
     val anonymousName: String,
-    val likeCount: Int,
-    val replyCount: Int,
-    val replies: List<CommentDto>,
+    val likeCnt: Long,
+    val commentCnt: Long,
+    val comments: List<CommentDto>,
     val createdAt: String
 ) : Parcelable
 
 @Parcelize
 data class CommentDto(
-    val commentId: Long,
+    val id: Long,
     val postId: Long,
     val content: String,
     val anonymousName: String,
-    val replyCount: Int,
-    val replies: List<CommentDto>,
+    val replyCnt: Int,
+    val comments: List<CommentDto>,
     val createdAt: String
 ) : Parcelable

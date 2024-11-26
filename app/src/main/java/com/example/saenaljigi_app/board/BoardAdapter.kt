@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.saenaljigi_app.databinding.ItemBoardBinding
 
 class BoardAdapter(
-    private val boards: List<BoardClass>,
-    private val onItemClick: (BoardClass) -> Unit
+    private val boards: List<PostClass>,
+    private val onItemClick: (PostClass) -> Unit
 ) : RecyclerView.Adapter<BoardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BoardViewHolder {

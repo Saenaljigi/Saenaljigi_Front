@@ -1,18 +1,11 @@
 package com.example.saenaljigi_app.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentHomeBinding
-import com.example.saenaljigi_app.menu.MenuApiService
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.util.Calendar

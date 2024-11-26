@@ -1,24 +1,34 @@
 package com.example.saenaljigi_app.board
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.saenaljigi_app.R
+import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentBoardBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import android.os.Handler
+import android.os.Looper
 
 class BoardFragment : Fragment() {
 
     private var _binding: FragmentBoardBinding? = null
     private val binding get() = _binding!!
+    private val postService: PostService by lazy {
+        RetrofitClient.instance.create(PostService::class.java)
+    }
 
-    private val boardList = listOf(
-        BoardClass(1, "배달 같이 시키실 분", "버거킹 먹고 싶은데 최소주문 금액이 안되는데 같이 시킬 사람 있나요? 버거킹 아니어도 돼요", "익명1", 3, 5, emptyList(), "10월 28일 14:20"),
-        BoardClass(2, "게시글 제목2", "내용2", "익명2", 5, 2, emptyList(), "10월 28일 15:00"),
-        BoardClass(3, "게시글 제목3", "내용3", "익명3", 1, 8, emptyList(), "10월 28일 16:10")
-    )
+    private lateinit var handler: Handler
+    private lateinit var runnable: Runnable
+    private val refreshInterval: Long = 12000 // 12초 (밀리초 단위)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,20 +41,83 @@ class BoardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = BoardAdapter(boardList) { board ->
-            val fragment = BoardDetailFragment.newInstance(board.postId)
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment)
-                .addToBackStack(null)
-                .commit()
-        }
-
         binding.rvBoard.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvBoard.adapter = adapter
+
+        // 초기 데이터 로드
+        fetchPosts()
+
+        // 주기적으로 데이터 새로고침
+        setupAutoRefresh()
+
+        binding.btnPost.setOnClickListener {
+            val intent = Intent(requireContext(), CreatePostActivity::class.java)
+            startActivityForResult(intent, CREATE_POST_REQUEST_CODE)
+        }
+    }
+
+    private fun setupAutoRefresh() {
+        handler = Handler(Looper.getMainLooper())
+        runnable = object : Runnable {
+            override fun run() {
+                fetchPosts() // 데이터 새로고침
+                handler.postDelayed(this, refreshInterval)
+            }
+        }
+        handler.post(runnable)
+    }
+
+    private fun fetchPosts() {
+        val token = getJwtToken()
+
+        postService.getAllPosts("$token").enqueue(object : Callback<List<PostClass>> {
+            override fun onResponse(call: Call<List<PostClass>>, response: Response<List<PostClass>>) {
+                if (response.isSuccessful) {
+                    val posts = response.body()
+                    if (posts != null) {
+                        val adapter = BoardAdapter(posts) { board ->
+                            val fragment = BoardDetailFragment.newInstance(board.id)
+                            parentFragmentManager.beginTransaction()
+                                .replace(R.id.fragment_container, fragment)
+                                .addToBackStack(null)
+                                .commit()
+                        }
+                        binding.rvBoard.adapter = adapter
+                    } else {
+                        showError("게시물을 불러올 수 없습니다.")
+                    }
+                } else {
+                    showError("서버 오류: ${response.code()}")
+                }
+            }
+
+            override fun onFailure(call: Call<List<PostClass>>, t: Throwable) {
+                showError("네트워크 오류: ${t.localizedMessage}")
+            }
+        })
+    }
+
+    private fun showError(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun getJwtToken(): String {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return sharedPref.getString("jwt_token", "") ?: ""
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        stopAutoRefresh() // Auto-refresh 중지
+    }
+
+    private fun stopAutoRefresh() {
+        if (::handler.isInitialized && ::runnable.isInitialized) {
+            handler.removeCallbacks(runnable)
+        }
+    }
+
+    companion object {
+        const val CREATE_POST_REQUEST_CODE = 100
     }
 }

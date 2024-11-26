@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.notice
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -21,12 +22,10 @@ class NoticeBoardFragment : Fragment() {
     private lateinit var adapter: NoticeBoardAdapter
     private lateinit var noticeList: ArrayList<NoticeBoardData>
 
-    private val useDummyData = true
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentNoticeBoardBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -34,11 +33,7 @@ class NoticeBoardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        noticeList = if (useDummyData) {
-            loadDummyData()
-        } else {
-            ArrayList()
-        }
+        noticeList = ArrayList()
 
         adapter = NoticeBoardAdapter(noticeList) { id ->
             loadNoticeDetail(id)
@@ -47,55 +42,47 @@ class NoticeBoardFragment : Fragment() {
         binding.rvNoticeBoard.layoutManager = LinearLayoutManager(requireContext())
         binding.rvNoticeBoard.adapter = adapter
 
-        if (!useDummyData) {
-            loadNoticesFromServer()
-        }
-    }
-
-    private fun loadDummyData(): ArrayList<NoticeBoardData> {
-        // 가라 데이터 (임시 데이터) 주석 처리
-        /*
-        return arrayListOf(
-            NoticeBoardData(id = 1, title = "공지사항 1", created_at = "2024-09-30"),
-            NoticeBoardData(id = 2, title = "공지사항 2", created_at = "2024-09-29"),
-            NoticeBoardData(id = 3, title = "공지사항 3", created_at = "2024-09-28")
-        )
-        */
+        // 서버에서 공지사항 목록 가져오기
         loadNoticesFromServer()
-        return ArrayList()
     }
 
-    private fun loadNoticeDetail(id: Long) {
-        // Retrofit API 사용 (주석 해제하여 사용)
-        /*
+    private fun loadNoticeDetail(noticeId: Long) {
+        val token = getJwtToken()
         val service = RetrofitClient.instance.create(NoticeBoardService::class.java)
-        service.getNoticeSeq("token").enqueue(object : Callback<NoticeBoardData> {
+        val noticeSeq = noticeId.toString()
+
+        // 상세 공지사항 로드 시작 로그
+        Log.d("NoticeBoardFragment", "Initiating fetch for notice detail, ID: $noticeSeq")
+
+        service.getNoticeSeq(token, noticeSeq).enqueue(object : Callback<NoticeBoardData> {
             override fun onResponse(call: Call<NoticeBoardData>, response: Response<NoticeBoardData>) {
-                response.body()?.let { detailedData ->
-                    openDetailFragment(detailedData)
+                Log.d("NoticeBoardFragment", "Received response for notice detail, ID: $noticeSeq")
+
+                if (response.isSuccessful) {
+                    response.body()?.let { detailedData ->
+                        Log.d("NoticeBoardFragment", "Successfully fetched notice detail: $detailedData")
+                        openDetailFragment(detailedData)
+                    } ?: run {
+                        Log.e("NoticeBoardFragment", "Notice detail response body is null, ID: $noticeSeq")
+                    }
+                } else {
+                    val errorBody = response.errorBody()?.string() ?: "No error body available"
+                    Log.e(
+                        "NoticeBoardFragment",
+                        "Failed to fetch notice detail, ID: $noticeSeq, Code: ${response.code()}, Error Body: $errorBody"
+                    )
                 }
             }
 
             override fun onFailure(call: Call<NoticeBoardData>, t: Throwable) {
-                // 에러 처리
+                Log.e("NoticeBoardFragment", "Error occurred while fetching notice detail, ID: $noticeSeq", t)
             }
         })
-        */
-
-        // 가라 데이터로 상세 화면 로드
-        val detailedData = NoticeBoardData(
-            id = id,
-            title = "[생활지도실] 2024-2학기 1차 생활점검 실시 안내 $id",
-            created_at = "2024-09-30",
-            content = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n새관 행복기숙사 전체 생활점검을 아래와 같이 실시하오니, 기숙사생들께서는 반드시 이 점 숙지하시고 생활점검에 반드시 참여해주시기 바랍니다.\n\n- 아 래 -\n\n1. 일 시: 2024년 09월 26일(목) 저녁 18시 00분 부터 실시\n2. 점검 시간:\n점검시간\n09월 26일 (목)\n남학생\n여학생\n18:00PM\n4, 5, 6, 7, 8층\n3, 9, 10, 11, 12, 13층\n※ 점검시간에 따라 상기 층별 점검시간이 다소 지체될 수 있음.\n\n3. 생활점검 내용\n(1) 호실 내 외부인 투숙, 흡연, 음주, 주류 반입 및 허가되지 않은 물품(취사도구, 전열기구)의 사용 금지.\n(2) 호실 내 정리정돈 및 청소상태 점검 (호실 출입구 주변, 화장실 포함)\n\n※ 호실 내 사생이 없더라도 사감 및 조교가 입실하여 호실 점검 후, 호실 내 상태에 따라 벌점 부과.",
-            writer = "관리자",
-            files = listOf(FileData(fileName = "파일$id", fileUrl = "https://example.com/file$id"))
-        )
-
-        openDetailFragment(detailedData)
     }
 
     private fun openDetailFragment(detailedData: NoticeBoardData) {
+        Log.d("NoticeBoardFragment", "Navigating to NoticeDetailFragment with data: $detailedData")
+
         val fragment = NoticeDetailFragment().apply {
             arguments = Bundle().apply {
                 putString("title", detailedData.title)
@@ -109,41 +96,49 @@ class NoticeBoardFragment : Fragment() {
             .replace(R.id.fragment_container, fragment)
             .addToBackStack(null)
             .commit()
+
+        Log.d("NoticeBoardFragment", "NoticeDetailFragment transaction committed")
+    }
+
+    private fun getJwtToken(): String {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        val token = sharedPref.getString("jwt_token", "") ?: ""
+        Log.d("NoticeBoardFragment", "Retrieved JWT token: $token")
+        return token
     }
 
     private fun loadNoticesFromServer() {
-        Log.d("NoticeBoardFragment", "Fetching notice list from server...")
+        val token = getJwtToken()
+        Log.d("NoticeBoardFragment", "Initiating fetch for notice list with token: $token")
+
         val service = RetrofitClient.instance.create(NoticeBoardService::class.java)
-        service.getNotice().enqueue(object : Callback<List<NoticeBoardData>> {
+        service.getNotice(token).enqueue(object : Callback<List<NoticeBoardData>> {
             override fun onResponse(call: Call<List<NoticeBoardData>>, response: Response<List<NoticeBoardData>>) {
+                Log.d("NoticeBoardFragment", "Received response for notice list")
+
                 if (response.isSuccessful) {
                     response.body()?.let { notices ->
                         Log.d("NoticeBoardFragment", "Successfully fetched ${notices.size} notices")
                         noticeList.clear()
                         noticeList.addAll(notices)
                         adapter.notifyDataSetChanged()
+                    } ?: run {
+                        Log.e("NoticeBoardFragment", "Notice list response body is null")
                     }
                 } else {
-                    // 실패 시 응답 코드, 에러 메시지, 헤더 등을 자세히 로깅
-                    val errorBody = response.errorBody()?.string() ?: "No error body"
-                    val errorCode = response.code() // HTTP 상태 코드
-                    val errorMessage = response.message() // 상태 메시지
-                    val headers = response.headers() // 응답 헤더
-
-                    Log.d("NoticeBoardFragment", "Failed to fetch notices.")
-                    Log.d("NoticeBoardFragment", "Error Code: $errorCode")
-                    Log.d("NoticeBoardFragment", "Error Message: $errorMessage")
-                    Log.d("NoticeBoardFragment", "Error Body: $errorBody")
-                    Log.d("NoticeBoardFragment", "Headers: $headers")
+                    val errorBody = response.errorBody()?.string() ?: "No error body available"
+                    Log.e(
+                        "NoticeBoardFragment",
+                        "Failed to fetch notice list, Code: ${response.code()}, Error Body: $errorBody"
+                    )
                 }
             }
 
             override fun onFailure(call: Call<List<NoticeBoardData>>, t: Throwable) {
-                Log.e("NoticeBoardFragment", "Error fetching notices", t)
+                Log.e("NoticeBoardFragment", "Error occurred while fetching notice list", t)
             }
         })
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

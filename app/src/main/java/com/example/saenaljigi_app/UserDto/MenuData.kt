@@ -1,4 +1,4 @@
-package com.example.saenaljigi_app.menu
+package com.example.saenaljigi_app.UserDto
 
 import java.time.LocalDate
 
