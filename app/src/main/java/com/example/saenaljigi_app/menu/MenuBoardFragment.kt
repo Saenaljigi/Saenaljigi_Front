@@ -1,4 +1,4 @@
-package com.example.saenaljigi_app.UserDto
+package com.example.saenaljigi_app.menu
 
 import android.content.Context
 import android.graphics.Canvas
@@ -91,7 +91,7 @@ class MenuBoardFragment : Fragment() {
         var selectedMonth: Int = CalendarDay.today().month
 
         // 이 달의 하이라이트된 날 표시하기
-        fetchHighlightedDate(selectedMonth)
+        //fetchHighlightedDate(selectedMonth)
 
         // 월 변경 이벤트 리스너
         binding.calendarView.setOnMonthChangedListener { _, date ->
@@ -102,7 +102,7 @@ class MenuBoardFragment : Fragment() {
             selectedMonthDecorator = SelectedMonthDecorator(requireContext(), date.month)
             binding.calendarView.addDecorators(dayDecorator, todayDecorator, sundayDecorator, selectedMonthDecorator)
             // 달이 변경될 때마다 그 달의 하이라이트된 날 받아오기
-            fetchHighlightedDate(selectedMonth)
+            //fetchHighlightedDate(selectedMonth)
         }
 
         // 날짜 선택 이벤트 리스너
@@ -123,6 +123,8 @@ class MenuBoardFragment : Fragment() {
                     .commit()
             }
         }
+
+        fetchHighlightedDate(selectedMonth)
 
         return binding.root
     }
@@ -166,15 +168,34 @@ class MenuBoardFragment : Fragment() {
     /* 오늘 날짜의 background를 설정하는 클래스 */
     private class TodayDecorator(context: Context) : DayViewDecorator {
         private val date = CalendarDay.today()
+        private val whiteTextSpan = ForegroundColorSpan(Color.WHITE)
         private val customBackgroundSpan = CustomBackgroundSpan(context, Color.parseColor("#45565E"))
 
         override fun shouldDecorate(day: CalendarDay?): Boolean = day == date
 
         override fun decorate(view: DayViewFacade?) {
-            // CustomBackgroundSpan을 사용하여 오늘 날짜의 배경을 설정
-            view?.addSpan(customBackgroundSpan)
+            view?.addSpan(whiteTextSpan) // 오늘 날짜 글씨를 하얀색으로
+            view?.addSpan(customBackgroundSpan) // 오늘 날짜 배경 커스텀 설정
         }
     }
+
+    /* 일요일 날짜의 색상을 설정하는 클래스 */
+    private class SundayDecorator(private val context: Context) : DayViewDecorator {
+        private val calendar: Calendar = Calendar.getInstance()
+        private val redTextSpan = ForegroundColorSpan(ContextCompat.getColor(context, R.color.red_sun))
+        private val today = CalendarDay.today() // 오늘 날짜 가져오기
+
+        override fun shouldDecorate(day: CalendarDay): Boolean {
+            // 오늘 날짜는 데코레이터 적용 제외
+            calendar.set(day.year, day.month - 1, day.day)
+            return calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY && day != today
+        }
+
+        override fun decorate(view: DayViewFacade) {
+            view.addSpan(redTextSpan) // 일요일 글씨를 빨간색으로 설정
+        }
+    }
+
 
     /* 이번달에 속하지 않지만 캘린더에 보여지는 이전달/다음달의 일부 날짜를 설정하는 클래스 */
     private inner class SelectedMonthDecorator(
@@ -184,20 +205,6 @@ class MenuBoardFragment : Fragment() {
         override fun shouldDecorate(day: CalendarDay): Boolean = day.month != selectedMonth
         override fun decorate(view: DayViewFacade) {
             view.addSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.gray)))
-        }
-    }
-
-    /* 일요일 날짜의 색상을 설정하는 클래스 */
-    private class SundayDecorator(private val context: Context) : DayViewDecorator {
-        private val calendar: Calendar = Calendar.getInstance()
-
-        override fun shouldDecorate(day: CalendarDay): Boolean {
-            calendar.set(day.year, day.month - 1, day.day)
-            return calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY
-        }
-
-        override fun decorate(view: DayViewFacade) {
-            view.addSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.red_sun)))
         }
     }
 
@@ -238,8 +245,10 @@ class MenuBoardFragment : Fragment() {
 
     // 하이라이트된 날짜 받아와 표시하기
     private fun fetchHighlightedDate(selectedMonth: Int) {
+        val token = getJwtToken()
+
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
-        val call = menuService.getAllDay()
+        val call = menuService.getAllDay("Bearer $token")
 
         call.enqueue(object : Callback<List<CalendarDto>> {
             override fun onResponse(call: Call<List<CalendarDto>>, response: Response<List<CalendarDto>>) {
@@ -247,11 +256,12 @@ class MenuBoardFragment : Fragment() {
                     response.body()?.let { days ->
                         // 하이라이트 여부가 true인 날들의 날짜만 저장
                         val highlightedDayList = days.filter { it.isHilight == true }.map { it.day }
+                        Log.d("MenuBoard", "$highlightedDayList")
                         binding.calendarView.addDecorators(HighlightedDayDecorator(highlightedDayList))
 
                     } ?: Log.e("MenuBoard", "Response body is null")
                 } else {
-                    Log.e("MenuBoard", "Error: ${response.errorBody()?.string()}")
+                    Log.e("MenuBoard", "Error: ${response.code()}")
                 }
             }
 
@@ -290,5 +300,14 @@ class MenuBoardFragment : Fragment() {
                 }
             })
         }
+    }
+
+    private fun applyForBreakfast(date: LocalDate, calendarId: Long) {
+
+    }
+
+    private fun getJwtToken(): String {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return sharedPref.getString("jwt_token", "") ?: ""
     }
 }

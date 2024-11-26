@@ -36,9 +36,10 @@ class PointFragment : Fragment() {
 
         // 데이터 생성
         myPageHistoryData = arrayListOf(
-            MyPageHistoryData("2024년 9월 20일", "상점", "+1점", "총 -3점"),
-            MyPageHistoryData("2024년 9월 19일", "상점", "+1점", "총 -4점"),
-            MyPageHistoryData("2024년 9월 19일", "벌점", "-2점", "총 -5점")
+            MyPageHistoryData("2024년 11월 5일", "상점", "+3점", "총 +2점"),
+            MyPageHistoryData("2024년 10월 17일", "상점", "+1점", "총 -1점"),
+            MyPageHistoryData("2024년 10월 10일", "상점", "+1점", "총 -2점"),
+            MyPageHistoryData("2024년 9월 19일", "벌점", "-3점", "총 -3점")
         )
 
         // 어댑터 초기화
@@ -50,14 +51,9 @@ class PointFragment : Fragment() {
             layoutManager = LinearLayoutManager(context) // 레이아웃 매니저 설정
         }
 
-        // 구분선 적용
-        val dividerItemDecoration =
-            DividerItemDecoration(binding.rcvPoint.context, LinearLayoutManager.VERTICAL)
-        val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.mypage_divider)
-        drawable?.let {
-            dividerItemDecoration.setDrawable(it)
-        }
-        binding.rcvPoint.addItemDecoration(dividerItemDecoration)
+        // 커스텀 구분선 적용
+        val customItemDecoration = CustomDividerItemDecoration(R.drawable.mypage_divider)
+        binding.rcvPoint.addItemDecoration(customItemDecoration)
 
         // back_btn 클릭 시 백스택으로 이동
         binding.backBtn.setOnClickListener {

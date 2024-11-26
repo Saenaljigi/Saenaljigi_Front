@@ -64,6 +64,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         app:chipSpacingHorizontal="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,17 +72,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_recent_keyword"
         app:layout_constraintVertical_bias="0.0">
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
-            android:text="조식"
-            android:textColor="#46515B"
-            android:textSize="13sp"
-            app:chipBackgroundColor="#E9E9E9"
-            app:chipCornerRadius="26dp"
-            app:chipStrokeColor="@color/transparent" />
-
     </com.google.android.material.chip.ChipGroup>
 
     <TextView
@@ -125,3 +115,15 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--Chip
+<com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:text="조식"
+            android:textColor="#46515B"
+            android:textSize="13sp"
+            app:chipBackgroundColor="#E9E9E9"
+            app:chipCornerRadius="26dp"
+            app:chipStrokeColor="@color/transparent" />
+            -->

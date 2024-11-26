@@ -28,7 +28,7 @@ class BoardFragment : Fragment() {
 
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
-    private val refreshInterval: Long = 12000 // 12초 (밀리초 단위)
+    private val refreshInterval: Long = 12000 // 12 seconds in milliseconds
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,6 +49,13 @@ class BoardFragment : Fragment() {
         // 주기적으로 데이터 새로고침
         setupAutoRefresh()
 
+        // 게시글 검색 버튼 클릭 시
+        binding.ivSearchIcon.setOnClickListener {
+            val intent = Intent(requireContext(), SearchPostActivity::class.java)
+            startActivity(intent) // SearchPostActivity로 이동
+        }
+
+        // 게시글 작성 버튼 클릭 시
         binding.btnPost.setOnClickListener {
             val intent = Intent(requireContext(), CreatePostActivity::class.java)
             startActivityForResult(intent, CREATE_POST_REQUEST_CODE)
@@ -69,7 +76,7 @@ class BoardFragment : Fragment() {
     private fun fetchPosts() {
         val token = getJwtToken()
 
-        postService.getAllPosts("$token").enqueue(object : Callback<List<PostClass>> {
+        postService.getAllPosts("Bearer $token").enqueue(object : Callback<List<PostClass>> {
             override fun onResponse(call: Call<List<PostClass>>, response: Response<List<PostClass>>) {
                 if (response.isSuccessful) {
                     val posts = response.body()
