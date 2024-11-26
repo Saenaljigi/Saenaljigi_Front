@@ -60,5 +60,20 @@
         tools:itemCount="10"
         tools:listitem="@layout/item_board" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="글쓰기"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/suite_regular"
+        android:background="@drawable/post_btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="78.64dp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

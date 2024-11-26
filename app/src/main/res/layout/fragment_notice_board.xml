@@ -38,52 +38,14 @@
         />
 
     <ImageView
-        android:id="@+id/img_board_top"
+        android:id="@+id/iv_back_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/notice_board_back1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_notice"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_bar"
+        app:layout_constraintTop_toBottomOf="@id/tv_notice" />
 
-    <!-- FrameLayout을 사용하여 처음 XML을 겹치게 배치 -->
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/img_board_top"
-        app:layout_constraintEnd_toEndOf="@id/img_board_top"
-        app:layout_constraintBottom_toBottomOf="@id/img_board_top"
-        app:layout_constraintTop_toTopOf="@id/img_board_top">
 
-        <!-- 처음 XML 레이아웃의 내용 -->
-        <ImageView
-            android:id="@+id/img_volume_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/volume_low_red"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="15dp" />
-
-            <TextView
-                android:id="@+id/tv_tile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="[생활지도실] 2024-2학기 1차 생활점검 실..."
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:textColor="#000000"
-                android:textSize="13sp"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="@font/suit_medium"
-                android:layout_marginStart="49dp"
-                android:layout_marginEnd="23dp"
-
-                />
-    </FrameLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -91,11 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:background="@drawable/notice_board_back2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_board_top"
+        app:layout_constraintTop_toBottomOf="@id/iv_back_bar"
         >
 
         <!-- 리사이클러뷰 -->
@@ -105,9 +67,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="15dp"
-            tools:itemCount="8"
+            tools:itemCount="20"
             tools:listitem="@layout/item_notice_board" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

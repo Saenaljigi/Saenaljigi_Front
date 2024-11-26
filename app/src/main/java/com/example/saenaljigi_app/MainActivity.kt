@@ -1,9 +1,7 @@
 package com.example.saenaljigi_app
 
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.saenaljigi_app.board.BoardFragment
 import com.example.saenaljigi_app.databinding.ActivityMainBinding
 import com.example.saenaljigi_app.home.HomeFragment
-import com.example.saenaljigi_app.menu.MenuBoardFragment
+import com.example.saenaljigi_app.UserDto.MenuBoardFragment
 import com.example.saenaljigi_app.mypage.MyPageFragment
 import com.example.saenaljigi_app.notice.NoticeBoardFragment
 

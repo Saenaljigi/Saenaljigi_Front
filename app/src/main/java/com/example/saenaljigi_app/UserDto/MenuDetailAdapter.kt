@@ -1,4 +1,4 @@
-package com.example.saenaljigi_app.menu
+package com.example.saenaljigi_app.UserDto
 
 import android.graphics.Color
 import android.view.LayoutInflater

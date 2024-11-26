@@ -7,18 +7,14 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-interface SejongApi {
-    // 세종대학교 기숙사 로그인 API
-    @POST("/auth?method=ClassicSession")
-    fun login(@Body body: Map<String, String>): Call<SejongAuthResponse>
-}
 interface LoginService {
 
     // 애플리케이션 JWT 토큰 요청 API
-    @POST("/users/login")
-    fun requestJwtToken(@Body userDTO: UserDTO): Call<JwtResponse>
+    @POST("/login")
+    fun requestJwtToken(@Body userRequest: UserRequest): Call<UserResponse>
 
     // 애플리케이션 로그아웃 API
-    @GET("/users/logout")
+    @GET("/logout")
     fun logout(): Call<ResponseBody>
 }
+
