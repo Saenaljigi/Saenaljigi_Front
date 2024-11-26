@@ -6,10 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentHomeBinding
 import com.example.saenaljigi_app.menu.CalendarDto
 import com.example.saenaljigi_app.menu.MenuApiService
+import com.example.saenaljigi_app.notice.NoticeBoardData
+import com.example.saenaljigi_app.notice.NoticeBoardFragment
+import com.example.saenaljigi_app.notice.NoticeBoardService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -47,6 +51,35 @@ class HomeFragment : Fragment() {
         val today: LocalDate = LocalDate.now()
         fetchTodayMenu(today)
 
+        // 식권 내역 불러오기
+
+        // 총 상벌점 불러오기
+        val total_point = fetchPoint()
+        // 텍스트뷰 변경
+        binding.totalCount.text = if (total_point > 0) "+$total_point" else total_point.toString()
+
+        if (total_point < 0)
+            binding.totalCountCmt.text = "벌점이 더 높아요 \uD83D\uDE13"
+        else if (total_point == 0)
+            binding.totalCountCmt.text = "상벌점이 같아요 \uD83D\uDE10"
+
+        // 공지사항 2개 불러오기
+        fetchNotice()
+
+        // 자세히 보기 클릭 시 공지사항 프래그먼트로 이동
+        binding.detailBtn.setOnClickListener {
+            val fragmentManager = requireActivity().supportFragmentManager
+            val transaction = fragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, NoticeBoardFragment())
+            transaction.commit()
+
+            // 바텀 네비게이션 상태를 NoticeBoardFragment로 동기화
+            val bottomNavigationView = requireActivity().findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(
+                R.id.bottom_navigation_view
+            )
+            bottomNavigationView.selectedItemId = R.id.fragment_notice
+        }
+
         return binding.root
     }
 
@@ -57,11 +90,13 @@ class HomeFragment : Fragment() {
 
     // 오늘 메뉴 불러오기
     private fun fetchTodayMenu(todayDate: LocalDate) {
+        val token = ""
+
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
         val formattedDate = todayDate.toString()
         Log.d("MenuDetail_R", "$formattedDate")
 
-        menuService.getMenu(formattedDate).enqueue(object : Callback<CalendarDto> {
+        menuService.getMenu(token, formattedDate).enqueue(object : Callback<CalendarDto> {
             override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto>) {
                 if (response.isSuccessful) {
                     response.body()?.let { menus ->
@@ -104,4 +139,46 @@ class HomeFragment : Fragment() {
         })
     }
 
+    private fun fetchPoint(): Int {
+        val point = 2
+        return point
+    }
+
+    private fun fetchNotice() {
+        val noticeService = RetrofitClient.instance.create(NoticeBoardService::class.java)
+        val call = noticeService.getNotice()
+
+        call.enqueue(object : Callback<List<NoticeBoardData>> {
+            override fun onResponse(
+                call: Call<List<NoticeBoardData>>,
+                response: Response<List<NoticeBoardData>>
+            ) {
+                if (response.isSuccessful) {
+                    val noticeList = response.body()
+                    // 서버에서 받은 데이터를 처리
+                    if (noticeList != null) {
+                        val notice1 = noticeList[0]
+                        val notice2 = noticeList[1]
+                        Log.d("HomeFrag", "$notice1/$notice2")
+
+                        // 제목과 시간 텍스트 변경
+                        binding.noticeContent1.text = notice1.title
+                        binding.noticePostedTime1.text = notice1.created_at
+
+                        binding.noticeContent2.text = notice2.title
+                        binding.noticePostedTime2.text = notice2.created_at
+                    } else {
+                        Log.e("fetchNotice", "응답은 성공했지만 데이터가 null입니다.")
+                    }
+                } else {
+                    Log.e("fetchNotice", "서버 응답 실패: ${response.code()} - ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<List<NoticeBoardData>>, t: Throwable) {
+                // 네트워크 오류나 기타 이유로 요청 실패 시 처리
+                Log.e("fetchNotice", "네트워크 요청 실패", t)
+            }
+        })
+    }
 }

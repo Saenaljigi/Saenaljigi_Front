@@ -64,6 +64,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         app:chipSpacingHorizontal="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -73,13 +73,14 @@ class SearchPostActivity : AppCompatActivity() {
         }
     }
 
-    // Chip 생성 및 추가 함수
+    // chip 생성 함수
     private fun addChipToGroup(chipGroup: ChipGroup, text: String) {
-        // Chip 개수 확인 후 10개 초과 시 첫 번째 Chip 제거
+        // 새로운 Chip 추가 전에 Chip 개수를 확인하고 10개 초과 시 가장 오래된 Chip(맨 뒤)을 제거
         if (chipGroup.childCount >= 10) {
-            chipGroup.removeViewAt(0)
+            chipGroup.removeViewAt(chipGroup.childCount - 1) // 가장 오래된 Chip 삭제 (맨 뒤)
         }
 
+        // 새로운 Chip 생성
         val chip = Chip(this).apply {
             this.text = text
             setTextColor(Color.parseColor("#46515B"))
@@ -95,6 +96,8 @@ class SearchPostActivity : AppCompatActivity() {
                 height = 46.dpToPx()
             }
         }
+
+        // 새로운 Chip을 항상 맨 앞에 추가
         chipGroup.addView(chip, 0)
 
         // 현재 Chip 데이터를 저장
@@ -133,36 +136,6 @@ class SearchPostActivity : AppCompatActivity() {
                 }
             }
             chipGroup.addView(chip) // 저장된 순서대로 맨 뒤에 추가
-        }
-    }
-
-    // Chip 생성 및 추가 함수
-    private fun addChipToGroup(chipGroup: ChipGroup, text: String, saveToPrefs: Boolean = true) {
-        // Chip 개수 확인 후 10개 초과 시 가장 오래된 Chip(맨 뒤) 제거
-        if (chipGroup.childCount >= 10) {
-            chipGroup.removeViewAt(chipGroup.childCount - 1) // 맨 뒤 Chip 제거
-        }
-
-        val chip = Chip(this).apply {
-            this.text = text
-            setTextColor(Color.parseColor("#46515B"))
-            textSize = 13f
-            chipBackgroundColor = getColorStateList("#E9E9E9")
-            chipCornerRadius = 26.dpToPx().toFloat()
-            chipStrokeColor = getColorStateList("#00000000") // 투명색
-            chipStrokeWidth = 0f // 테두리 제거
-            layoutParams = ChipGroup.LayoutParams(
-                ChipGroup.LayoutParams.WRAP_CONTENT,
-                ChipGroup.LayoutParams.WRAP_CONTENT
-            ).apply {
-                height = 46.dpToPx()
-            }
-        }
-        chipGroup.addView(chip, 0) // Chip을 항상 맨 앞에 추가
-
-        // 저장 옵션이 활성화된 경우에만 SharedPreferences에 저장
-        if (saveToPrefs) {
-            saveChips(getChipTexts(chipGroup))
         }
     }
 

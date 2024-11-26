@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.mypage
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -54,15 +55,9 @@ class MealTicketFragment : Fragment() {
         val recyclerView = binding.rcvMealTicket
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        // 구분선 적용
-        val dividerItemDecoration =
-            DividerItemDecoration(recyclerView.context, LinearLayoutManager.VERTICAL)
-        val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.mypage_divider)
-        drawable?.let {
-            dividerItemDecoration.setDrawable(it)
-        }
-
-        recyclerView.addItemDecoration(dividerItemDecoration)
+        // 커스텀 구분선 적용
+        val customItemDecoration = CustomDividerItemDecoration(R.drawable.mypage_divider)
+        binding.rcvMealTicket.addItemDecoration(customItemDecoration)
 
         // back_btn 클릭 시 백스택으로 이동
         binding.backBtn.setOnClickListener {

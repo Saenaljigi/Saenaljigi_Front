@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.menu
 
+import MenuDetailAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.util.Log
 import android.view.Menu
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.saenaljigi_app.R
@@ -109,49 +111,29 @@ class MenuDetailFragment : Fragment() {
 
     // 메뉴 불러오기
     private fun fetchMenu(selectedDate: LocalDate) {
+        val token = ""
+
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
-        val formattedDate = selectedDate.toString() // String 형태로 포멧
+        val formattedDate = selectedDate.toString() // String 형태로 포맷
         Log.d("MenuDetail_R", "$formattedDate")
-        apiCall = menuService.getMenu(formattedDate)
+        apiCall = menuService.getMenu(token, formattedDate)
 
         apiCall?.enqueue(object : Callback<CalendarDto> {
             override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto>) {
                 if (isAdded) {
                     if (response.isSuccessful) {
-                        response.body()?.let { menus ->
-                            Log.d("MenuDetail_R", "$menus")
+                        response.body()?.let { calendarDto ->
+                            Log.d("MenuDetail_R", "$calendarDto")
 
-                            // 중식과 석식의 foodName만 분리하여 리스트 생성
-                            val lunchMenuNames = mutableListOf<String>()
-                            val dinnerMenuNames = mutableListOf<String>()
+                            // 메뉴 리스트를 분할해 저장
+                            val menuList = calendarDto.menus
+                            val lunchMenu = menuList[1]
+                            val dinnerMenu = menuList[0]
 
-                            menus.menus.forEach { menu ->
-                                when (menu.foodTime) {
-                                    "중식" -> lunchMenuNames.addAll(menu.foods.map { it.foodName })
-                                    "석식" -> dinnerMenuNames.addAll(menu.foods.map { it.foodName })
-                                }
-                            }
-
-                            // 아침은 안내 멘트 설정
-                            val breakfast = listOf(
-                                "식당 스낵바에",
-                                "샐러드&샌드위치",
-                                "준비되어있습니다.",
-                                "이틀 전에 예약하신 후",
-                                "이용 가능합니다."
-                            )
-
-                            Log.d(
-                                "MenuDetail_R",
-                                "Lunch: $lunchMenuNames, Dinner: $dinnerMenuNames"
-                            )
-
-                            // 세 리스트를 하나의 데이터 구조로 전달
-                            val menuLists = listOf(breakfast, lunchMenuNames, dinnerMenuNames)
+                            Log.d("MenuDetail_R", "Menu List: $menuList")
 
                             // 어댑터 연결
-                            val adapter =
-                                MenuDetailAdapter(menuLists, binding.viewPager, binding.applyBtn)
+                            val adapter = MenuDetailAdapter(lunchMenu, dinnerMenu, binding.viewPager)
                             binding.viewPager.adapter = adapter
 
                         } ?: run {
@@ -177,6 +159,7 @@ class MenuDetailFragment : Fragment() {
             }
         })
     }
+
 
     private fun showErrorAndExit(message: String) {
         if (!isAdded) return // 프래그먼트가 Activity에 연결되지 않은 경우 아무 작업도 수행하지 않음
