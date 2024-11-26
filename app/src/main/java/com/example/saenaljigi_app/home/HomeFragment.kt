@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.home
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,9 +12,7 @@ import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentHomeBinding
 import com.example.saenaljigi_app.menu.CalendarDto
 import com.example.saenaljigi_app.menu.MenuApiService
-import com.example.saenaljigi_app.notice.NoticeBoardData
 import com.example.saenaljigi_app.notice.NoticeBoardFragment
-import com.example.saenaljigi_app.notice.NoticeBoardService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,11 +22,6 @@ import java.util.Calendar
 import java.util.Locale
 import java.util.TimeZone
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -51,8 +45,6 @@ class HomeFragment : Fragment() {
         val today: LocalDate = LocalDate.now()
         fetchTodayMenu(today)
 
-        // 식권 내역 불러오기
-
         // 총 상벌점 불러오기
         val total_point = fetchPoint()
         // 텍스트뷰 변경
@@ -74,9 +66,7 @@ class HomeFragment : Fragment() {
             transaction.commit()
 
             // 바텀 네비게이션 상태를 NoticeBoardFragment로 동기화
-            val bottomNavigationView = requireActivity().findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(
-                R.id.bottom_navigation_view
-            )
+            val bottomNavigationView = requireActivity().findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation_view)
             bottomNavigationView.selectedItemId = R.id.fragment_notice
         }
 
@@ -90,13 +80,13 @@ class HomeFragment : Fragment() {
 
     // 오늘 메뉴 불러오기
     private fun fetchTodayMenu(todayDate: LocalDate) {
-        val token = ""
+        val token = getJwtToken()
 
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
         val formattedDate = todayDate.toString()
         Log.d("MenuDetail_R", "$formattedDate")
 
-        menuService.getMenu(token, formattedDate).enqueue(object : Callback<CalendarDto> {
+        menuService.getMenu("Bearer $token", formattedDate).enqueue(object : Callback<CalendarDto> {
             override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto>) {
                 if (response.isSuccessful) {
                     response.body()?.let { menus ->
@@ -117,8 +107,7 @@ class HomeFragment : Fragment() {
                         val lunchMenu = lunchMenuNames.joinToString("\n")
                         val dinnerMenu = dinnerMenuNames.joinToString("\n")
 
-                        val breakfast =
-                            "식당 스낵바에\n샐러드&샌드위치\n준비되어있습니다.\n이틀 전에\n예약하신 후\n이용 가능합니다."
+                        val breakfast = "식당 스낵바에\n샐러드&샌드위치\n준비되어있습니다.\n이틀 전에\n예약하신 후\n이용 가능합니다."
 
                         Log.d("HomeFrag", "Lunch: $lunchMenu, Dinner: $dinnerMenu")
 
@@ -126,59 +115,31 @@ class HomeFragment : Fragment() {
                         binding.breakfastMenu.text = breakfast
                         binding.lunchMenu.text = lunchMenu
                         binding.dinnerMenu.text = dinnerMenu
-
-                    } ?: Log.e("HomeFrag", "Response body is null")
+                    } ?: Log.e("HomeFragment", "Menu data is null")
                 } else {
-                    Log.e("HomeFrag", "Error: ${response.errorBody()?.string()}")
+                    Log.e("HomeFragment", "Failed to load menu data: ${response.code()}")
                 }
             }
 
             override fun onFailure(call: Call<CalendarDto>, t: Throwable) {
-                Log.e("HomeFrag", "Error: ${t.message}")
+                Log.e("HomeFragment", "Error fetching menu data", t)
             }
         })
     }
 
+    // 추후 구현 예정: 식권 내역 불러오기
     private fun fetchPoint(): Int {
-        val point = 2
-        return point
+        // 예시로 더미 데이터를 반환
+        return 10
     }
 
+    // 추후 구현 예정: 공지사항 불러오기
     private fun fetchNotice() {
-        val noticeService = RetrofitClient.instance.create(NoticeBoardService::class.java)
-        val call = noticeService.getNotice()
+        // 여기에 API 호출을 추가할 수 있습니다.
+    }
 
-        call.enqueue(object : Callback<List<NoticeBoardData>> {
-            override fun onResponse(
-                call: Call<List<NoticeBoardData>>,
-                response: Response<List<NoticeBoardData>>
-            ) {
-                if (response.isSuccessful) {
-                    val noticeList = response.body()
-                    // 서버에서 받은 데이터를 처리
-                    if (noticeList != null) {
-                        val notice1 = noticeList[0]
-                        val notice2 = noticeList[1]
-                        Log.d("HomeFrag", "$notice1/$notice2")
-
-                        // 제목과 시간 텍스트 변경
-                        binding.noticeContent1.text = notice1.title
-                        binding.noticePostedTime1.text = notice1.created_at
-
-                        binding.noticeContent2.text = notice2.title
-                        binding.noticePostedTime2.text = notice2.created_at
-                    } else {
-                        Log.e("fetchNotice", "응답은 성공했지만 데이터가 null입니다.")
-                    }
-                } else {
-                    Log.e("fetchNotice", "서버 응답 실패: ${response.code()} - ${response.message()}")
-                }
-            }
-
-            override fun onFailure(call: Call<List<NoticeBoardData>>, t: Throwable) {
-                // 네트워크 오류나 기타 이유로 요청 실패 시 처리
-                Log.e("fetchNotice", "네트워크 요청 실패", t)
-            }
-        })
+    private fun getJwtToken(): String {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return sharedPref.getString("jwt_token", "") ?: ""
     }
 }

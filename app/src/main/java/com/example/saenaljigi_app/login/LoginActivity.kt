@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
@@ -14,8 +13,13 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.WindowCompat
+import androidx.core.widget.addTextChangedListener
 import com.example.saenaljigi_app.MainActivity
 import com.example.saenaljigi_app.R
+import com.example.saenaljigi_app.RetrofitClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
@@ -40,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
         etId = findViewById(R.id.et_id)
         etPassword = findViewById(R.id.et_password)
         btnLogin = findViewById(R.id.btn_login)
+        tvFailLogin = findViewById(R.id.tv_fail_login) // tv_fail_login 초기화
         constraintLayout = findViewById(R.id.root_layout)
 
         tvNo.setOnClickListener {
@@ -50,16 +55,12 @@ class LoginActivity : AppCompatActivity() {
             performLogin()
         }
 
-        etId.setOnFocusChangeListener { _, hasFocus ->
-            if (hasFocus) {
-                updateAllBackgrounds()
-            }
+        // 아이디나 비밀번호 입력 필드가 수정될 때 버튼 색깔을 원래대로 변경
+        etId.addTextChangedListener {
+            resetButtonAndTextFields()
         }
-
-        etPassword.setOnFocusChangeListener { _, hasFocus ->
-            if (hasFocus) {
-                updateAllBackgrounds()
-            }
+        etPassword.addTextChangedListener {
+            resetButtonAndTextFields()
         }
     }
 
@@ -68,32 +69,34 @@ class LoginActivity : AppCompatActivity() {
         val id = etId.text.toString()
         val pw = etPassword.text.toString()
 
-        /* JWT 토큰 요청 (주석 처리하여 화면 넘어가게 하기)
-        val body = mapOf("id" to id, "pw" to pw)
-        RetrofitClient.sejongApi.login(body).enqueue(object : Callback<SejongAuthResponse> {
-            override fun onResponse(call: Call<SejongAuthResponse>, response: Response<SejongAuthResponse>) {
-                if (response.isSuccessful && response.body() != null) {
-                    val auth = response.body()?.result
-                    if (auth?.isAuth == "true") {
-                        val userData = auth.body
-                        requestJwtToken(userData, id)
-                    } else {
-                        showLoginError("아이디나 비밀번호가 일치하지 않습니다.")
+        val body = UserRequest(username = id, password = pw)
+
+        /* JWT 토큰 요청 */
+        RetrofitClient.userApi.requestJwtToken(body).enqueue(object : Callback<UserResponse> {
+            override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
+                if (response.code() == 200) { // HTTP 상태 코드 200만 확인
+                    response.body()?.let { userResponse ->
+                        // JWT 토큰 저장 로직 추가
+                        val jwtToken = response.headers()["Authorization"] ?: ""
+                        saveUserData(jwtToken, userResponse.username,userResponse.userId)
+
+                        // 로그인 성공 시 MainActivity로 이동
+                        navigateToMainActivity()
+                    } ?: run {
+                        // Response body가 null인 경우
+                        showLoginError("응답 데이터가 올바르지 않습니다.")
                     }
                 } else {
-                    showLoginError("네트워크 문제로 로그인하지 못했습니다.")
+                    // 상태 코드가 200이 아닌 경우
+                    showLoginError("아이디나 비밀번호가 일치하지 않습니다.")
                 }
             }
 
-            override fun onFailure(call: Call<SejongAuthResponse>, t: Throwable) {
+            override fun onFailure(call: Call<UserResponse>, t: Throwable) {
+                // 네트워크 문제 처리
                 showLoginError("네트워크 문제로 로그인하지 못했습니다.")
             }
         })
-        */
-
-
-        // 직접 MainActivity로 이동 (API 실패 무시)
-        navigateToMainActivity()
     }
 
     // MainActivity로 이동
@@ -103,16 +106,37 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
-    // 로그인 실패 시 에러 표시
+    // jwt_token 저장
+    private fun saveUserData(token: String, username: String, userId:Int) {
+        val sharedPref = getSharedPreferences("auth", MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putString("jwt_token", token)
+            putString("username", username)
+            putInt("userId", userId)
+            apply()
+        }
+    }
+
+    // 로그인 실패 시 에러 표시 및 버튼 색 변경
     private fun showLoginError(message: String) {
         etId.setBackgroundResource(R.drawable.login_red_id)
         etPassword.setBackgroundResource(R.drawable.login_red_id)
         etId.setHintTextColor(Color.parseColor("#FF0707"))
         etPassword.setHintTextColor(Color.parseColor("#FF0707"))
         tvFailLogin.apply {
-            text = message
-            visibility = View.VISIBLE
+            text = message // 에러 메시지 설정
+            visibility = View.VISIBLE // 메시지 보이기
         }
+        btnLogin.setBackgroundResource(R.drawable.login_btn)
+    }
+
+    // 아이디나 비밀번호 입력 필드가 수정될 때 호출: 색깔을 원래대로 복원
+    private fun resetButtonAndTextFields() {
+        etId.setBackgroundResource(R.drawable.login_black_id)
+        etPassword.setBackgroundResource(R.drawable.login_black_id)
+        etId.setHintTextColor(Color.parseColor("#808080"))
+        etPassword.setHintTextColor(Color.parseColor("#808080"))
+        btnLogin.setBackgroundResource(R.drawable.login_btn_black) // 버튼 색 복원
     }
 
     // tv_no 눌렀을 때 마진 수정 함수
@@ -131,13 +155,6 @@ class LoginActivity : AppCompatActivity() {
         clBox.visibility = if (isClBoxVisible) View.GONE else View.VISIBLE
         clBox.requestLayout()
         isClBoxVisible = !isClBoxVisible
-    }
-
-    // 입력하면 배경 변경
-    private fun updateAllBackgrounds() {
-        etId.setBackgroundResource(R.drawable.login_black_id)
-        etPassword.setBackgroundResource(R.drawable.login_black_id)
-        btnLogin.setBackgroundResource(R.drawable.login_btn_black)
     }
 
     // dp를 px로 변환하는 함수

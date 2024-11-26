@@ -9,7 +9,7 @@
         android:id="@+id/iv_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/answer_bar"
+        android:background="@drawable/board_detail_bar2"
         app:layout_constraintTop_toTopOf="parent"
         />
 
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="19dp"
 
         >
 
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="종이1"
-            android:textStyle="bold"
+            android:fontFamily="@font/suite_medium"
             android:textSize="13sp"
             />
 
@@ -41,11 +41,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:fontFamily="@font/suite_light"
             android:text="기숙사에서 배달 시켜도 돼요?"
             android:textColor="@color/black12"
             android:textSize="13sp"
             android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/comment_icon2"
+            />
     </LinearLayout>
 
     <TextView

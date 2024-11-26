@@ -1,9 +1,7 @@
 package com.example.saenaljigi_app
 
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity

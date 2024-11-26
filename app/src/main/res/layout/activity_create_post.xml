@@ -55,16 +55,6 @@
         app:layout_constraintTop_toBottomOf="@+id/post_line2"
         app:srcCompat="@drawable/post_rectangle1" />
 
-    <ImageView
-        android:id="@+id/post_line3"
-        android:layout_width="0dp"
-        android:layout_height="4dp"
-        android:layout_marginTop="57dp"
-        app:layout_constraintEnd_toEndOf="@+id/post_box"
-        app:layout_constraintStart_toStartOf="@+id/post_box"
-        app:layout_constraintTop_toTopOf="@+id/post_box"
-        app:srcCompat="@drawable/post_line1" />
-
     <EditText
         android:id="@+id/tv_post_title"
         android:layout_width="0dp"
@@ -82,6 +72,17 @@
         app:layout_constraintStart_toStartOf="@+id/post_box"
         app:layout_constraintTop_toTopOf="@+id/post_box"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/post_line3"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/post_box"
+        app:layout_constraintStart_toStartOf="@+id/post_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_post_title"
+        app:srcCompat="@drawable/post_line1" />
+
 
     <EditText
         android:id="@+id/tv_post_content"

@@ -12,7 +12,7 @@ class NoticeBoardAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoticeBoardViewHolder {
         val binding = ItemNoticeBoardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return NoticeBoardViewHolder(binding, onItemClickListener) // 클릭 리스너를 전달
+        return NoticeBoardViewHolder(binding, onItemClickListener)
     }
 
     override fun getItemCount(): Int {
@@ -21,7 +21,6 @@ class NoticeBoardAdapter(
 
     override fun onBindViewHolder(holder: NoticeBoardViewHolder, position: Int) {
         val item = noticeList[position]
-        val isLastItem = position == noticeList.size - 1 // 마지막 아이템 여부 확인
-        holder.bind(item, isLastItem) // `isLastItem` 값을 추가로 전달
+        holder.bind(item, position == noticeList.size - 1) // 마지막 아이템 여부 전달
     }
 }

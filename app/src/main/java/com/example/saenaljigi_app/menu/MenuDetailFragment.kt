@@ -1,19 +1,17 @@
 package com.example.saenaljigi_app.menu
 
-import MenuDetailAdapter
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.util.Log
-import android.view.Menu
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContentProviderCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.RetrofitClient
-import com.example.saenaljigi_app.UserDTO
 import com.example.saenaljigi_app.databinding.FragmentMenuDetailBinding
 import java.time.LocalDate
 import retrofit2.Call
@@ -111,12 +109,12 @@ class MenuDetailFragment : Fragment() {
 
     // 메뉴 불러오기
     private fun fetchMenu(selectedDate: LocalDate) {
-        val token = ""
+        val token = getJwtToken()
 
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
         val formattedDate = selectedDate.toString() // String 형태로 포맷
         Log.d("MenuDetail_R", "$formattedDate")
-        apiCall = menuService.getMenu(token, formattedDate)
+        apiCall = menuService.getMenu("Bearer $token", formattedDate)
 
         apiCall?.enqueue(object : Callback<CalendarDto> {
             override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto>) {
@@ -133,7 +131,7 @@ class MenuDetailFragment : Fragment() {
                             Log.d("MenuDetail_R", "Menu List: $menuList")
 
                             // 어댑터 연결
-                            val adapter = MenuDetailAdapter(lunchMenu, dinnerMenu, binding.viewPager)
+                            val adapter = MenuDetailAdapter(lunchMenu, dinnerMenu, binding.viewPager, token)
                             binding.viewPager.adapter = adapter
 
                         } ?: run {
@@ -165,5 +163,10 @@ class MenuDetailFragment : Fragment() {
         if (!isAdded) return // 프래그먼트가 Activity에 연결되지 않은 경우 아무 작업도 수행하지 않음
         Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
         parentFragmentManager.popBackStack() // 프래그먼트 종료
+    }
+
+    private fun getJwtToken(): String {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return sharedPref.getString("jwt_token", "") ?: ""
     }
 }

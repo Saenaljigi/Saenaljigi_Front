@@ -41,9 +41,9 @@ class SearchPostActivity : AppCompatActivity() {
                 val text = etKeyword.text.toString().trim()
                 if (text.isNotEmpty()) {
                     addChipToGroup(chipGroup, text)
-                    etKeyword.text.clear() // 입력 필드 초기화
+                    etKeyword.text.clear()
                 }
-                true // 이벤트 소비
+                true
             } else {
                 false
             }

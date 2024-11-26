@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="23dp"
                 android:layout_marginTop="35dp"
-                android:background="@drawable/like_gray_icon"
+                android:background="@drawable/like_icon"
                 app:layout_constraintStart_toStartOf="@id/board_container"
                 app:layout_constraintTop_toBottomOf="@id/tv_content" />
 
@@ -131,7 +131,7 @@
                 android:layout_marginStart="3dp"
                 android:layout_marginTop="35dp"
                 android:text="1개"
-                android:textColor="@color/gray7"
+                android:textColor="#FF012C"
                 android:textSize="10sp"
                 app:layout_constraintStart_toEndOf="@id/iv_like_icon"
                 app:layout_constraintTop_toBottomOf="@id/tv_content" />
@@ -160,12 +160,32 @@
                 app:layout_constraintStart_toEndOf="@id/iv_comment_icon"
                 app:layout_constraintTop_toBottomOf="@id/tv_content" />
 
+            <ImageView
+                android:id="@+id/btn_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/board_container"
+                app:layout_constraintBottom_toTopOf="@id/iv_box_bar"
+                android:background="@drawable/btn_setting"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="19dp"
+                />
+            <ImageView
+                android:id="@+id/iv_box_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_comment_icon"
+                android:background="@drawable/board_detail_bar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/board_container"
+                app:layout_constraintEnd_toEndOf="@id/board_container"
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintTop_toBottomOf="@id/iv_like_icon"
                 tools:itemCount="20"
                 tools:listitem="@layout/item_answer" />

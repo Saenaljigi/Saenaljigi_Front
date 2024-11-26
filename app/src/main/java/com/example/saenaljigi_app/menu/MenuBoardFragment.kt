@@ -245,10 +245,10 @@ class MenuBoardFragment : Fragment() {
 
     // 하이라이트된 날짜 받아와 표시하기
     private fun fetchHighlightedDate(selectedMonth: Int) {
-        val token = ""
+        val token = getJwtToken()
 
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
-        val call = menuService.getAllDay(token)
+        val call = menuService.getAllDay("Bearer $token")
 
         call.enqueue(object : Callback<List<CalendarDto>> {
             override fun onResponse(call: Call<List<CalendarDto>>, response: Response<List<CalendarDto>>) {
@@ -304,5 +304,10 @@ class MenuBoardFragment : Fragment() {
 
     private fun applyForBreakfast(date: LocalDate, calendarId: Long) {
 
+    }
+
+    private fun getJwtToken(): String {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return sharedPref.getString("jwt_token", "") ?: ""
     }
 }

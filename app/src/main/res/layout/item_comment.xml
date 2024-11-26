@@ -3,56 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="58dp"
-    android:layout_marginEnd="58dp"
     android:layout_marginBottom="10dp"
-    android:background="@drawable/background_comment"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent">
-    <LinearLayout
-        android:id="@+id/linear_comment"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <!-- Comment Writer -->
+    <TextView
+        android:id="@+id/tv_comment_writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종이2"
+        android:textSize="13sp"
+        android:fontFamily="@font/suite_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="58dp"
+
+        />
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/iv_background_comment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/background_comment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_comment_writer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Comment Content -->
+    <TextView
+        android:id="@+id/tv_comment_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="40dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:text="네"
+        android:textColor="@color/black12"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintStart_toStartOf="@id/iv_background_comment"
+        app:layout_constraintTop_toTopOf="@id/iv_background_comment"
+        app:layout_constraintEnd_toEndOf="@id/iv_background_comment"
+        />
 
-        <TextView
-            android:id="@+id/tv_comment_writer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="종이2"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tv_comment_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/suite_light"
-            android:text="네"
-            android:textColor="@color/black12"
-            android:textSize="13sp" />
-    </LinearLayout>
-
+    <!-- Comment Created Time -->
     <TextView
         android:id="@+id/tv_comment_created_at"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="5dp"
         android:text="14:13"
         android:textColor="@color/gray7"
         android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linear_comment" />
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="@id/iv_background_comment"
+        app:layout_constraintTop_toBottomOf="@id/tv_comment_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

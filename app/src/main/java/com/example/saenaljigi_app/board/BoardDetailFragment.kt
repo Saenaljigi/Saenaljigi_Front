@@ -41,56 +41,57 @@ class BoardDetailFragment : Fragment() {
             requireActivity().supportFragmentManager.popBackStack()
         }
 
-        val boardData = BoardClass(
-            postId = 1,
+        val boardData = PostClass(
+            id = 1,
+            username = "23011004", // userId 추가
             title = "배달 같이 시키실 분",
             content = "버거킹 먹고 싶은데 최소주문 금액이 안되는데 같이 시킬 사람 있나요? 버거킹 아니어도 돼요",
             anonymousName = "종이1",
-            likeCount = 1,
-            replyCount = 5,
-            replies = listOf(
+            likeCnt = 1,
+            commentCnt = 5,
+            comments = listOf(
                 CommentDto(
-                    commentId = 1,
+                    id = 1,
                     postId = 1,
                     content = "기숙사에서 배달 시켜도 되나요?",
                     anonymousName = "익명",
-                    replyCount = 2,
-                    replies = listOf(
+                    replyCnt = 2,
+                    comments = listOf(
                         CommentDto(
-                            commentId = 2,
+                            id = 2,
                             postId = 1,
                             content = "네",
                             anonymousName = "종이2",
-                            replyCount = 0,
-                            replies = emptyList(),
+                            replyCnt = 0,
+                            comments = emptyList(),
                             createdAt = "14:13"
                         ),
                         CommentDto(
-                            commentId = 3,
+                            id = 3,
                             postId = 1,
                             content = "원래 안되는데 그냥 봐주세요",
                             anonymousName = "종이3",
-                            replyCount = 0,
-                            replies = emptyList(),
+                            replyCnt = 0,
+                            comments = emptyList(),
                             createdAt = "14:14"
                         )
                     ),
                     createdAt = "14:13"
                 ),
                 CommentDto(
-                    commentId = 4,
+                    id = 4,
                     postId = 1,
                     content = "맥도날드는 어때요?",
                     anonymousName = "종이3",
-                    replyCount = 1,
-                    replies = listOf(
+                    replyCnt = 1,
+                    comments = listOf(
                         CommentDto(
-                            commentId = 5,
+                            id = 5,
                             postId = 1,
                             content = "좋아요!",
                             anonymousName = "작성자",
-                            replyCount = 0,
-                            replies = emptyList(),
+                            replyCnt = 0,
+                            comments = emptyList(),
                             createdAt = "14:17"
                         )
                     ),
@@ -101,13 +102,14 @@ class BoardDetailFragment : Fragment() {
         )
 
 
+
         binding.tvTitle.text = boardData.title
         binding.tvContent.text = boardData.content
-        binding.tvLikeIcon.text = "${boardData.likeCount}개"
-        binding.tvCommentIcon.text = "${boardData.replyCount}개"
+        binding.tvLikeIcon.text = "${boardData.likeCnt}개"
+        binding.tvCommentIcon.text = "${boardData.commentCnt}개"
         binding.tvCreatedAt.text = boardData.createdAt
 
-        val answerAdapter = AnswerAdapter(boardData.replies)
+        val answerAdapter = AnswerAdapter(boardData.comments)
         binding.rvAnswerContainer.layoutManager = LinearLayoutManager(requireContext())
         binding.rvAnswerContainer.adapter = answerAdapter
     }

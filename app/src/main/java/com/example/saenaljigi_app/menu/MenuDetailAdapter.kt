@@ -1,9 +1,13 @@
+package com.example.saenaljigi_app.menu
+
+import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.saenaljigi_app.R
@@ -17,7 +21,8 @@ import retrofit2.Response
 class MenuDetailAdapter(
     private val lunchMenuDto: MenuDto, // 중식 메뉴
     private val dinnerMenuDto: MenuDto, // 석식 메뉴
-    private val viewPager: ViewPager2
+    private val viewPager: ViewPager2,
+    private val token: String
 ) : RecyclerView.Adapter<MenuDetailAdapter.MenuDetailViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuDetailViewHolder {
@@ -62,11 +67,11 @@ class MenuDetailAdapter(
                         textView.setBackgroundColor(Color.parseColor("#FFF86C"))
                         textView.tag = true
                         // 하이라이트 상태 true로 업데이트
-                        updateFoodSelection(food.menuId, true, food.foodName)
+                        updateFoodSelection(food.menuId, true, food.foodName, token)
                     } else {
                         textView.tag = false
                         // 하이라이트 상태 false로 업데이트
-                        updateFoodSelection(food.menuId, false, food.foodName)
+                        updateFoodSelection(food.menuId, false, food.foodName, token)
                     }
                 }
             } else {
@@ -92,11 +97,10 @@ class MenuDetailAdapter(
 
     override fun getItemCount(): Int = 2 // "중식"과 "석식" 두 개의 페이지만 존재
 
-    private fun updateFoodSelection(menuId: Long, isSelected: Boolean, foodId: String) {
-        val token = ""
+    private fun updateFoodSelection(menuId: Long, isSelected: Boolean, foodId: String, token: String) {
 
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
-        val call = menuService.updateHighlightedMenu(token, menuId, isSelected, foodId)
+        val call = menuService.updateHighlightedMenu("Bearer $token", menuId, isSelected, foodId)
 
         call.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
