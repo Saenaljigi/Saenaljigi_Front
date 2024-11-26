@@ -261,7 +261,7 @@ class MenuBoardFragment : Fragment() {
 
                     } ?: Log.e("MenuBoard", "Response body is null")
                 } else {
-                    Log.e("MenuBoard", "Error: ${response.errorBody()?.string()}")
+                    Log.e("MenuBoard", "Error: ${response.code()}")
                 }
             }
 

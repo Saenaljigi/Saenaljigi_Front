@@ -142,7 +142,7 @@ class MenuDetailFragment : Fragment() {
 
                     } else {
                         val errorMessage = "서버에서 오류가 발생했습니다. 잠시 후 다시 시도해주세요."
-                        Log.e("MenuDetail_R", "Error: ${response.errorBody()?.string()}")
+                        Log.e("MenuDetail_R", "Error: ${response.code()}")
                         showErrorAndExit(errorMessage)
                     }
                 }
