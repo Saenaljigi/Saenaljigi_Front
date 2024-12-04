@@ -1,29 +1,37 @@
 package com.example.saenaljigi_app.notice
 
+import NoticeBoardData
+import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.saenaljigi_app.R
+import com.example.saenaljigi_app.board.BoardDetailFragment
 import com.example.saenaljigi_app.databinding.ItemNoticeBoardBinding
 
 class NoticeBoardViewHolder(
     private val binding: ItemNoticeBoardBinding,
-    private val onItemClickListener: (Long) -> Unit
+    private val onItemClickListener: (Long) -> Unit,
+    private val fragmentManager: FragmentManager
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(notice: NoticeBoardData, isLastItem: Boolean) {
-        // 제목과 작성일 데이터 설정
         binding.tvTile.text = notice.title
-        binding.tvCreatedAt.text = notice.created_at
+        binding.tvCreatedAt.text = notice.date
 
-        // 마지막 아이템일 경우 선 숨기기
+        binding.root.setOnClickListener {
+            val fragment = BoardDetailFragment.newInstance(notice.noticeId)
+
+            fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .addToBackStack(null)
+                .commit()
+            onItemClickListener(notice.noticeId)
+        }
+
         binding.imgLine.visibility = if (isLastItem) View.GONE else View.VISIBLE
 
-        // 디버그 로그 추가
-        Log.d("NoticeBoardViewHolder", "Binding: Title=${notice.title}, CreatedAt=${notice.created_at}")
-
-        // 클릭 리스너 연결
-        binding.root.setOnClickListener {
-            onItemClickListener(notice.id) // 공지사항 ID 전달
-        }
+        Log.d("NoticeBoardViewHolder", "Binding: Title=${notice.title}, CreatedAt=${notice.date}")
     }
 }

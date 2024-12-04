@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.notice
 
+import NoticeBoardData
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -35,9 +36,10 @@ class NoticeBoardFragment : Fragment() {
 
         noticeList = ArrayList()
 
-        adapter = NoticeBoardAdapter(noticeList) { id ->
-            loadNoticeDetail(id)
-        }
+        adapter = NoticeBoardAdapter(noticeList, { noticeId ->
+            Log.d("NoticeBoardFragment", "Clicked notice with ID: $noticeId")
+            openDetailFragment(noticeId)
+        }, parentFragmentManager)
 
         binding.rvNoticeBoard.layoutManager = LinearLayoutManager(requireContext())
         binding.rvNoticeBoard.adapter = adapter
@@ -46,58 +48,30 @@ class NoticeBoardFragment : Fragment() {
         loadNoticesFromServer()
     }
 
-    private fun loadNoticeDetail(noticeId: Long) {
-        val token = getJwtToken()
-        val service = RetrofitClient.instance.create(NoticeBoardService::class.java)
-        val noticeSeq = noticeId.toString()
+    private fun openDetailFragment(noticeId: Long) {
+        Log.d("NoticeBoardFragment", "Navigating to NoticeDetailFragment with postId: $noticeId")
 
-        // 상세 공지사항 로드 시작 로그
-        Log.d("NoticeBoardFragment", "Initiating fetch for notice detail, ID: $noticeSeq")
+        val selectedNotice = noticeList.find { it.noticeId == noticeId }
 
-        service.getNoticeSeq(token, noticeSeq).enqueue(object : Callback<NoticeBoardData> {
-            override fun onResponse(call: Call<NoticeBoardData>, response: Response<NoticeBoardData>) {
-                Log.d("NoticeBoardFragment", "Received response for notice detail, ID: $noticeSeq")
-
-                if (response.isSuccessful) {
-                    response.body()?.let { detailedData ->
-                        Log.d("NoticeBoardFragment", "Successfully fetched notice detail: $detailedData")
-                        openDetailFragment(detailedData)
-                    } ?: run {
-                        Log.e("NoticeBoardFragment", "Notice detail response body is null, ID: $noticeSeq")
-                    }
-                } else {
-                    val errorBody = response.errorBody()?.string() ?: "No error body available"
-                    Log.e(
-                        "NoticeBoardFragment",
-                        "Failed to fetch notice detail, ID: $noticeSeq, Code: ${response.code()}, Error Body: $errorBody"
-                    )
+        if (selectedNotice != null) {
+            val fragment = NoticeDetailFragment().apply {
+                arguments = Bundle().apply {
+                    putString("title", selectedNotice.title)
+                    putString("writer", selectedNotice.author)
+                    putString("created_at", selectedNotice.date)
+                    putLong("noticeId", noticeId)
                 }
             }
 
-            override fun onFailure(call: Call<NoticeBoardData>, t: Throwable) {
-                Log.e("NoticeBoardFragment", "Error occurred while fetching notice detail, ID: $noticeSeq", t)
-            }
-        })
-    }
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)  // NoticeDetailFragment로 바로 넘어감
+                .addToBackStack(null)  // 백스택에 추가 (필요한 경우)
+                .commit()
 
-    private fun openDetailFragment(detailedData: NoticeBoardData) {
-        Log.d("NoticeBoardFragment", "Navigating to NoticeDetailFragment with data: $detailedData")
-
-        val fragment = NoticeDetailFragment().apply {
-            arguments = Bundle().apply {
-                putString("title", detailedData.title)
-                putString("content", detailedData.content)
-                putString("writer", detailedData.writer)
-                putString("created_at", detailedData.created_at)
-            }
+            Log.d("NoticeBoardFragment", "NoticeDetailFragment transaction committed")
+        } else {
+            Log.e("NoticeBoardFragment", "Notice with ID $noticeId not found in the list")
         }
-
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .addToBackStack(null)
-            .commit()
-
-        Log.d("NoticeBoardFragment", "NoticeDetailFragment transaction committed")
     }
 
     private fun getJwtToken(): String {

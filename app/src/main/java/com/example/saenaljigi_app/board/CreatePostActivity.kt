@@ -48,7 +48,7 @@ class CreatePostActivity : AppCompatActivity() {
                 Log.e("CreatePostActivity", "Invalid token or userId")
             } else {
                 Log.d("CreatePostActivity", "Sending post request")
-                sendPost(token, userId, title, content, true)
+                sendPost(token, userId, title, content)
             }
         }
     }
@@ -67,8 +67,8 @@ class CreatePostActivity : AppCompatActivity() {
         return token
     }
 
-    private fun sendPost(token: String, userId: Int, title: String, content: String, isAnonymous: Boolean) {
-        postService.createPost(token, userId, title, content, isAnonymous)
+    private fun sendPost(token: String, userId: Int, title: String, content: String) {
+        postService.createPost(token, userId, title, content)
             .enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                     if (response.isSuccessful) {
