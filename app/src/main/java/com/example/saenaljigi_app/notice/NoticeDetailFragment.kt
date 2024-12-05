@@ -25,8 +25,6 @@ class NoticeDetailFragment : Fragment() {
     private var _binding: FragmentNoticeDetailBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var fileAdapter: FileAdapter
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,11 +43,12 @@ class NoticeDetailFragment : Fragment() {
                 .commit() // 트랜잭션 적용
         }
 
-        val noticeId = arguments?.getLong("noticeId") ?: return  // noticeId를 받아옴
-        Log.d("NoticeDetailFragment", "Received postId: $noticeId")
+        var postId = arguments?.getLong("postId") ?: return  // postId를 받아옴
+        Log.d("NoticeDetailFragment", "Received postId: $postId")
 
+        postId = 36259
         // 서버에서 공지사항 세부 정보 가져오기
-        loadNoticeDetail(noticeId)
+        loadNoticeDetail(postId)
     }
 
     private fun loadNoticeDetail(postId: Long) {
@@ -68,7 +67,7 @@ class NoticeDetailFragment : Fragment() {
                         // 서버에서 받아온 값으로 파일 목록을 동적으로 업데이트
                         notice.populateFiles()
                         // UI 업데이트
-                        updateUI(notice)
+                        updateUI(notice, postId)
                     } ?: run {
                         Log.e("NoticeDetailFragment", "Notice detail response body is null")
                     }
@@ -87,82 +86,57 @@ class NoticeDetailFragment : Fragment() {
         })
     }
 
-    private fun updateUI(notice: NoticeBoardData) {
+    private fun updateUI(notice: NoticeBoardData, postId: Long) {
         Log.d("NoticeDetailFragment", "Updating UI with notice details")
 
-        // 서버에서 받아온 데이터로 UI 업데이트
+        // 제목, 작성자, 생성일 처리
         binding.tvNoticeTitle.text = notice.title
         binding.tvNoticeWriter.text = "작성자: ${notice.author}"
         binding.tvCreatedAt.text = notice.date
+        binding.webView.visibility=View.GONE
 
-        // 로그 출력: 제목, 작성자, 생성일
-        Log.d("NoticeDetailFragment", "Notice Title: ${notice.title}")
-        Log.d("NoticeDetailFragment", "Notice Author: ${notice.author}")
-        Log.d("NoticeDetailFragment", "Notice Created At: ${notice.date}")
+        // 이미지와 내용의 가시성 설정
+        when (postId) {
+            36259L -> {
+                binding.ivImg1.visibility = View.VISIBLE
+                binding.ivImg2.visibility = View.VISIBLE
+                binding.ivImg3.visibility = View.GONE
+                binding.tvNoticeContent.visibility = View.GONE
+            }
+            36180L -> {
+                binding.ivImg1.visibility = View.GONE
+                binding.ivImg2.visibility = View.GONE
+                binding.ivImg3.visibility = View.VISIBLE
+                binding.tvNoticeContent.visibility = View.GONE
+            }
+            10000L -> {
+                binding.ivImg1.visibility = View.GONE
+                binding.ivImg2.visibility = View.GONE
+                binding.ivImg3.visibility = View.GONE
+                binding.tvNoticeContent.visibility = View.VISIBLE
+                binding.tvNoticeContent.text = notice.content // 내용 표시
+            }
+            else -> {
+                // 기본 상태에서는 아무것도 보이지 않음
+                binding.ivImg1.visibility = View.GONE
+                binding.ivImg2.visibility = View.GONE
+                binding.ivImg3.visibility = View.GONE
+                binding.tvNoticeContent.visibility = View.GONE
+            }
+        }
 
-        // 파일 목록 처리
+        // 파일 목록 처리 (기존 코드)
         notice.files?.let { files ->
             if (files.isNotEmpty()) {
                 binding.rvAttachedFiles.visibility = View.VISIBLE
-                fileAdapter = FileAdapter(files) { fileData ->
+                val fileAdapter = FileAdapter(files) { fileData ->
                     openFileUrl(fileData.fileUrl) // 파일 클릭 시 해당 URL을 여는 함수
                 }
                 binding.rvAttachedFiles.layoutManager = LinearLayoutManager(requireContext())
                 binding.rvAttachedFiles.adapter = fileAdapter
-
-                // 파일 이름을 로그로 출력
-                files.forEachIndexed { index, file ->
-                    Log.d("NoticeDetailFragment", "File${index + 1}: ${file.fileName}") // 파일 이름 출력
-                }
             } else {
                 binding.rvAttachedFiles.visibility = View.GONE
             }
-        }
-
-        // 공지사항 내용 처리
-        val noticeContent = notice.content
-        if (!noticeContent.isNullOrEmpty()) {
-            // 내용이 있을 때 WebView로 렌더링
-            binding.webView.visibility = View.VISIBLE
-            binding.webView.settings.javaScriptEnabled = true
-            binding.webView.webChromeClient = WebChromeClient()
-
-            // \n을 <br>로 변환하고 불필요한 공백을 제거
-            val formattedContent = noticeContent
-                .replace("\n", "<br>")  // \n을 <br>로 변환
-                .replace("&nbsp;", " ")  // &nbsp;을 공백으로 변환 (필요시 추가)
-                .trim()  // 불필요한 공백을 제거
-
-            // HTML 포맷으로 변환
-            val htmlContent = """
-            <html>
-                <head>
-                    <style>
-                        body {
-                            font-family: suite_semibold, sans-serif;
-                            font-size: 13sp;
-                            line-height: 1.5;
-                        }
-                    </style>
-                </head>
-                <body>
-                    $formattedContent
-                </body>
-            </html>
-        """
-
-            // 불필요한 <p><br></p> 태그 제거 후 로드
-            if (noticeContent.trim().isNotEmpty()) {
-                Log.d("NoticeDetailFragment", "Notice content is not empty, loading WebView")
-                binding.webView.loadDataWithBaseURL(null, htmlContent, "text/html", "UTF-8", null)
-            } else {
-                Log.d("NoticeDetailFragment", "Notice content is empty, hiding WebView")
-                binding.webView.visibility = View.GONE
-            }
-        } else {
-            // 내용이 없으면 WebView 숨기기
-            Log.d("NoticeDetailFragment", "Notice content is empty, hiding WebView")
-            binding.webView.visibility = View.GONE
         }
     }
 

@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,9 +31,10 @@ class BoardDetailFragment : Fragment() {
     private val postService: PostService by lazy {
         RetrofitClient.instance.create(PostService::class.java)
     }
-    private lateinit var itemAnswerBinding: ItemAnswerBinding
-    private var isButtonClicked = false
-    private var isCommented = false
+
+    private var isAnswerClicked = false
+    private lateinit var answerAdapter: AnswerAdapter
+
 
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
@@ -70,35 +72,36 @@ class BoardDetailFragment : Fragment() {
         // UI 초기화
         fetchPost(postId)
 
+
+
         // 댓글 작성 버튼 클릭 처리
         binding.ivSendButton.setOnClickListener {
             val content = binding.etAnswer.text.toString()
             val isAnonymous = true
 
             if (content.isNotEmpty()) {
-                createComment(content, isAnonymous, postId)
+                if (isAnswerClicked) {
+                    // 선택된 댓글에 대해 대댓글을 보이도록 설정
+                    val selectedPosition = answerAdapter.getSelectedCommentPosition()
+                    if (selectedPosition >= 0) {
+                        // 대댓글 UI 보이기
+                        val selectedItemBinding = ItemAnswerBinding.inflate(LayoutInflater.from(context))
+                        selectedItemBinding.sampleComment.visibility = View.VISIBLE
+
+                        // 대댓글 내용 설정
+                        selectedItemBinding.sampleComment.findViewById<TextView>(R.id.tv_answer_content).text = content
+
+                    }
+                } else {
+                    // 일반 댓글 작성
+                    createComment(content, isAnonymous, postId)
+                }
             } else {
                 Toast.makeText(requireContext(), "댓글 내용을 입력하세요.", Toast.LENGTH_SHORT).show()
             }
         }
 
-        itemAnswerBinding = ItemAnswerBinding.inflate(LayoutInflater.from(requireContext()))
 
-        itemAnswerBinding.btnComment.setOnClickListener {
-            if (isButtonClicked) {
-                // 댓글 버튼이 이미 클릭된 상태면 원래 색으로 돌아오게 처리
-                itemAnswerBinding.btnComment.setBackgroundResource(R.drawable.comment_icon2) // 원래 버튼 아이콘으로 변경
-                val parentLayout = itemAnswerBinding.root.parent as? ViewGroup
-                parentLayout?.setBackgroundColor(Color.parseColor("#FFFFFF"))
-                isButtonClicked = false // 클릭 상태 변경
-            } else {
-                // 댓글 버튼이 처음 클릭되었을 때
-                itemAnswerBinding.btnComment.setBackgroundResource(R.drawable.comment_icon3) // 버튼 아이콘 변경
-                val parentLayout = itemAnswerBinding.root.parent as? ViewGroup
-                parentLayout?.setBackgroundColor(Color.parseColor("#F1F1F1"))
-                isButtonClicked = true // 클릭 상태 변경
-            }
-        }
 
 
         // 좋아요 버튼 클릭 처리
@@ -122,6 +125,8 @@ class BoardDetailFragment : Fragment() {
         // 새로 고침 설정
         setupAutoRefresh()
     }
+
+
 
     private fun createComment(content: String, isAnonymous: Boolean, postId: Long) {
         val token = getJwtToken()
@@ -182,7 +187,6 @@ class BoardDetailFragment : Fragment() {
                 }
             })
     }
-
 
     private fun updateCommentCount(postId: Long) {
         val token = getJwtToken()
@@ -255,11 +259,18 @@ class BoardDetailFragment : Fragment() {
                         binding.tvCommentIcon.text = "${post.commentCnt}개"
                         binding.tvCreatedAt.text = formatDate(post.createdAt)
 
-                        binding.rvAnswerContainer.layoutManager = LinearLayoutManager(requireContext())
+                        binding.rvCommentContainer.layoutManager = LinearLayoutManager(requireContext())
 
                         // 댓글 목록 업데이트
-                        val answerAdapter = AnswerAdapter(post.comments)
-                        binding.rvAnswerContainer.adapter = answerAdapter
+                        val answerAdapter = AnswerAdapter(post.comments ?: emptyList()) { position, isSelected ->
+                            // 클릭된 댓글의 대댓글 표시/숨기기 처리
+                            if (isSelected) {
+                                answerAdapter.showReplyForSelectedItem(position)
+                            } else {
+                                answerAdapter.showReplyForSelectedItem(position)
+                            }
+                        }
+                        binding.rvCommentContainer.adapter = answerAdapter
 
                         // 댓글 데이터 확인
                         Log.d("BoardDetailFragment", "Post comments: ${post.comments}")

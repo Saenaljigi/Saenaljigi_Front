@@ -29,7 +29,7 @@ class BoardFragment : Fragment() {
 
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
-    private val refreshInterval: Long = 60000//12000
+    private val refreshInterval: Long = 9000//12000
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

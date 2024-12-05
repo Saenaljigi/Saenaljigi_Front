@@ -59,7 +59,7 @@ class SearchPostActivity : AppCompatActivity() {
         }
 
         binding.searchBackBtn.setOnClickListener {
-            // 뒤로가기 버튼 동작
+            onBackPressed() // 기존의 뒤로가기 동작을 호출
         }
 
         setStatusBarTransparent()
