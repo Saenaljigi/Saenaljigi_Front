@@ -50,7 +50,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="22dp"
@@ -58,6 +58,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_back_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="58dp"
         >
 
         <!-- 리사이클러뷰 -->

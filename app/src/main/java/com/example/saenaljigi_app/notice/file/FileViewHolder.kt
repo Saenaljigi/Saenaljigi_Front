@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.notice
 
+import FileData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.saenaljigi_app.databinding.ItemFileBinding
 

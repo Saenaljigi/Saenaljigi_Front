@@ -1,6 +1,7 @@
 package com.example.saenaljigi_app.board
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Build
@@ -9,9 +10,8 @@ import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.saenaljigi_app.MainActivity
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.databinding.ActivitySearchPostBinding
 import com.google.android.material.chip.Chip
@@ -30,18 +30,22 @@ class SearchPostActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("ChipPreferences", Context.MODE_PRIVATE)
 
-        val etKeyword = binding.etSearchPost
         val chipGroup = binding.searchChipGroup
 
         // 저장된 Chip 데이터 복원
         loadChips(chipGroup)
 
+        val etKeyword = binding.etSearchPost
+
         etKeyword.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 val text = etKeyword.text.toString().trim()
                 if (text.isNotEmpty()) {
-                    addChipToGroup(chipGroup, text)
-                    etKeyword.text.clear()
+                    // 검색어가 있을 경우 MainActivity로 검색어를 전달
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("searchQuery", text)
+                    startActivity(intent)
+                    finish() // SearchPostActivity 종료
                 }
                 true
             } else {
@@ -55,7 +59,7 @@ class SearchPostActivity : AppCompatActivity() {
         }
 
         binding.searchBackBtn.setOnClickListener {
-            // 뒤로가기 버튼 동작
+            onBackPressed() // 기존의 뒤로가기 동작을 호출
         }
 
         setStatusBarTransparent()

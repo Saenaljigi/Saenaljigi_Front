@@ -17,6 +17,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 
 class BoardFragment : Fragment() {
 
@@ -28,7 +29,7 @@ class BoardFragment : Fragment() {
 
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
-    private val refreshInterval: Long = 12000 // 12 seconds in milliseconds
+    private val refreshInterval: Long = 9000//12000
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,7 +47,7 @@ class BoardFragment : Fragment() {
         // 초기 데이터 로드
         fetchPosts()
 
-        // 주기적으로 데이터 새로고침
+        // 주기적으로 데이터 새로고침x
         setupAutoRefresh()
 
         // 게시글 검색 버튼 클릭 시
@@ -76,11 +77,15 @@ class BoardFragment : Fragment() {
     private fun fetchPosts() {
         val token = getJwtToken()
 
-        postService.getAllPosts("Bearer $token").enqueue(object : Callback<List<PostClass>> {
+        // Log the token being used for the request (be careful with exposing sensitive data)
+        Log.d("BoardFragment", "Fetching posts with token: $token")
+
+        postService.getAllPosts("$token").enqueue(object : Callback<List<PostClass>> {
             override fun onResponse(call: Call<List<PostClass>>, response: Response<List<PostClass>>) {
                 if (response.isSuccessful) {
                     val posts = response.body()
                     if (posts != null) {
+                        Log.d("BoardFragment", "Successfully fetched ${posts.size} posts.")
                         val adapter = BoardAdapter(posts) { board ->
                             val fragment = BoardDetailFragment.newInstance(board.id)
                             parentFragmentManager.beginTransaction()
@@ -89,16 +94,22 @@ class BoardFragment : Fragment() {
                                 .commit()
                         }
                         binding.rvBoard.adapter = adapter
-                    } else {
-                        showError("게시물을 불러올 수 없습니다.")
                     }
                 } else {
-                    showError("서버 오류: ${response.code()}")
+                    Log.e("BoardFragment", "Failed to fetch posts. Response code: ${response.code()}, Message: ${response.message()}")
+
+                    if (response.code() == 403) {
+                        Log.e("BoardFragment", "Authorization failed. Token may be invalid or expired.")
+                        showError("Authorization failed. Please check your login status.")
+                    } else {
+                        showError("Failed to load posts: ${response.message()}")
+                    }
                 }
             }
 
             override fun onFailure(call: Call<List<PostClass>>, t: Throwable) {
-                showError("네트워크 오류: ${t.localizedMessage}")
+                Log.e("BoardFragment", "Network error: ${t.message}", t)
+                showError("Network error: ${t.message}")
             }
         })
     }
@@ -115,7 +126,7 @@ class BoardFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        stopAutoRefresh() // Auto-refresh 중지
+        stopAutoRefresh()
     }
 
     private fun stopAutoRefresh() {

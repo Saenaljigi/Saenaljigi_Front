@@ -14,11 +14,10 @@ class BoardViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(board: PostClass) {
-        // 게시글 제목 설정
         binding.tvTitle.text = board.title
 
-        // 작성자 이름 설정
-        binding.tvWriter.text = board.anonymousName
+        binding.tvLikeIcon.text = "${board.likeCnt}개"
+        binding.tvCommentIcon.text = "${board.commentCnt}개"
 
         try {
             // 시간 계산 로직
@@ -35,14 +34,11 @@ class BoardViewHolder(
                 else -> "방금 전"
             }
 
-            // 시간 차이를 TextView에 설정
             binding.tvCreatedAt.text = elapsedTime
         } catch (e: Exception) {
-            // 오류 발생 시 기본 메시지 표시
             binding.tvCreatedAt.text = "시간 정보 없음"
         }
 
-        // 아이템 클릭 이벤트 설정
         binding.root.setOnClickListener { onItemClick(board) }
     }
 }
