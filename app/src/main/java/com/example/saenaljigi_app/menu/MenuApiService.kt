@@ -10,23 +10,25 @@ import retrofit2.http.Query
 
 interface MenuApiService {
 
-    @GET("/calendar/day")
+    @GET("/calendar/day/user")
     fun getMenu ( // 메뉴 조회
         @Header("Authorization") token: String,
-        @Query("day") day: String
+        @Query("day") day: String,
+        @Query("userId") userId: Int
     ): Call<CalendarDto>
 
     @GET("/calendar")
     fun getAllDay ( // 하이라이트된 날 조회 (모든 날짜 요청 받아 분류해야 함)
-        @Header("Authorization") token: String
+        @Header("Authorization") token: String,
+        @Query("userId") userId: Int
     ): Call<List<CalendarDto>>
 
-    @PUT("/select")
+    @PUT("/food/select")
     fun updateHighlightedMenu( // 메뉴 하이라이트 업데이트
         @Header("Authorization") token: String,
         @Query("menuId") menuId: Long,
         @Query("isSelected") isSelected: Boolean,
-        @Query("foodName") foodName: String
+        @Query("foodname") foodname: String
     ): Call<Void>
 
     @POST("/calendar/{calendarId}/breakfast")

@@ -12,16 +12,17 @@ data class MenuDto(
 
 data class FoodDto(
     val foodName: String,
-    val isSelected: Boolean,
+    val selected: Boolean,
     val menuId: Long
 )
 
 data class CalendarDto(
     val id: Long,
-    val day: LocalDate,
+    val day: String,
     val isHilight: Boolean,
     val isBreakfast: Boolean,
-    val menus: List<MenuDto>
+    val menus: List<MenuDto>,
+    val userId: Long
 )
 
 data class Food(

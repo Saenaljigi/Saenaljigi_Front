@@ -1,6 +1,8 @@
 package com.example.saenaljigi_app.mypage
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +43,11 @@ class MyPageFragment : Fragment() {
             // replaceFragment(SettingFragment())
         }
 
+        val username = getUsername()
+        Log.d("MypageFrag", "username: $username")
+
+        binding.tvStudentId.text = "${username}님"
+
         return binding.root
     }
 
@@ -50,5 +57,10 @@ class MyPageFragment : Fragment() {
             .replace(R.id.fragment_container, fragment)
             .addToBackStack(null)
             .commit()
+    }
+
+    private fun getUsername(): String {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return sharedPref.getString("username", "") ?: ""
     }
 }

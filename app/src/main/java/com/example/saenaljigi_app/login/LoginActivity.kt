@@ -14,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.WindowCompat
 import androidx.core.widget.addTextChangedListener
+import com.example.saenaljigi_app.AdminActivity
 import com.example.saenaljigi_app.MainActivity
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.RetrofitClient
@@ -68,6 +69,12 @@ class LoginActivity : AppCompatActivity() {
     private fun performLogin() {
         val id = etId.text.toString()
         val pw = etPassword.text.toString()
+
+        // 관리자 페이지로 이동
+        if (id.equals("000000") && pw.equals("111111")) {
+            goToAdminPage()
+            return
+        }
 
         val body = UserRequest(username = id, password = pw)
 
@@ -172,5 +179,10 @@ class LoginActivity : AppCompatActivity() {
         if(Build.VERSION.SDK_INT >= 30) {   // API 30 에 적용
             WindowCompat.setDecorFitsSystemWindows(window, false)
         }
+    }
+
+    private fun goToAdminPage() {
+        val intent = Intent(this, AdminActivity::class.java)
+        startActivity(intent)
     }
 }
