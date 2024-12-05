@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         if (!searchQuery.isNullOrEmpty()) {
             val fragment = PostResultsFragment.newInstance(searchQuery)
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment)
+                .add(R.id.fragment_container, fragment)
                 .addToBackStack(null)
                 .commit()
         }
