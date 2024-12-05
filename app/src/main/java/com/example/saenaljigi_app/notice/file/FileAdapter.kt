@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.notice
 
+import FileData
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

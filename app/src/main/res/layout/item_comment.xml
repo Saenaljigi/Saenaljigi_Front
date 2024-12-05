@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
     app:layout_constraintBottom_toBottomOf="parent">
 
     <!-- Comment Writer -->
@@ -38,7 +37,7 @@
         android:id="@+id/tv_comment_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="네"
+        android:text="네 가능해요"
         android:textColor="@color/black12"
         android:textSize="13sp"
         android:layout_marginTop="5dp"
@@ -54,7 +53,7 @@
         android:id="@+id/tv_comment_created_at"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="14:13"
+        android:text="16:35"
         android:textColor="@color/gray7"
         android:textSize="9sp"
         android:layout_marginStart="17dp"

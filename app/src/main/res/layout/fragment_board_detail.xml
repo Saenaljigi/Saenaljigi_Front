@@ -6,7 +6,7 @@
     android:background="#F5F5F5">
 
     <TextView
-        android:id="@+id/tv_board"
+        android:id="@+id/tv_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="62dp"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/background_bar"
-        app:layout_constraintTop_toBottomOf="@id/tv_board" />
+        app:layout_constraintTop_toBottomOf="@id/tv_search" />
 
     <ImageView
         android:id="@+id/back_btn"
@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_board" />
+        app:layout_constraintTop_toBottomOf="@id/tv_search" />
 
 
     <!-- 스크롤 뷰 -->
@@ -170,6 +170,8 @@
                 android:layout_marginEnd="19dp"
                 android:layout_marginBottom="19dp"
                 />
+
+
             <ImageView
                 android:id="@+id/iv_box_bar"
                 android:layout_width="match_parent"
@@ -182,7 +184,7 @@
                 />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_answer_container"
+                android:id="@+id/rv_comment_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
