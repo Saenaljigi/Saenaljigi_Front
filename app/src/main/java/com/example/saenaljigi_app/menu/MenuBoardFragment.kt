@@ -18,6 +18,8 @@ import androidx.fragment.app.Fragment
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentMenuBoardBinding
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.DayViewDecorator
 import com.prolificinteractive.materialcalendarview.DayViewFacade
@@ -29,6 +31,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class MenuBoardFragment : Fragment() {
 
@@ -126,6 +129,8 @@ class MenuBoardFragment : Fragment() {
 
         fetchHighlightedDate(selectedMonth)
 
+        applyForBreakfast(today.date.toString())
+
         return binding.root
     }
 
@@ -143,6 +148,11 @@ class MenuBoardFragment : Fragment() {
         parentFragmentManager.removeOnBackStackChangedListener(backStackListener)
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateTodayApplyBtnVisibility()  // 버튼 상태 갱신
+    }
+
     // BackStack 변경 Listener 정의
     private val backStackListener = {
         updateTodayApplyBtnVisibility()
@@ -154,7 +164,6 @@ class MenuBoardFragment : Fragment() {
                 if (parentFragmentManager.backStackEntryCount == 0) View.VISIBLE else View.GONE
         }
     }
-
 
     /* 선택된 날짜의 background를 설정하는 클래스 */
     private inner class DayDecorator(context: Context) : DayViewDecorator {
@@ -246,9 +255,11 @@ class MenuBoardFragment : Fragment() {
     // 하이라이트된 날짜 받아와 표시하기
     private fun fetchHighlightedDate(selectedMonth: Int) {
         val token = getJwtToken()
+        val userId = getUserId()
+        Log.d("MenuBoard", "userId: $userId")
 
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
-        val call = menuService.getAllDay("Bearer $token")
+        val call = menuService.getAllDay(token, userId)
 
         call.enqueue(object : Callback<List<CalendarDto>> {
             override fun onResponse(call: Call<List<CalendarDto>>, response: Response<List<CalendarDto>>) {
@@ -256,8 +267,22 @@ class MenuBoardFragment : Fragment() {
                     response.body()?.let { days ->
                         // 하이라이트 여부가 true인 날들의 날짜만 저장
                         val highlightedDayList = days.filter { it.isHilight == true }.map { it.day }
-                        Log.d("MenuBoard", "$highlightedDayList")
-                        binding.calendarView.addDecorators(HighlightedDayDecorator(highlightedDayList))
+
+                        // String 리스트를 LocalDate로 변환
+                        val dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd") // 날짜 포맷에 맞게 수정
+                        val localDateList = highlightedDayList.mapNotNull { dateString ->
+                            try {
+                                LocalDate.parse(dateString, dateFormatter)
+                            } catch (e: Exception) {
+                                Log.e("MenuBoard", "Invalid date format: $dateString")
+                                null
+                            }
+                        }
+
+                        Log.d("MenuBoard", "LocalDate list: $localDateList")
+
+                        // HighlightedDayDecorator에 LocalDate 리스트 전달
+                        binding.calendarView.addDecorators(HighlightedDayDecorator(localDateList))
 
                     } ?: Log.e("MenuBoard", "Response body is null")
                 } else {
@@ -293,21 +318,87 @@ class MenuBoardFragment : Fragment() {
                     bottom: Int, text: CharSequence,
                     start: Int, end: Int, lineNum: Int
                 ) {
-                    val radius = 11f // 원의 반지름 설정
+                    val radius = 10f // 원의 반지름 설정
                     val cx = (left + right) / 2f
-                    val cy = (top + bottom) / 2f + 50f
+                    val cy = (top + bottom) / 2f + 51f
                     canvas.drawCircle(cx, cy, radius, this@HighlightedDayDecorator.paint)
                 }
             })
         }
     }
 
-    private fun applyForBreakfast(date: LocalDate, calendarId: Long) {
+    private fun applyForBreakfast(date: String) {
+        // 로컬 저장소에서 데이터 가져오기
+        val savedMeals = getSavedMealsFromPreferences(requireContext())
+        val isMealSaved = savedMeals.any { it["date"] == date && it["foodType"] == "조식" }
 
+        // 버튼 상태 설정
+        binding.todayApplyBtn.apply {
+            if (isMealSaved) {
+                // 이미 신청된 상태
+                setBackgroundResource(R.drawable.apply_btn_background)
+                isClickable = false
+                text = "오늘의 조식 신청 완료"
+            } else {
+                // 신청 가능 상태
+                setBackgroundResource(R.drawable.menu_btn)
+                isClickable = true
+                text = "오늘의 조식 신청하기"
+                setOnClickListener {
+                    setBackgroundResource(R.drawable.apply_btn_background)
+                    text = "오늘의 조식 신청 완료"
+
+                    // 클릭 시 로컬 저장 및 상태 업데이트
+                    saveMealToPreferences(requireContext(), date, "조식")
+
+                    // SharedPreferences에서 MealTicket 값을 가져오고, 없으면 0으로 초기화
+                    val sharedPreferences = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+                    val savedMealsCount = sharedPreferences.getInt("MealTicket", 0)  // 기본값 0
+
+                    // 값을 하나씩 증가시킴
+                    val newMealsCount = savedMealsCount + 1
+
+                    // SharedPreferences에 새 값 저장
+                    val editor = sharedPreferences.edit()
+                    editor.putInt("MealTicket", newMealsCount)
+                    editor.apply()  // 비동기적으로 저장
+                }
+            }
+        }
+
+    }
+
+    private fun saveMealToPreferences(context: Context, date: String, foodType: String) {
+        // 로컬 저장소에 데이터를 저장
+        val sharedPreferences = context.getSharedPreferences("MenuPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val currentData = getSavedMealsFromPreferences(context)
+        val newMeal = mapOf("date" to date, "foodType" to foodType)
+        val updatedList = currentData.toMutableList().apply { add(newMeal) }
+        val json = Gson().toJson(updatedList)
+        editor.putString("mealDataList", json)
+        editor.apply()
+    }
+
+    private fun getSavedMealsFromPreferences(context: Context): List<Map<String, String>> {
+        // 로컬 저장소에서 데이터 읽기
+        val sharedPreferences = context.getSharedPreferences("MenuPrefs", Context.MODE_PRIVATE)
+        val json = sharedPreferences.getString("mealDataList", "") ?: ""
+        val listType = object : TypeToken<List<Map<String, String>>>() {}.type
+        return Gson().fromJson(json, listType) ?: emptyList()
     }
 
     private fun getJwtToken(): String {
         val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
-        return sharedPref.getString("jwt_token", "") ?: ""
+        val token = sharedPref.getString("jwt_token", "") ?: ""
+        Log.d("MenuBoardFrag", "Retrieved JWT token: $token")
+        return token
+    }
+
+    private fun getUserId(): Int {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        val userId = sharedPref.getInt("userId", 0) // 기본값 0
+        Log.d("UserId", "UserId: $userId")  // 로그 출력
+        return userId
     }
 }
