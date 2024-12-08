@@ -22,7 +22,7 @@ class CommentViewHolder(
             binding.ivBackgroundComment.setImageResource(R.drawable.background_comment2) // 배경 변경
             Log.d("CommentViewHolder", "Set background to background_comment2 for comment ID: ${comment.id}")
         } else {
-            binding.tvCommentWriter.text = "종이${comment.id - 1}"
+            binding.tvCommentWriter.text = "종이${4}"
             binding.ivBackgroundComment.setImageResource(R.drawable.background_comment) // 기본 배경
             Log.d("CommentViewHolder", "Set background to background_comment for comment ID: ${comment.id}")
         }

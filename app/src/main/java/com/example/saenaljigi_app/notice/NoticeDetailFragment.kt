@@ -9,8 +9,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebChromeClient
-import android.webkit.WebView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.saenaljigi_app.R
@@ -37,18 +35,16 @@ class NoticeDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.noticeBack.setOnClickListener {
-            // NoticeBoardFragment로 이동 (뒤로 가는 대신 새로운 프래그먼트로 교체)
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, NoticeBoardFragment()) // fragment_container는 프래그먼트가 표시될 컨테이너 ID
-                .commit() // 트랜잭션 적용
+                .replace(R.id.fragment_container, NoticeBoardFragment())
+                .addToBackStack(null)
+                .commit()
         }
 
-        var postId = arguments?.getLong("postId") ?: return  // postId를 받아옴
-        Log.d("NoticeDetailFragment", "Received postId: $postId")
+        val noticeId = arguments?.getLong("noticeId") ?: return  // postId를 받아옴
+        Log.d("NoticeDetailFragment", "Received noticeId: $noticeId")
 
-        postId = 36259
-        // 서버에서 공지사항 세부 정보 가져오기
-        loadNoticeDetail(postId)
+        loadNoticeDetail(noticeId)
     }
 
     private fun loadNoticeDetail(postId: Long) {
