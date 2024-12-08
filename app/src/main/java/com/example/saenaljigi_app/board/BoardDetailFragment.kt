@@ -262,12 +262,12 @@ class BoardDetailFragment : Fragment() {
                         binding.rvCommentContainer.layoutManager = LinearLayoutManager(requireContext())
 
                         // 댓글 목록 업데이트
-                        val answerAdapter = AnswerAdapter(post.comments ?: emptyList()) { position, isSelected ->
+                        answerAdapter = AnswerAdapter(post.comments ?: emptyList()) { position, isSelected ->
                             // 클릭된 댓글의 대댓글 표시/숨기기 처리
                             if (isSelected) {
-                                answerAdapter.showReplyForSelectedItem(position)
+                                answerAdapter.showReplyForSelectedItem(position) // 대댓글 보이기
                             } else {
-                                answerAdapter.showReplyForSelectedItem(position)
+                                answerAdapter.showReplyForSelectedItem(position) // 대댓글 숨기기
                             }
                         }
                         binding.rvCommentContainer.adapter = answerAdapter
