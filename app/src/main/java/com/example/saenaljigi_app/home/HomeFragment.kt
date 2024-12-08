@@ -1,5 +1,6 @@
 package com.example.saenaljigi_app.home
 
+import NoticeBoardData
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -7,12 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.RetrofitClient
 import com.example.saenaljigi_app.databinding.FragmentHomeBinding
 import com.example.saenaljigi_app.menu.CalendarDto
 import com.example.saenaljigi_app.menu.MenuApiService
 import com.example.saenaljigi_app.notice.NoticeBoardFragment
+import com.example.saenaljigi_app.notice.NoticeBoardService
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -24,49 +28,52 @@ import java.util.TimeZone
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = _binding ?: throw IllegalStateException("Binding should not be null")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        // 오늘 날짜 가져오기 (로컬 시간대 설정)
         val calendar = Calendar.getInstance(TimeZone.getDefault())
         val dateFormat = SimpleDateFormat("yyyy년 MM월 dd일", Locale.KOREA)
         dateFormat.timeZone = TimeZone.getDefault()
         val todayDate: String = dateFormat.format(calendar.time)
 
-        // TextView에 날짜 설정
         binding.homeDate.text = todayDate
 
-        // 오늘의 메뉴 불러오기
         val today: LocalDate = LocalDate.now()
         fetchTodayMenu(today)
 
-        // 총 상벌점 불러오기
-        val total_point = fetchPoint()
-        // 텍스트뷰 변경
-        binding.totalCount.text = if (total_point > 0) "+$total_point" else total_point.toString()
+        val mealTicketCount = getMealTicketCount()
+        binding.mealCount.text = "${mealTicketCount}회"
 
-        if (total_point < 0)
-            binding.totalCountCmt.text = "벌점이 더 높아요 \uD83D\uDE13"
-        else if (total_point == 0)
-            binding.totalCountCmt.text = "상벌점이 같아요 \uD83D\uDE10"
+        val totalPoint = fetchPoint()
+        binding.totalCount.text = if (totalPoint > 0) "+$totalPoint" else totalPoint.toString()
 
-        // 공지사항 2개 불러오기
+        binding?.let {
+            it.homeDate.text = todayDate
+            it.mealCount.text = "${mealTicketCount}회"
+            it.totalCount.text = if (totalPoint > 0) "+$totalPoint" else totalPoint.toString()
+            if (totalPoint < 0)
+                it.totalCountCmt.text = "벌점이 더 높아요 \uD83D\uDE13"
+            else if (totalPoint == 0)
+                it.totalCountCmt.text = "상벌점이 같아요 \uD83D\uDE10"
+        }
+
         fetchNotice()
 
-        // 자세히 보기 클릭 시 공지사항 프래그먼트로 이동
         binding.detailBtn.setOnClickListener {
             val fragmentManager = requireActivity().supportFragmentManager
             val transaction = fragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container, NoticeBoardFragment())
             transaction.commit()
 
-            // 바텀 네비게이션 상태를 NoticeBoardFragment로 동기화
-            val bottomNavigationView = requireActivity().findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation_view)
+            val bottomNavigationView =
+                requireActivity().findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(
+                    R.id.bottom_navigation_view
+                )
             bottomNavigationView.selectedItemId = R.id.fragment_notice
         }
 
@@ -78,68 +85,123 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    // 오늘 메뉴 불러오기
     private fun fetchTodayMenu(todayDate: LocalDate) {
         val token = getJwtToken()
+        val userId = getUserId()
 
         val menuService = RetrofitClient.instance.create(MenuApiService::class.java)
         val formattedDate = todayDate.toString()
-        Log.d("MenuDetail_R", "$formattedDate")
+        Log.d("HomeFrag_M", "$formattedDate")
 
-        menuService.getMenu("Bearer $token", formattedDate).enqueue(object : Callback<CalendarDto> {
-            override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto>) {
-                if (response.isSuccessful) {
-                    response.body()?.let { menus ->
-                        Log.d("MenuDetail_R", "$menus")
+        viewLifecycleOwner.lifecycleScope.launch {
+            menuService.getMenu(token, formattedDate, userId).enqueue(object : Callback<CalendarDto> {
+                override fun onResponse(call: Call<CalendarDto>, response: Response<CalendarDto>) {
+                    if (response.isSuccessful) {
+                        response.body()?.let { menus ->
+                            val lunchMenuNames = mutableListOf<String>()
+                            val dinnerMenuNames = mutableListOf<String>()
 
-                        // 중식과 석식의 foodName만 분리하여 리스트 생성
-                        val lunchMenuNames = mutableListOf<String>()
-                        val dinnerMenuNames = mutableListOf<String>()
+                            menus.menus.forEach { menu ->
+                                when (menu.foodTime) {
+                                    "중식" -> lunchMenuNames.addAll(menu.foods.map { it.foodName })
+                                    "석식" -> dinnerMenuNames.addAll(menu.foods.map { it.foodName })
+                                }
+                            }
 
-                        menus.menus.forEach { menu ->
-                            when (menu.foodTime) {
-                                "중식" -> lunchMenuNames.addAll(menu.foods.map { it.foodName })
-                                "석식" -> dinnerMenuNames.addAll(menu.foods.map { it.foodName })
+                            val lunchMenu1 = lunchMenuNames.joinToString("\n")
+                            val dinnerMenu1 = dinnerMenuNames.joinToString("\n")
+                            val breakfast = "식당 스낵바에\n샐러드&샌드위치\n준비되어있습니다.\n이틀 전에\n예약하신 후\n이용 가능합니다."
+
+                            Log.d("HomeFrag_M", "Lunch: $lunchMenu1, Dinner: $dinnerMenu1")
+
+                            binding?.apply {
+                                breakfastMenu.text = breakfast
+                                lunchMenu.text = lunchMenu1
+                                dinnerMenu.text = dinnerMenu1
                             }
                         }
+                    } else {
+                        Log.e("HomeFrag_M", "Error body: ${response.errorBody()?.string()}")
+                    }
+                }
 
-                        // "\n"으로 구분된 문자열 생성
-                        val lunchMenu = lunchMenuNames.joinToString("\n")
-                        val dinnerMenu = dinnerMenuNames.joinToString("\n")
+                override fun onFailure(call: Call<CalendarDto>, t: Throwable) {
+                    Log.e("HomeFrag_M", "Error fetching menu data", t)
+                }
+            })
+        }
+    }
 
-                        val breakfast = "식당 스낵바에\n샐러드&샌드위치\n준비되어있습니다.\n이틀 전에\n예약하신 후\n이용 가능합니다."
+    private fun getMealTicketCount(): Int {
+        val sharedPreferences = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        return sharedPreferences.getInt("MealTicket", 0)
+    }
 
-                        Log.d("HomeFrag", "Lunch: $lunchMenu, Dinner: $dinnerMenu")
+    private fun fetchPoint(): Int {
+        return 2
+    }
 
-                        // 텍스트뷰에 표시 (예: 점심 메뉴와 저녁 메뉴)
-                        binding.breakfastMenu.text = breakfast
-                        binding.lunchMenu.text = lunchMenu
-                        binding.dinnerMenu.text = dinnerMenu
-                    } ?: Log.e("HomeFragment", "Menu data is null")
-                } else {
-                    Log.e("HomeFragment", "Failed to load menu data: ${response.code()}")
+    private fun fetchNotice() {
+        val token = getJwtToken()
+        Log.d("HomeFragment", "token: $token")
+
+        val service = RetrofitClient.instance.create(NoticeBoardService::class.java)
+        service.getNotice(token).enqueue(object : Callback<List<NoticeBoardData>> {
+            override fun onResponse(
+                call: Call<List<NoticeBoardData>>,
+                response: Response<List<NoticeBoardData>>
+            ) {
+                if (response.isSuccessful) {
+                    response.body()?.let { notices ->
+                        if (notices.isNotEmpty()) {
+                            val notice1 = notices[0]
+                            val notice2 = notices.getOrNull(1)
+                            Log.d("HomeFragment", "notice: $notice1, $notice2")
+
+                            binding?.apply {
+                                noticeContent1.text = formatTitle(notice1.title)
+                                noticePostedTime1.text = formatDate(notice1.createdAt)
+
+                                notice2?.let {
+                                    noticeContent2.text = formatTitle(it.title)
+                                    noticePostedTime2.text = formatDate(it.createdAt)
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
-            override fun onFailure(call: Call<CalendarDto>, t: Throwable) {
-                Log.e("HomeFragment", "Error fetching menu data", t)
+            override fun onFailure(call: Call<List<NoticeBoardData>>, t: Throwable) {
+                Log.e("HomeFragment", "Error occurred while fetching notice list", t)
             }
         })
     }
 
-    // 추후 구현 예정: 식권 내역 불러오기
-    private fun fetchPoint(): Int {
-        // 예시로 더미 데이터를 반환
-        return 10
+    private fun formatTitle(title: String): String {
+        return if (title.length > 24) title.substring(0, 25) + " ..." else title
     }
 
-    // 추후 구현 예정: 공지사항 불러오기
-    private fun fetchNotice() {
-        // 여기에 API 호출을 추가할 수 있습니다.
+    private fun formatDate(dateString: String?): String {
+        if (dateString.isNullOrEmpty()) return ""
+        val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val outputFormat = SimpleDateFormat("MM월 dd일", Locale.getDefault())  // 변경된 부분
+        return try {
+            val parsedDate = inputFormat.parse(dateString)
+            outputFormat.format(parsedDate)
+        } catch (e: Exception) {
+            Log.e("HomeFragment", "Error parsing date: $dateString", e)
+            dateString
+        }
     }
 
     private fun getJwtToken(): String {
         val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
         return sharedPref.getString("jwt_token", "") ?: ""
+    }
+
+    private fun getUserId(): Int {
+        val sharedPref = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return sharedPref.getInt("userId", 0)
     }
 }
