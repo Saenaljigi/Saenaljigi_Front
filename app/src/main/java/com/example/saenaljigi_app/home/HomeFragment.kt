@@ -160,11 +160,11 @@ class HomeFragment : Fragment() {
 
                             binding?.apply {
                                 noticeContent1.text = formatTitle(notice1.title)
-                                noticePostedTime1.text = formatDate(notice1.createdAt)
+                                noticePostedTime1.text = formatDate(notice1.date)
 
                                 notice2?.let {
                                     noticeContent2.text = formatTitle(it.title)
-                                    noticePostedTime2.text = formatDate(it.createdAt)
+                                    noticePostedTime2.text = formatDate(it.date)
                                 }
                             }
                         }

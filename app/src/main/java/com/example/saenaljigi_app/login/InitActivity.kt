@@ -2,17 +2,25 @@
 
     import android.content.Intent
     import android.os.Bundle
+    import androidx.activity.enableEdgeToEdge
     import androidx.appcompat.app.AppCompatActivity
     import androidx.appcompat.widget.AppCompatButton
+    import com.example.saenaljigi_app.BaseActivity
     import com.example.saenaljigi_app.R
+    import com.example.saenaljigi_app.databinding.ActivityInitBinding
 
-    class InitActivity : AppCompatActivity() {
+    class InitActivity : BaseActivity() {
 
+        private lateinit var binding: ActivityInitBinding
         private lateinit var btnLogin: AppCompatButton
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_init)
+            enableEdgeToEdge()
+            binding = ActivityInitBinding.inflate(layoutInflater)
+            setContentView(binding.root)
+
+            setWindowInsets(binding)
 
             btnLogin = findViewById(R.id.btn_login)
 

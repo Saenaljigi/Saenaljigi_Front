@@ -8,6 +8,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -15,14 +16,18 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.WindowCompat
 import androidx.core.widget.addTextChangedListener
 import com.example.saenaljigi_app.AdminActivity
+import com.example.saenaljigi_app.BaseActivity
 import com.example.saenaljigi_app.MainActivity
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.RetrofitClient
+import com.example.saenaljigi_app.databinding.ActivityLoginBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
 
     private lateinit var tvNo: TextView
     private lateinit var clBox: ConstraintLayout
@@ -36,9 +41,11 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        enableEdgeToEdge()
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setStatusBarTransparent()  // 상태 바 투명하게 설정
+        setWindowInsets(binding)
 
         tvNo = findViewById(R.id.tv_no)
         clBox = findViewById(R.id.cl_box)

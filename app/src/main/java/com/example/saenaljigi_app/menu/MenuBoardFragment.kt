@@ -148,6 +148,11 @@ class MenuBoardFragment : Fragment() {
         parentFragmentManager.removeOnBackStackChangedListener(backStackListener)
     }
 
+    override fun onStart() {
+        super.onStart()
+        updateTodayApplyBtnVisibility()
+    }
+
     override fun onResume() {
         super.onResume()
         updateTodayApplyBtnVisibility()  // 버튼 상태 갱신
@@ -159,10 +164,7 @@ class MenuBoardFragment : Fragment() {
     }
 
     private fun updateTodayApplyBtnVisibility() {
-        _binding?.let {
-            it.todayApplyBtn.visibility =
-                if (parentFragmentManager.backStackEntryCount == 0) View.VISIBLE else View.GONE
-        }
+        binding.todayApplyBtn.visibility = View.VISIBLE
     }
 
     /* 선택된 날짜의 background를 설정하는 클래스 */
