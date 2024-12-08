@@ -33,6 +33,11 @@
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.LightStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity> <!-- Android 10 이하에서 외부 저장소 접근 허용 -->
         <!-- 활동(Activity) 목록 정의 -->
         <!-- 게시물 작성 화면 Activity -->
@@ -52,11 +57,6 @@
         <activity
             android:name=".login.LoginActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

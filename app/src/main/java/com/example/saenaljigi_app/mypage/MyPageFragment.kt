@@ -1,6 +1,7 @@
 package com.example.saenaljigi_app.mypage
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.saenaljigi_app.R
 import com.example.saenaljigi_app.databinding.FragmentMyPageBinding
+import com.example.saenaljigi_app.login.LoginActivity
 
 class MyPageFragment : Fragment() {
     private var param1: String? = null
@@ -41,6 +43,12 @@ class MyPageFragment : Fragment() {
         // SettingFragment로 교체
         binding.menu4Box.setOnClickListener {
             // replaceFragment(SettingFragment())
+        }
+
+        binding.logoutBtn.setOnClickListener {
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+            activity?.finish()  // 현재 액티비티 종료
         }
 
         val username = getUsername()

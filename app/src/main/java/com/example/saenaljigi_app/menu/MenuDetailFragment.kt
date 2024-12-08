@@ -1,7 +1,6 @@
 package com.example.saenaljigi_app.menu
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -45,11 +44,11 @@ class MenuDetailFragment : Fragment() {
             parentFragmentManager.popBackStack()
 
             // 새로 MenuDetailFragment를 시작
-            val newFragment = MenuBoardFragment()
+            val fragment = MenuBoardFragment()
 
             // 새 프래그먼트를 추가하고 트랜잭션을 커밋
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, newFragment) // 또는 add() 사용 가능
+                .replace(R.id.fragment_container, fragment) // 또는 add() 사용 가능
                 .commit()
         }
 
