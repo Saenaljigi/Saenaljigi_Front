@@ -19,7 +19,7 @@ class AdminActivity : BaseActivity() {
 
         setWindowInsets(binding)
 
-        binding.tvApplicationCount.text = "2명"
-        binding.tvApplicationDate.text = "2024.12.05 기준"
+        binding.tvApplicationCount.text = "3명"
+        binding.tvApplicationDate.text = "2024.12.10 기준"
     }
 }
