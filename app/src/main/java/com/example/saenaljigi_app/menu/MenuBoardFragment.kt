@@ -137,34 +137,19 @@ class MenuBoardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // BackStack이 변경될 때 호출되는 Listener 추가
-        parentFragmentManager.addOnBackStackChangedListener(backStackListener)
-        updateTodayApplyBtnVisibility()
     }
 
     override fun onPause() {
         super.onPause()
         // BackStack Listener를 제거하여 메모리 누수 방지
-        parentFragmentManager.removeOnBackStackChangedListener(backStackListener)
     }
 
     override fun onStart() {
         super.onStart()
-        updateTodayApplyBtnVisibility()
     }
 
     override fun onResume() {
         super.onResume()
-        updateTodayApplyBtnVisibility()  // 버튼 상태 갱신
-    }
-
-    // BackStack 변경 Listener 정의
-    private val backStackListener = {
-        updateTodayApplyBtnVisibility()
-    }
-
-    private fun updateTodayApplyBtnVisibility() {
-        binding.todayApplyBtn.visibility = View.VISIBLE
     }
 
     /* 선택된 날짜의 background를 설정하는 클래스 */
